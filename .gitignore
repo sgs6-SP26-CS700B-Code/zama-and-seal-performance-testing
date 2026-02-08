@@ -1,0 +1,6 @@
+.cache/*
+!build/.gitignore
+build/*
+docs/generated/maintainer_html/*
+docs/generated/seal_html/*
+IntelCryptoLibraryInstaller/*

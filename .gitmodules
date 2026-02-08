@@ -1,0 +1,6 @@
+[submodule "submodules/seal"]
+	path = submodules/seal
+	url = https://github.com/microsoft/SEAL.git
+[submodule "submodules/zama-rs"]
+	path = submodules/zama-rs
+	url = https://github.com/zama-ai/tfhe-rs.git
