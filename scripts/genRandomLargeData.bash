@@ -93,42 +93,29 @@ fi
 # echo "\nGenerated 1m 64 bit signed numbers"
 
 
-echo "\nGenerating 1m 128 bit signed numbers, note this may take a bit of time, run overnight."
-# Generate random numbers and append to the file
-for i in $(seq 1 $MAX_LOOP); do
-    # Calculate percentage
-    percent=$((i * 100 / MAX_LOOP))
+# echo "\n BROKEN!!!! Generating 1m 128 bit signed numbers, note this may take a bit of time, run overnight."
+# THE FOLLOWING CODE IS BROKEN, BASH CANT HANDLE 128 BIT EASILY
+# for i in $(seq 1 $MAX_LOOP); do
+#     percent=$((i * 100 / MAX_LOOP))
 
-    # Print progress bar
-    bar=""
-    for ((j = 0; j < percent / 2; j++)); do
-        bar="${bar}#"
-    done
-    # Ensure the progress bar is exactly 50 characters wide
-    printf "\r[%s%s] %d%%" "$bar" $(printf "%-50s" "") "$percent"
-    RAND_NUM_STR=$(od -A n -t dL -N 16 /dev/urandom | tr -d ' ')
+#     bar=""
+#     for ((j = 0; j < percent / 2; j++)); do
+#         bar="${bar}#"
+#     done
+#     printf "\r[%s%s] %d%%" "$bar" $(printf "%-50s" "") "$percent"
+#     RAND_NUM_STR=$(od -A n -t dL -N 16 /dev/urandom | tr -d ' ')
 
-    # Bash natively handles 64-bit integers on 64-bit systems.
-    # We explicitly specify the number is a long decimal for safety in the next step.
-    # This variable now holds the raw 64-bit unsigned integer value.
-    UNSIGNED_128BIT=$RAND_NUM_STR
+#     UNSIGNED_128BIT=$RAND_NUM_STR
 
-    # To treat it as signed, we need to manually implement two's complement logic
-    # for the most significant bit.
-    # The maximum positive signed 64-bit integer is 2^63 - 1.
-    MAX_SIGNED=$(( 2**127 - 1 ))
+#     MAX_SIGNED=$(( 2**127 - 1 ))
 
-    # Check if the generated number is larger than the max positive signed number.
-    if [[ $UNSIGNED_128BIT -gt $MAX_SIGNED ]]; then
-        # If it is, subtract 2^64 to get the negative representation.
-        # 2^64 is too large for bash, so we do subtraction in two parts:
-        # 2^64 = 2 * 2^63
-        SIGNED_128BIT=$(( UNSIGNED_128BIT - 2 * 2**63 ))
-    else
-        SIGNED_128BIT=$UNSIGNED_128BIT
-    fi
+#     if [[ $UNSIGNED_128BIT -gt $MAX_SIGNED ]]; then
+#         SIGNED_128BIT=$(( UNSIGNED_128BIT - 2 * 2**127 ))
+#     else
+#         SIGNED_128BIT=$UNSIGNED_128BIT
+#     fi
 
-    echo "$SIGNED_128BIT" >> $BIT_128_DATA
-done
+#     echo "$SIGNED_128BIT" >> $BIT_128_DATA
+# done
 
-echo "\nGenerated 1m 128 bit signed numbers"
+# echo "\n BROKEN!!! Generated 1m 128 bit signed numbers"

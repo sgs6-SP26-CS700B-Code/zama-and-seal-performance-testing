@@ -27,5 +27,5 @@ clean_deep:
 format:
 	bash ./scripts/formatCode.sh ;
 
-# init_submodules:
-# 	git submodule update --init --recursive ;
+init_submodules:
+	git submodule update --init --recursive ;
