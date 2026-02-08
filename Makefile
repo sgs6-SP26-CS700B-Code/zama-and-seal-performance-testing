@@ -24,7 +24,6 @@ clean_deep:
 	rm -rf ./build/* ; \
 	rm -rf ./.cache/* ;
 
-
 format:
 	bash ./scripts/formatCode.sh ;
 
