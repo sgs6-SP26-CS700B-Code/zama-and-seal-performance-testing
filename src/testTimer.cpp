@@ -1,8 +1,10 @@
+
 #include <testTimer.hpp>
 #include <iostream>
 #include <string>
 #include <chrono>
 
+namespace timing {
 // Method to print the timing results in multiple units
 void printTimingResults(const std::chrono::high_resolution_clock::time_point& start,
                         const std::chrono::high_resolution_clock::time_point& end,
@@ -25,4 +27,5 @@ void printTimingResults(const std::chrono::high_resolution_clock::time_point& st
     std::cout << "\tTime taken (nanoseconds): " << nanoseconds.count() << "ns\n";
 
     std::cout << "-------------------------------------\n";
+}
 }

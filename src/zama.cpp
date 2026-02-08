@@ -102,19 +102,7 @@
 
 
 // Main driver function
-void zama_test_driver() {
-    // Example setup and initialization (you would have your own key generation here)
-    // const std::vector<int64_t> input_vector = {10, 20, 30, 40, 50, 60, 70, 80};  // Input vector
-    // size_t length = input_vector.size();
-    // // Generate the keys (secret key and public key)
-    // TFheGateBootstrappingSecretKeySet *secret_key = new_random_gate_bootstrapping_secret_keyset(110);  // 110 is a parameter for security level
-    // TFheGateBootstrappingCloudKeySet *public_key = secret_key->cloud_key;
-
-    // // Perform the encrypt-add-decrypt process
-    // encrypt_add_decrypt(secret_key, public_key, input_vector);
-
-    // // Cleanup
-    // delete_gate_bootstrapping_secret_keyset(secret_key);
+void zama_test_driver(const std::vector<int64_t>& data) {
 
     int ok = 0;
     // Prepare the config builder for the high level API and choose which types to enable
@@ -134,37 +122,33 @@ void zama_test_driver() {
     // Set the server key for the current thread
     set_server_key(server_key);
 
-    FheUint128 *lhs = NULL;
-    FheUint128 *rhs = NULL;
-    FheUint128 *result = NULL;
-    // A 128-bit unsigned integer containing value: 20 << 64 | 10
-    U128 clear_lhs = { .w0 = 10, .w1 = 20 };
-    // A 128-bit unsigned integer containing value: 2 << 64 | 1
-    U128 clear_rhs = { .w0 = 1, .w1 = 2 };
+    FheInt64 *lhs = NULL;
+    FheInt64 *rhs = NULL;
+    FheInt64 *result = NULL;
 
-    ok = fhe_uint128_try_encrypt_with_client_key_u128(clear_lhs, client_key, &lhs);
+    int64_t clear_lhs = 20l << 32 | 10;
+    int64_t clear_rhs = 2l << 32 | 1;
+
+    ok = fhe_int64_try_encrypt_with_client_key_i64(clear_lhs, client_key, &lhs);
     assert(ok == 0);
 
-    ok = fhe_uint128_try_encrypt_with_client_key_u128(clear_rhs, client_key, &rhs);
+    ok = fhe_int64_try_encrypt_with_client_key_i64(clear_rhs, client_key, &rhs);
     assert(ok == 0);
 
-    // Compute the subtraction
-    ok = fhe_uint128_sub(lhs, rhs, &result);
+    // Compute the addition
+    ok = fhe_int64_add(lhs, rhs, &result);
     assert(ok == 0);
 
-    U128 clear_result;
+    int64_t clear_result;
     // Decrypt
-    ok = fhe_uint128_decrypt(result, client_key, &clear_result);
+    ok = fhe_int64_decrypt(result, client_key, &clear_result);
     assert(ok == 0);
 
-    // Here the subtraction allows us to compare each word
-    assert(clear_result.w0 == 9);
-    assert(clear_result.w1 == 18);
 
     // Destroy the ciphertexts
-    fhe_uint128_destroy(lhs);
-    fhe_uint128_destroy(rhs);
-    fhe_uint128_destroy(result);
+    fhe_int64_destroy(lhs);
+    fhe_int64_destroy(rhs);
+    fhe_int64_destroy(result);
 
     // Destroy the keys
     client_key_destroy(client_key);
