@@ -1,0 +1,140 @@
+Begining to read 1m lines of signed 32 bit ints into 64 bit buffer from file: ./1m-32-bit-data.data
+Finished reading 1m lines of signed 32 bit ints into 64 bit buffer from file: ./1m-32-bit-data.data
+Begining Zama Tests: Note, this runs on 16 threads, need more time to modify its automatic threading using its API
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+Begining zama tests
+
+==========================================================================
+  Timing Results for: Zama Encrypt 32bit in 64bit space signed int
+==========================================================================
+	| Time taken (seconds)      | 4s
+	| Time taken (milliseconds) | 4499ms
+	| Time taken (microseconds) | 4499277us
+	| Time taken (nanoseconds)  | 4499277704ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama add 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 262s
+	| Time taken (milliseconds) | 262271ms
+	| Time taken (microseconds) | 262271913us
+	| Time taken (nanoseconds)  | 262271913988ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama add 32bit in 64bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 240s
+	| Time taken (milliseconds) | 240435ms
+	| Time taken (microseconds) | 240435791us
+	| Time taken (nanoseconds)  | 240435791081ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama sub 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 262s
+	| Time taken (milliseconds) | 262478ms
+	| Time taken (microseconds) | 262478164us
+	| Time taken (nanoseconds)  | 262478164649ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama sub 32bit in 64bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 240s
+	| Time taken (milliseconds) | 240394ms
+	| Time taken (microseconds) | 240394137us
+	| Time taken (nanoseconds)  | 240394137024ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama mult 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 4182s
+	| Time taken (milliseconds) | 4182390ms
+	| Time taken (microseconds) | 4182390194us
+	| Time taken (nanoseconds)  | 4182390194912ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama mult 32bit in 64bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 1118s
+	| Time taken (milliseconds) | 1118329ms
+	| Time taken (microseconds) | 1118329799us
+	| Time taken (nanoseconds)  | 1118329799661ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt added 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 52ms
+	| Time taken (microseconds) | 52967us
+	| Time taken (nanoseconds)  | 52967551ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt added 32bit in 64bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 43ms
+	| Time taken (microseconds) | 43020us
+	| Time taken (nanoseconds)  | 43020226ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt sub 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 41ms
+	| Time taken (microseconds) | 41852us
+	| Time taken (nanoseconds)  | 41852171ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt subtracted 32bit in 64bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 40ms
+	| Time taken (microseconds) | 40672us
+	| Time taken (nanoseconds)  | 40672158ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt mult 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 42ms
+	| Time taken (microseconds) | 42031us
+	| Time taken (nanoseconds)  | 42031905ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt multiplied 32bit in 64bit space space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 46ms
+	| Time taken (microseconds) | 46086us
+	| Time taken (nanoseconds)  | 46086166ns
+--------------------------------------------------------------------------
+Data Free
+Key Free
+
+==========================================================================
+  Timing Results for: Zama 1k
+==========================================================================
+	| Time taken (seconds)      | 6312s
+	| Time taken (milliseconds) | 6312082ms
+	| Time taken (microseconds) | 6312082197us
+	| Time taken (nanoseconds)  | 6312082197569ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+ Skipping the following tests for time limitations: 10k, 100k, 250k, 500k, 1m
