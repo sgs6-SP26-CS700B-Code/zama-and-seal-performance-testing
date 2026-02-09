@@ -140,26 +140,37 @@ void zama_test_driver(const std::vector<int64_t>& data) {
 
     //==============================[Mult 64 bit Signed Int Cipher to Cipher]=======================================
 
-    // Perform the homomorphic multiplication (mult each element to itself)
     start = std::chrono::high_resolution_clock::now();
-    for (FheInt64* encrypted_value : encrypted_data) {
+
+    n = encrypted_data.size();  // Assuming encrypted_data is a vector of FheInt64*
+    for (size_t i = 0; i < n; ++i) {
         FheInt64* result = NULL;
-        ok = fhe_int64_mul(encrypted_value, encrypted_value, &result);  // sub the encrypted value to itself
+
+        // Determine the next index, wrapping around to the first element when reaching the last element
+
+        // Perform the homomorphic subtraction (encrypted_value[i] - encrypted_value[i + 1])
+        ok = fhe_int64_mul(encrypted_data[i], encrypted_data[(i + 1) % n], &result);
         assert(ok == 0);
+
+        // Store the result of the subtraction
         mult_result_data.push_back(result);
     }
+
     end = std::chrono::high_resolution_clock::now();
     printTimingResults(start, end, "Zama mult 32bit in 64bit space signed int Cipher Cipher");
     std::cout << std::flush;
 
-    //==============================[mult 64 bit Signed Int Cipher to Plain]=======================================
 
-    // Perform the homomorphic addition (adding each element to itself)
+    //==============================[mult 64 bit Signed Int Cipher to Plain]=======================================
     start = std::chrono::high_resolution_clock::now();
-    for (int i = 0; i <= encrypted_data.size(); i++) {
+    n = encrypted_data.size();  // Assuming encrypted_data is a vector of FheInt64*
+    for (size_t i = 0; i < n; ++i) {
         FheInt64* result = NULL;
-        ok = fhe_int64_scalar_mul(encrypted_data[i], data[i], &result);  // Add the encrypted value to itself
+        // Perform the homomorphic subtraction (encrypted_value[i] - encrypted_value[i + 1])
+        ok = fhe_int64_scalar_mul(encrypted_data[i], data[(i + 1) % n], &result);
         assert(ok == 0);
+
+        // Store the result of the subtraction
         scalar_mult_result_data.push_back(result);
     }
     end = std::chrono::high_resolution_clock::now();
