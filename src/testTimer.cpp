@@ -4,7 +4,6 @@
 #include <string>
 #include <chrono>
 
-namespace timing {
 // Method to print the timing results in multiple units
 void printTimingResults(const std::chrono::high_resolution_clock::time_point& start,
                         const std::chrono::high_resolution_clock::time_point& end,
@@ -17,15 +16,14 @@ void printTimingResults(const std::chrono::high_resolution_clock::time_point& st
     auto nanoseconds = std::chrono::duration_cast<std::chrono::nanoseconds>(duration);
 
     std::cout << "\n";
-    std::cout << "=====================================\n";
+    std::cout << "==========================================================================\n";
     std::cout << "  Timing Results for: " << testName << "\n";
-    std::cout << "=====================================\n";
+    std::cout << "==========================================================================\n";
 
-    std::cout << "\tTime taken (seconds):    " << seconds.count() << "s\n";
-    std::cout << "\tTime taken (milliseconds): " << milliseconds.count() << "ms\n";
-    std::cout << "\tTime taken (microseconds): " << microseconds.count() << "us\n";
-    std::cout << "\tTime taken (nanoseconds): " << nanoseconds.count() << "ns\n";
+    std::cout << "\t| Time taken (seconds)      | " << seconds.count() << "s\n";
+    std::cout << "\t| Time taken (milliseconds) | " << milliseconds.count() << "ms\n";
+    std::cout << "\t| Time taken (microseconds) | " << microseconds.count() << "us\n";
+    std::cout << "\t| Time taken (nanoseconds)  | " << nanoseconds.count() << "ns\n";
 
-    std::cout << "-------------------------------------\n";
-}
+    std::cout << "--------------------------------------------------------------------------\n";
 }

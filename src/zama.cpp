@@ -8,103 +8,10 @@
 #include <cstdlib>
 #include <assert.h>
 
-// // Function to encrypt a 64-bit signed integer
-// void encrypt_int64_t(LweSample **ciphertext, int64_t value, TFheGateBootstrappingSecretKeySet *secret_key) {
-//     // Convert the 64-bit signed integer to binary
-//     uint8_t binary[64];
-//     for (int i = 0; i < 64; i++) {
-//         binary[i] = (value >> (63 - i)) & 1;
-//     }
-
-//     // Encrypt each bit using the secret key
-//     for (int i = 0; i < 64; i++) {
-//         bootsSymEncrypt(&ciphertext[i][0], binary[i], secret_key);
-//     }
-// }
-
-// // Function to decrypt a 64-bit signed integer from a ciphertext
-// int64_t decrypt_int64_t(LweSample *ciphertext, TFheGateBootstrappingSecretKeySet *secret_key) {
-//     int64_t value = 0;
-
-//     // Decrypt each bit and build the 64-bit integer
-//     for (int i = 0; i < 64; i++) {
-//         int bit = bootsSymDecrypt(&ciphertext[i], secret_key);
-//         value |= (bit << (63 - i));
-//     }
-
-//     return value;
-// }
-
-// // Function to perform homomorphic addition on encrypted ciphertexts and return the result as ciphertext
-// std::vector<LweSample*> homomorphic_addition(LweSample **encrypted_input, size_t length, TFheGateBootstrappingCloudKeySet *public_key) {
-//     std::vector<LweSample*> result_vector(length / 2);
-
-//     // Perform homomorphic addition on encrypted pairs and store in result_vector
-//     for (size_t i = 0; i < length / 2; i++) {
-//         result_vector[i] = new_gate_bootstrapping_ciphertext_array(64, public_key->params);
-
-//         // Perform homomorphic addition on the ciphertexts
-//         for (int j = 0; j < 64; j++) {
-//             bootsADD(&result_vector[i][j], &encrypted_input[2*i][j], &encrypted_input[2*i + 1][j], public_key);
-//         }
-//     }
-
-//     return result_vector; // Return the result vector containing ciphertexts
-// }
-
-// // Main function to perform encryption, addition, and decryption
-// void encrypt_add_decrypt(TFheGateBootstrappingSecretKeySet *secret_key, TFheGateBootstrappingCloudKeySet *public_key,
-//                          const std::vector<int64_t> &input_vector) {
-//     size_t length = input_vector.size();
-
-//     // Step 1: Encrypt the vector of 64-bit signed integers
-
-//     // Sample function you want to time
-//     auto start = std::chrono::high_resolution_clock::now();
-//     std::vector<LweSample*> encrypted_input(length);
-//     for (size_t i = 0; i < length; i++) {
-//         encrypted_input[i] = new_gate_bootstrapping_ciphertext_array(64, public_key->params);
-//         encrypt_int64_t(encrypted_input[i], input_vector[i], secret_key);
-//     }
-//     auto end = std::chrono::high_resolution_clock::now();
-//     printTimingResults(start, end, "Zama Encrypt 1m 64bit signed int plaintext");
-
-//     // Step 2: Perform homomorphic addition on encrypted pairs and return the result
-//     start = std::chrono::high_resolution_clock::now();
-//     std::vector<LweSample*> result_vector = homomorphic_addition(encrypted_input, length, public_key);
-//     end = std::chrono::high_resolution_clock::now();
-//     printTimingResults(start, end, "Zama Add Odd Even Pair 500k 64bit signed int ciphertext");
-
-//     // Step 3: Decrypt the result vector
-//     start = std::chrono::high_resolution_clock::now();
-//     std::vector<int64_t> decrypted_results(result_vector.size());
-//     for (size_t i = 0; i < result_vector.size(); i++) {
-//         decrypted_results[i] = decrypt_int64_t(result_vector[i], secret_key);
-//     }
-//     end = std::chrono::high_resolution_clock::now();
-//     printTimingResults(start, end, "Zama Decrypt 500k 64bit signed int ciphertext");
-
-//     // Step 4: Print the decrypted results vector
-//     std::cout << "Decrypted result vector: ";
-//     for (const auto& result : decrypted_results) {
-//         std::cout << result << " ";
-//     }
-//     std::cout << std::endl();
-
-//     // Free resources
-//     for (size_t i = 0; i < length; i++) {
-//         delete_gate_bootstrapping_ciphertext_array(64, encrypted_input[i]);
-//     }
-//     for (size_t i = 0; i < result_vector.size(); i++) {
-//         delete_gate_bootstrapping_ciphertext_array(64, result_vector[i]);
-//     }
-// }
-
-
-// Main driver function
 void zama_test_driver(const std::vector<int64_t>& data) {
 
     int ok = 0;
+
     // Prepare the config builder for the high level API and choose which types to enable
     ConfigBuilder *builder;
     Config *config;
@@ -122,38 +29,286 @@ void zama_test_driver(const std::vector<int64_t>& data) {
     // Set the server key for the current thread
     set_server_key(server_key);
 
-    FheInt64 *lhs = NULL;
-    FheInt64 *rhs = NULL;
-    FheInt64 *result = NULL;
+    // Create vectors to hold the encrypted values
+    std::vector<FheInt64*> encrypted_data;
+    std::vector<FheInt64*> add_result_data;
+    std::vector<FheInt64*> sub_result_data;
+    std::vector<FheInt64*> mult_result_data;
+    std::vector<FheInt64*> scalar_add_result_data;
+    std::vector<FheInt64*> scalar_sub_result_data;
+    std::vector<FheInt64*> scalar_mult_result_data;
 
-    int64_t clear_lhs = 20l << 32 | 10;
-    int64_t clear_rhs = 2l << 32 | 1;
-
-    ok = fhe_int64_try_encrypt_with_client_key_i64(clear_lhs, client_key, &lhs);
-    assert(ok == 0);
-
-    ok = fhe_int64_try_encrypt_with_client_key_i64(clear_rhs, client_key, &rhs);
-    assert(ok == 0);
-
-    // Compute the addition
-    ok = fhe_int64_add(lhs, rhs, &result);
-    assert(ok == 0);
-
-    int64_t clear_result;
-    // Decrypt
-    ok = fhe_int64_decrypt(result, client_key, &clear_result);
-    assert(ok == 0);
+    std::cout << "Begining zama tests" << std::endl;
+    std::cout << std::flush;
+    //=============================================================================================
+    // Begin Tests
+    //=============================================================================================
 
 
-    // Destroy the ciphertexts
-    fhe_int64_destroy(lhs);
-    fhe_int64_destroy(rhs);
-    fhe_int64_destroy(result);
 
-    // Destroy the keys
+    //==============================[Encrypt 64 bit Signed int]=======================================
+    // Encrypt each value in the input data vector
+    auto start = std::chrono::high_resolution_clock::now();
+    for (const auto& value : data) {
+        FheInt64 *ciphertext = NULL;
+        ok = fhe_int64_try_encrypt_with_client_key_i64(value, client_key, &ciphertext);
+        assert(ok == 0);
+        encrypted_data.push_back(ciphertext);
+    }
+    auto end = std::chrono::high_resolution_clock::now();
+    printTimingResults(start, end, "Zama Encrypt 32bit in 64bit space signed int");
+    std::cout << std::flush;
+
+
+    //==============================[Add 64 bit Signed Int Cipher to Cipher]=======================================
+
+    start = std::chrono::high_resolution_clock::now();
+
+    size_t n = encrypted_data.size();  // Assuming encrypted_data is a vector of FheInt64*
+    for (size_t i = 0; i < n; ++i) {
+        FheInt64* result = NULL;
+
+        // Determine the next index, wrapping around to the first element when reaching the last element
+
+        // Perform the homomorphic subtraction (encrypted_value[i] - encrypted_value[i + 1])
+        ok = fhe_int64_add(encrypted_data[i], encrypted_data[(i + 1) % n], &result);
+        assert(ok == 0);
+
+        // Store the result of the subtraction
+        add_result_data.push_back(result);
+    }
+
+    end = std::chrono::high_resolution_clock::now();
+    printTimingResults(start, end, "Zama add 32bit in 64bit space signed int Cipher Cipher");
+    std::cout << std::flush;
+
+
+    //==============================[add 64 bit Signed Int Cipher to Plain]=======================================
+    start = std::chrono::high_resolution_clock::now();
+    n = encrypted_data.size();  // Assuming encrypted_data is a vector of FheInt64*
+    for (size_t i = 0; i < n; ++i) {
+        FheInt64* result = NULL;
+        // Perform the homomorphic subtraction (encrypted_value[i] - encrypted_value[i + 1])
+        ok = fhe_int64_scalar_add(encrypted_data[i], data[(i + 1) % n], &result);
+        assert(ok == 0);
+
+        // Store the result of the subtraction
+        scalar_add_result_data.push_back(result);
+    }
+    end = std::chrono::high_resolution_clock::now();
+    printTimingResults(start, end, "Zama add 32bit in 64bit space signed int Cipher Scalar");
+    std::cout << std::flush;
+
+    //==============================[Sub 64 bit Signed Int Cipher to Cipher]=======================================
+
+    start = std::chrono::high_resolution_clock::now();
+
+    n = encrypted_data.size();  // Assuming encrypted_data is a vector of FheInt64*
+    for (size_t i = 0; i < n; ++i) {
+        FheInt64* result = NULL;
+
+        // Determine the next index, wrapping around to the first element when reaching the last element
+
+        // Perform the homomorphic subtraction (encrypted_value[i] - encrypted_value[i + 1])
+        ok = fhe_int64_sub(encrypted_data[i], encrypted_data[(i + 1) % n], &result);
+        assert(ok == 0);
+
+        // Store the result of the subtraction
+        sub_result_data.push_back(result);
+    }
+
+    end = std::chrono::high_resolution_clock::now();
+    printTimingResults(start, end, "Zama sub 32bit in 64bit space signed int Cipher Cipher");
+    std::cout << std::flush;
+
+
+    //==============================[sub 64 bit Signed Int Cipher to Plain]=======================================
+    start = std::chrono::high_resolution_clock::now();
+    n = encrypted_data.size();  // Assuming encrypted_data is a vector of FheInt64*
+    for (size_t i = 0; i < n; ++i) {
+        FheInt64* result = NULL;
+        // Perform the homomorphic subtraction (encrypted_value[i] - encrypted_value[i + 1])
+        ok = fhe_int64_scalar_sub(encrypted_data[i], data[(i + 1) % n], &result);
+        assert(ok == 0);
+
+        // Store the result of the subtraction
+        scalar_sub_result_data.push_back(result);
+    }
+    end = std::chrono::high_resolution_clock::now();
+    printTimingResults(start, end, "Zama sub 32bit in 64bit space signed int Cipher Scalar");
+    std::cout << std::flush;
+
+    //==============================[Mult 64 bit Signed Int Cipher to Cipher]=======================================
+
+    // Perform the homomorphic multiplication (mult each element to itself)
+    start = std::chrono::high_resolution_clock::now();
+    for (FheInt64* encrypted_value : encrypted_data) {
+        FheInt64* result = NULL;
+        ok = fhe_int64_mul(encrypted_value, encrypted_value, &result);  // sub the encrypted value to itself
+        assert(ok == 0);
+        mult_result_data.push_back(result);
+    }
+    end = std::chrono::high_resolution_clock::now();
+    printTimingResults(start, end, "Zama mult 32bit in 64bit space signed int Cipher Cipher");
+    std::cout << std::flush;
+
+    //==============================[mult 64 bit Signed Int Cipher to Plain]=======================================
+
+    // Perform the homomorphic addition (adding each element to itself)
+    start = std::chrono::high_resolution_clock::now();
+    for (int i = 0; i <= encrypted_data.size(); i++) {
+        FheInt64* result = NULL;
+        ok = fhe_int64_scalar_mul(encrypted_data[i], data[i], &result);  // Add the encrypted value to itself
+        assert(ok == 0);
+        scalar_mult_result_data.push_back(result);
+    }
+    end = std::chrono::high_resolution_clock::now();
+    printTimingResults(start, end, "Zama mult 32bit in 64bit space signed int Cipher Scalar");
+    std::cout << std::flush;
+
+    //==============================[Decrypt Added 64 bit Signed Int Cipher to Cipher]=======================================
+
+    // Decrypt the results and store them in a new vector
+    std::vector<int64_t> decrypted_results_add;
+    start = std::chrono::high_resolution_clock::now();
+    for (FheInt64* result : add_result_data) {
+        int64_t decrypted_value;
+        ok = fhe_int64_decrypt(result, client_key, &decrypted_value);
+        assert(ok == 0);
+        decrypted_results_add.push_back(decrypted_value);
+    }
+    end = std::chrono::high_resolution_clock::now();
+    printTimingResults(start, end, "Zama decrypt added 32bit in 64bit space signed int Cipher Cipher");
+    std::cout << std::flush;
+
+
+    //==============================[Decrypt Added 64 bit Signed Int Cipher to Scalar]=======================================
+
+    // Decrypt the results and store them in a new vector
+    std::vector<int64_t> decrypted_results_add_scalar;
+    start = std::chrono::high_resolution_clock::now();
+    for (FheInt64* result : scalar_add_result_data) {
+        int64_t decrypted_value;
+        ok = fhe_int64_decrypt(result, client_key, &decrypted_value);
+        assert(ok == 0);
+        decrypted_results_add_scalar.push_back(decrypted_value);
+    }
+    end = std::chrono::high_resolution_clock::now();
+    printTimingResults(start, end, "Zama decrypt added 32bit in 64bit space signed int Cipher Scalar");
+    std::cout << std::flush;
+
+
+    //==============================[Decrypt Subtracted 64 bit Signed Int Cipher to Cipher]=======================================
+
+    // Decrypt the results and store them in a new vector
+    std::vector<int64_t> decrypted_results_sub;
+    start = std::chrono::high_resolution_clock::now();
+    for (FheInt64* result : sub_result_data) {
+        int64_t decrypted_value;
+        ok = fhe_int64_decrypt(result, client_key, &decrypted_value);
+        assert(ok == 0);
+        decrypted_results_sub.push_back(decrypted_value);
+    }
+    end = std::chrono::high_resolution_clock::now();
+    printTimingResults(start, end, "Zama decrypt sub 32bit in 64bit space signed int Cipher Cipher");
+    std::cout << std::flush;
+
+
+    //==============================[Decrypt Subtracted 64 bit Signed Int Cipher to Scalar]=======================================
+
+    // Decrypt the results and store them in a new vector
+    std::vector<int64_t> decrypted_results_sub_scalar;
+    start = std::chrono::high_resolution_clock::now();
+    for (FheInt64* result : scalar_sub_result_data) {
+        int64_t decrypted_value;
+        ok = fhe_int64_decrypt(result, client_key, &decrypted_value);
+        assert(ok == 0);
+        decrypted_results_sub_scalar.push_back(decrypted_value);
+    }
+    end = std::chrono::high_resolution_clock::now();
+    printTimingResults(start, end, "Zama decrypt subtracted 32bit in 64bit space signed int Cipher Scalar");
+    std::cout << std::flush;
+
+    //==============================[Decrypt Multiplied 64 bit Signed Int Cipher to Cipher]=======================================
+
+    // Decrypt the results and store them in a new vector
+    std::vector<int64_t> decrypted_results_mult;
+    start = std::chrono::high_resolution_clock::now();
+    for (FheInt64* result : sub_result_data) {
+        int64_t decrypted_value;
+        ok = fhe_int64_decrypt(result, client_key, &decrypted_value);
+        assert(ok == 0);
+        decrypted_results_mult.push_back(decrypted_value);
+    }
+    end = std::chrono::high_resolution_clock::now();
+    printTimingResults(start, end, "Zama decrypt mult 32bit in 64bit space signed int Cipher Cipher");
+    std::cout << std::flush;
+
+
+    //==============================[Decrypt Mult 64 bit Signed Int Cipher to Scalar]=======================================
+
+    // Decrypt the results and store them in a new vector
+    std::vector<int64_t> decrypted_results_mult_scalar;
+    start = std::chrono::high_resolution_clock::now();
+    for (FheInt64* result : scalar_mult_result_data) {
+        int64_t decrypted_value;
+        ok = fhe_int64_decrypt(result, client_key, &decrypted_value);
+        assert(ok == 0);
+        decrypted_results_mult_scalar.push_back(decrypted_value);
+    }
+    end = std::chrono::high_resolution_clock::now();
+    printTimingResults(start, end, "Zama decrypt multiplied 32bit in 64bit space space signed int Cipher Scalar");
+    std::cout << std::flush;
+
+    //=============================================================================================
+    // End Tests
+    //=============================================================================================
+
+
+    //==============================[Assert Accuracy]=======================================
+
+    // std::cout << "Test Comparision" << std::endl;
+    // // test the results
+    // n = encrypted_data.size();  // Assuming encrypted_data is a vector of FheInt64*
+    // for (int i = 0; i<=data.size(); i++) {
+    //     std::cout << "Cipher Cipher" << std::endl;
+    //     std::cout <<  data[i] << " + "<< data[(i + 1) % n] << " = Normal: " <<  data[i] + data[(i + 1) % n] << " = FHE: " << decrypted_results_add[i] << std::endl;
+    //     std::cout <<  data[i] << " - "<< data[(i + 1) % n] << " = Normal: " <<  data[i] - data[(i + 1) % n] << " = FHE: " << decrypted_results_sub[i] << std::endl;
+    //     // std::cout <<  data[i] << " * "<< data[i] << " = Normal: " <<  data[i] * data[i] << " = FHE: " << decrypted_results_mult[i] << std::endl;
+    //     std::cout << "Cipher Scalar" << std::endl;
+    //     std::cout <<  data[i] << " + "<< data[(i + 1) % n] << " = Normal: " <<  data[i] + data[(i + 1) % n] << " = FHE: " << decrypted_results_add_scalar[i] << std::endl;
+    //     std::cout <<  data[i] << " - "<< data[(i + 1) % n] << " = Normal: " <<  data[i] - data[(i + 1) % n] << " = FHE: " << decrypted_results_sub_scalar[i] << std::endl;
+    //     // std::cout <<  data[i] << " + "<< data[i] << " = Normal: " <<  data[i] * data[i] << " = FHE: " << decrypted_results_mult_scalar[i] << std::endl;
+    // }
+
+    //==============================[Cleanup]=======================================
+
+    std::cout << "Data Free" << std::endl;
+    // Clean up ciphertexts and keys
+    for (FheInt64* encrypted_value : encrypted_data) {
+        fhe_int64_destroy(encrypted_value);
+    }
+    for (FheInt64* result : add_result_data) {
+        fhe_int64_destroy(result);
+    }
+    for (FheInt64* result : sub_result_data) {
+        fhe_int64_destroy(result);
+    }
+    for (FheInt64* result : mult_result_data) {
+        fhe_int64_destroy(result);
+    }
+
+    for (FheInt64* result : scalar_add_result_data) {
+        fhe_int64_destroy(result);
+    }
+    for (FheInt64* result : scalar_sub_result_data) {
+        fhe_int64_destroy(result);
+    }
+    for (FheInt64* result : scalar_mult_result_data) {
+        fhe_int64_destroy(result);
+    }
+
+    std::cout << "Key Free" << std::endl;
     client_key_destroy(client_key);
     server_key_destroy(server_key);
-
-    printf("FHE computation successful!\n");
-
 }
