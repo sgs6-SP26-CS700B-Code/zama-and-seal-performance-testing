@@ -9,7 +9,8 @@ add_executable(${EXECUTABLE_NAME} ${PERFORMANCE_TEST_HDRS} ${PERFORMANCE_TEST_SR
 target_include_directories(${EXECUTABLE_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Link against tfhe, and other necessary libraries
-target_link_libraries(${EXECUTABLE_NAME} LINK_PUBLIC tfhe m pthread dl)
+target_link_libraries(${EXECUTABLE_NAME} LINK_PUBLIC SEAL::seal tfhe m pthread dl)
+add_dependencies(${EXECUTABLE_NAME} SEAL::seal)
 
 # Ensure warnings are treated as errors
 target_compile_options(${EXECUTABLE_NAME} PRIVATE -Werror)

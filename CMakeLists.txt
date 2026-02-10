@@ -47,6 +47,10 @@ message("CMAKE_CXX_COMPILER_ID: ${CMAKE_CXX_FLAGS}")
 message("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 message("")
 
+# Adds zama Libs directly
+add_subdirectory(submodules/seal/)
+
+
 # Set the path to where the TFHE library and headers are located
 set(TFHE_C_API "${CMAKE_SOURCE_DIR}/submodules/zama-rs/target/release/")
 

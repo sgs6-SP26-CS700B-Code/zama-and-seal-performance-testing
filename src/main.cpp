@@ -1,6 +1,7 @@
 
 #include <testTimer.hpp>
 #include <zama.hpp>
+#include <seal.hpp>
 #include <chrono>
 #include <string>
 #include <vector>
@@ -69,19 +70,42 @@ void testZama(size_t dataQuantity, const string& testName, const std::vector<int
     cout << "|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|" << endl << endl;
 }
 
-int main()
+void testSeal(size_t dataQuantity, const string& testName, const std::vector<int64_t>& data)
 {
-    const string dataFile = "./1m-32-bit-data.data";
-    cout << "Begining to read 1m lines of signed 32 bit ints into 64 bit buffer from file: " << dataFile << endl;
-    auto signed64BitData = readFileToInt64Vector(dataFile, 1000000);
+    auto dataToTest = getFirstNValues(data, dataQuantity);
+    cout << endl
+         << endl
+         << "|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|" << endl;
+    cout << "|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|" << endl;
+    // Sample function you want to time
+    auto start = std::chrono::high_resolution_clock::now(); // Record start time
+    seal_bgv_test_driver(dataToTest);
+    auto end = std::chrono::high_resolution_clock::now(); // Record end time
 
-    cout << "Finished reading 1m lines of signed 32 bit ints into 64 bit buffer from file: " << dataFile << endl;
+    // Pass the start time, end time, and test name to the print function
+    printTimingResults(start, end, testName);
+
+    cout << "|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|" << endl;
+    cout << "|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|" << endl << endl;
+}
+
+
+void bulk_zama_tests(const std::vector<int64_t>& data)
+{
+
+    cout << "Begining Seal Tests: Note, this runs on 1 thread" << endl;
+
+    testZama(1000, "Seal 1k", data);
+}
+
+void bulk_seal_tests(const std::vector<int64_t>& data)
+{
 
     cout << "Begining Zama Tests: Note, this runs on 16 threads, need more time to modify its automatic threading "
             "using its API"
          << endl;
 
-    testZama(1000, "Zama 1k", signed64BitData);
+    testZama(1000, "Zama 1k", data);
 
     cout << " Skipping the following tests for time limitations: 10k, 100k, 250k, 500k, 1m";
     // testZama(10000, "Zama 10k", signed64BitData);
@@ -89,6 +113,18 @@ int main()
     // testZama(250000, "Zama 250k", signed64BitData);
     // testZama(500000, "Zama 500k", signed64BitData);
     // testZama(1000000, "Zama 1m", signed64BitData);
+}
+
+int main()
+{
+    const string dataFile = "./1m-32-bit-data.data";
+    cout << "Begining to read 1m lines of signed 32 bit ints into 64 bit buffer from file: " << dataFile << endl;
+    auto signed64BitData = readFileToInt64Vector(dataFile, 1000000);
+    cout << "Finished reading 1m lines of signed 32 bit ints into 64 bit buffer from file: " << dataFile << endl;
+
+    // bulk_zama_tests(signed64BitData);
+
+    bulk_seal_tests(signed64BitData);
 
     return 0;
 }
