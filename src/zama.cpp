@@ -8,21 +8,22 @@
 #include <cstdlib>
 #include <assert.h>
 
-void zama_test_driver(const std::vector<int64_t>& data) {
+void zama_test_driver(const std::vector<int64_t>& data)
+{
 
     int ok = 0;
 
     // Prepare the config builder for the high level API and choose which types to enable
-    ConfigBuilder *builder;
-    Config *config;
+    ConfigBuilder* builder;
+    Config*        config;
 
     // Put the builder in a default state without any types enabled
     config_builder_default(&builder);
     // Populate the config
     config_builder_build(builder, &config);
 
-    ClientKey *client_key = NULL;
-    ServerKey *server_key = NULL;
+    ClientKey* client_key = NULL;
+    ServerKey* server_key = NULL;
 
     // Generate the keys using the config
     generate_keys(config, &client_key, &server_key);
@@ -49,9 +50,9 @@ void zama_test_driver(const std::vector<int64_t>& data) {
     //==============================[Encrypt 64 bit Signed int]=======================================
     // Encrypt each value in the input data vector
     auto start = std::chrono::high_resolution_clock::now();
-    for (const auto& value : data) {
-        FheInt64 *ciphertext = NULL;
-        ok = fhe_int64_try_encrypt_with_client_key_i64(value, client_key, &ciphertext);
+    for(const auto& value : data) {
+        FheInt64* ciphertext = NULL;
+        ok                   = fhe_int64_try_encrypt_with_client_key_i64(value, client_key, &ciphertext);
         assert(ok == 0);
         encrypted_data.push_back(ciphertext);
     }
@@ -64,8 +65,8 @@ void zama_test_driver(const std::vector<int64_t>& data) {
 
     start = std::chrono::high_resolution_clock::now();
 
-    size_t n = encrypted_data.size();  // Assuming encrypted_data is a vector of FheInt64*
-    for (size_t i = 0; i < n; ++i) {
+    size_t n = encrypted_data.size(); // Assuming encrypted_data is a vector of FheInt64*
+    for(size_t i = 0; i < n; ++i) {
         FheInt64* result = NULL;
 
         // Determine the next index, wrapping around to the first element when reaching the last element
@@ -85,11 +86,11 @@ void zama_test_driver(const std::vector<int64_t>& data) {
 
     //==============================[add 64 bit Signed Int Cipher to Plain]=======================================
     start = std::chrono::high_resolution_clock::now();
-    n = encrypted_data.size();  // Assuming encrypted_data is a vector of FheInt64*
-    for (size_t i = 0; i < n; ++i) {
+    n     = encrypted_data.size(); // Assuming encrypted_data is a vector of FheInt64*
+    for(size_t i = 0; i < n; ++i) {
         FheInt64* result = NULL;
         // Perform the homomorphic subtraction (encrypted_value[i] - encrypted_value[i + 1])
-        ok = fhe_int64_scalar_add(encrypted_data[i], data[(i + 1) % n], &result);
+        ok               = fhe_int64_scalar_add(encrypted_data[i], data[(i + 1) % n], &result);
         assert(ok == 0);
 
         // Store the result of the subtraction
@@ -103,8 +104,8 @@ void zama_test_driver(const std::vector<int64_t>& data) {
 
     start = std::chrono::high_resolution_clock::now();
 
-    n = encrypted_data.size();  // Assuming encrypted_data is a vector of FheInt64*
-    for (size_t i = 0; i < n; ++i) {
+    n = encrypted_data.size(); // Assuming encrypted_data is a vector of FheInt64*
+    for(size_t i = 0; i < n; ++i) {
         FheInt64* result = NULL;
 
         // Determine the next index, wrapping around to the first element when reaching the last element
@@ -124,11 +125,11 @@ void zama_test_driver(const std::vector<int64_t>& data) {
 
     //==============================[sub 64 bit Signed Int Cipher to Plain]=======================================
     start = std::chrono::high_resolution_clock::now();
-    n = encrypted_data.size();  // Assuming encrypted_data is a vector of FheInt64*
-    for (size_t i = 0; i < n; ++i) {
+    n     = encrypted_data.size(); // Assuming encrypted_data is a vector of FheInt64*
+    for(size_t i = 0; i < n; ++i) {
         FheInt64* result = NULL;
         // Perform the homomorphic subtraction (encrypted_value[i] - encrypted_value[i + 1])
-        ok = fhe_int64_scalar_sub(encrypted_data[i], data[(i + 1) % n], &result);
+        ok               = fhe_int64_scalar_sub(encrypted_data[i], data[(i + 1) % n], &result);
         assert(ok == 0);
 
         // Store the result of the subtraction
@@ -142,8 +143,8 @@ void zama_test_driver(const std::vector<int64_t>& data) {
 
     start = std::chrono::high_resolution_clock::now();
 
-    n = encrypted_data.size();  // Assuming encrypted_data is a vector of FheInt64*
-    for (size_t i = 0; i < n; ++i) {
+    n = encrypted_data.size(); // Assuming encrypted_data is a vector of FheInt64*
+    for(size_t i = 0; i < n; ++i) {
         FheInt64* result = NULL;
 
         // Determine the next index, wrapping around to the first element when reaching the last element
@@ -163,11 +164,11 @@ void zama_test_driver(const std::vector<int64_t>& data) {
 
     //==============================[mult 64 bit Signed Int Cipher to Plain]=======================================
     start = std::chrono::high_resolution_clock::now();
-    n = encrypted_data.size();  // Assuming encrypted_data is a vector of FheInt64*
-    for (size_t i = 0; i < n; ++i) {
+    n     = encrypted_data.size(); // Assuming encrypted_data is a vector of FheInt64*
+    for(size_t i = 0; i < n; ++i) {
         FheInt64* result = NULL;
         // Perform the homomorphic subtraction (encrypted_value[i] - encrypted_value[i + 1])
-        ok = fhe_int64_scalar_mul(encrypted_data[i], data[(i + 1) % n], &result);
+        ok               = fhe_int64_scalar_mul(encrypted_data[i], data[(i + 1) % n], &result);
         assert(ok == 0);
 
         // Store the result of the subtraction
@@ -182,7 +183,7 @@ void zama_test_driver(const std::vector<int64_t>& data) {
     // Decrypt the results and store them in a new vector
     std::vector<int64_t> decrypted_results_add;
     start = std::chrono::high_resolution_clock::now();
-    for (FheInt64* result : add_result_data) {
+    for(FheInt64* result : add_result_data) {
         int64_t decrypted_value;
         ok = fhe_int64_decrypt(result, client_key, &decrypted_value);
         assert(ok == 0);
@@ -198,7 +199,7 @@ void zama_test_driver(const std::vector<int64_t>& data) {
     // Decrypt the results and store them in a new vector
     std::vector<int64_t> decrypted_results_add_scalar;
     start = std::chrono::high_resolution_clock::now();
-    for (FheInt64* result : scalar_add_result_data) {
+    for(FheInt64* result : scalar_add_result_data) {
         int64_t decrypted_value;
         ok = fhe_int64_decrypt(result, client_key, &decrypted_value);
         assert(ok == 0);
@@ -214,7 +215,7 @@ void zama_test_driver(const std::vector<int64_t>& data) {
     // Decrypt the results and store them in a new vector
     std::vector<int64_t> decrypted_results_sub;
     start = std::chrono::high_resolution_clock::now();
-    for (FheInt64* result : sub_result_data) {
+    for(FheInt64* result : sub_result_data) {
         int64_t decrypted_value;
         ok = fhe_int64_decrypt(result, client_key, &decrypted_value);
         assert(ok == 0);
@@ -230,7 +231,7 @@ void zama_test_driver(const std::vector<int64_t>& data) {
     // Decrypt the results and store them in a new vector
     std::vector<int64_t> decrypted_results_sub_scalar;
     start = std::chrono::high_resolution_clock::now();
-    for (FheInt64* result : scalar_sub_result_data) {
+    for(FheInt64* result : scalar_sub_result_data) {
         int64_t decrypted_value;
         ok = fhe_int64_decrypt(result, client_key, &decrypted_value);
         assert(ok == 0);
@@ -245,7 +246,7 @@ void zama_test_driver(const std::vector<int64_t>& data) {
     // Decrypt the results and store them in a new vector
     std::vector<int64_t> decrypted_results_mult;
     start = std::chrono::high_resolution_clock::now();
-    for (FheInt64* result : sub_result_data) {
+    for(FheInt64* result : sub_result_data) {
         int64_t decrypted_value;
         ok = fhe_int64_decrypt(result, client_key, &decrypted_value);
         assert(ok == 0);
@@ -261,7 +262,7 @@ void zama_test_driver(const std::vector<int64_t>& data) {
     // Decrypt the results and store them in a new vector
     std::vector<int64_t> decrypted_results_mult_scalar;
     start = std::chrono::high_resolution_clock::now();
-    for (FheInt64* result : scalar_mult_result_data) {
+    for(FheInt64* result : scalar_mult_result_data) {
         int64_t decrypted_value;
         ok = fhe_int64_decrypt(result, client_key, &decrypted_value);
         assert(ok == 0);
@@ -296,26 +297,26 @@ void zama_test_driver(const std::vector<int64_t>& data) {
 
     std::cout << "Data Free" << std::endl;
     // Clean up ciphertexts and keys
-    for (FheInt64* encrypted_value : encrypted_data) {
+    for(FheInt64* encrypted_value : encrypted_data) {
         fhe_int64_destroy(encrypted_value);
     }
-    for (FheInt64* result : add_result_data) {
+    for(FheInt64* result : add_result_data) {
         fhe_int64_destroy(result);
     }
-    for (FheInt64* result : sub_result_data) {
+    for(FheInt64* result : sub_result_data) {
         fhe_int64_destroy(result);
     }
-    for (FheInt64* result : mult_result_data) {
+    for(FheInt64* result : mult_result_data) {
         fhe_int64_destroy(result);
     }
 
-    for (FheInt64* result : scalar_add_result_data) {
+    for(FheInt64* result : scalar_add_result_data) {
         fhe_int64_destroy(result);
     }
-    for (FheInt64* result : scalar_sub_result_data) {
+    for(FheInt64* result : scalar_sub_result_data) {
         fhe_int64_destroy(result);
     }
-    for (FheInt64* result : scalar_mult_result_data) {
+    for(FheInt64* result : scalar_mult_result_data) {
         fhe_int64_destroy(result);
     }
 

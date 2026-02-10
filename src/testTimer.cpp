@@ -5,15 +5,17 @@
 #include <chrono>
 
 // Method to print the timing results in multiple units
-void printTimingResults(const std::chrono::high_resolution_clock::time_point& start,
-                        const std::chrono::high_resolution_clock::time_point& end,
-                        const std::string& testName) {
+void printTimingResults(
+    const std::chrono::high_resolution_clock::time_point& start,
+    const std::chrono::high_resolution_clock::time_point& end,
+    const std::string&                                    testName)
+{
     auto duration = end - start;
 
-    auto seconds = std::chrono::duration_cast<std::chrono::seconds>(duration);
+    auto seconds      = std::chrono::duration_cast<std::chrono::seconds>(duration);
     auto milliseconds = std::chrono::duration_cast<std::chrono::milliseconds>(duration);
     auto microseconds = std::chrono::duration_cast<std::chrono::microseconds>(duration);
-    auto nanoseconds = std::chrono::duration_cast<std::chrono::nanoseconds>(duration);
+    auto nanoseconds  = std::chrono::duration_cast<std::chrono::nanoseconds>(duration);
 
     std::cout << "\n";
     std::cout << "==========================================================================\n";
