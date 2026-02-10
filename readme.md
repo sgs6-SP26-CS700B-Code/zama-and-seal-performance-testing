@@ -21,6 +21,8 @@ Additionally, the data used is included with this repo to keep things simple, ev
 
 ---
 
+Currently does not compile, comment out the code in seal.cpp and uncomment the zama function call in main to test zama. Yeah I could do a separate branch, but its more of a hassle right now.
+
 Currently, the Zama test code is commented out in the main.cpp (directly in the main function) as I collected the initial results and want to quickly start ignoring it to work on the SEAL tests. To re-enable, just uncomment and compile again. If needed I can make fancier ways to enable and disable tests, but for now the scope of this repo is limited to raw testing frameworks.
 
 ---
