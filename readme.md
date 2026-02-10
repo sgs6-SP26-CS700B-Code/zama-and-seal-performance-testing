@@ -6,13 +6,22 @@
 This repo is for testing SEAL and Zama for performance comparisons between the following operations:
 - Addition
 - Multiplication
-- Batching (Both?)
+- Batching (Seal Only, ZAMA does not support batching fundamentally as it is based on Torus FHE, torus based cryptography is incompatible with the concept)
 
 It is planned to be tested against 64 bit signed numbers, but 32 bit numbers were prepared as well, and 128 bit numbers will be generated but may not be used.
 
 This repo is part of a collection of testing / learning repos scrapped together for CS700B to gain an understanding of various algorithms and methods to do FHE and run it in SGX. Unlike the others, I decided to make this a more... simple project structure to make it easier to tell whats being compared rather than getting familiar with APIs. 
 
 Additionally, the data used is included with this repo to keep things simple, even though it does realistically make the git repo much larger.
+
+
+---
+
+# Current State
+
+---
+
+Currently, the Zama test code is commented out in the main.cpp (directly in the main function) as I collected the initial results and want to quickly start ignoring it to work on the SEAL tests. To re-enable, just uncomment and compile again. If needed I can make fancier ways to enable and disable tests, but for now the scope of this repo is limited to raw testing frameworks.
 
 ---
 
