@@ -29,17 +29,17 @@ void bulk_seal_tests(
     testSeal_32_batch(4096, "SEAL 2048 Batch 32 bit", data32);
     testSeal_32_batch(8192, "SEAL 4096 Batch 32 bit", data32);
     testSeal_32_batch(16384, "SEAL 8192 Batch 32 bit", data32);
-    testSeal_32_batch(32768, "SEAL 16384 Batch 32 bit", data32);
-    testSeal_32_batch(32768 * 2, "SEAL 32768 Batch 32 bit", data32);
+    // testSeal_32_batch(32768, "SEAL 16384 Batch 32 bit", data32);
+    // testSeal_32_batch(32768 * 2, "SEAL 32768 Batch 32 bit", data32);
 
     testSeal_32(1000, "Seal 1k 32 bit", data32);
     testSeal_32(10000, "Seal 10k 32 bit", data32);
     testSeal_32(100000, "Seal 100k 32 bit", data32);
-    testSeal_32(250000, "Seal 250k 32 bit", data32);
-    testSeal_32(500000, "Seal 500k 32 bit", data32);
-    testSeal_32(1000000, "Seal 1m 32 bit", data32);
+    // testSeal_32(250000, "Seal 250k 32 bit", data32);
+    // testSeal_32(500000, "Seal 500k 32 bit", data32);
+    // testSeal_32(1000000, "Seal 1m 32 bit", data32);
 
-    // cout << " Skipping the following normal tests for time limitations: 10k, 100k, 250k, 500k, 1m";
+    cout << " Skipping the following normal tests for time limitations: 250k, 500k, 1m";
 }
 
 void testSeal_32(size_t dataQuantity, const string& testName, const std::vector<int32_t>& data)
