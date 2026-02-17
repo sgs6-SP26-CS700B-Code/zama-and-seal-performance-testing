@@ -21,9 +21,7 @@ Additionally, the data used is included with this repo to keep things simple, ev
 
 ---
 
-Currently does not compile, comment out the code in seal.cpp and uncomment the zama function call in main to test zama. Yeah I could do a separate branch, but its more of a hassle right now.
-
-Currently, the Zama test code is commented out in the main.cpp (directly in the main function) as I collected the initial results and want to quickly start ignoring it to work on the SEAL tests. To re-enable, just uncomment and compile again. If needed I can make fancier ways to enable and disable tests, but for now the scope of this repo is limited to raw testing frameworks.
+Current configuration is for zama and seal to run, seal first with all tests, zama multi threaded for a small amount of tests. I need to figure out the fine tuning for SEAL parameters (or see if there is an issue with overflows from signed values?), particularly for multiplication. That being said, the current code is whats being used to collect the next stage of data. The next batch will try to fix these, as well as test out packing in zama in an attempt to optimize things?
 
 ---
 

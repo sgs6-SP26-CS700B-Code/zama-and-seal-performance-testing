@@ -1,8 +1,9 @@
 #!/bin/bash
 
+BIT_16_DATA="./1m-16-bit-data.data"
 #BIT_32_DATA="./1m-32-bit-data.data"
 #BIT_64_DATA="./1m-64-bit-data.data"
-BIT_128_DATA="./1m-128-bit-data.data"
+# BIT_128_DATA="./1m-128-bit-data.data"
 MAX_LOOP=1000000
 
 if [ -f "$BIT_32_DATA" ]; then
@@ -13,6 +14,45 @@ if [ -f "$BIT_64_DATA" ]; then
     echo "Old copy of $BIT_64_DATA detected, deleting."
     rm "$BIT_64_DATA"
 fi
+
+
+echo "Generating 1m 16 bit signed numbers"
+# Generate random numbers and append to the file
+for i in $(seq 1 $MAX_LOOP); do
+    # Calculate percentage
+    percent=$((i * 100 / MAX_LOOP))
+
+    # Print progress bar
+    bar=""
+    for ((j = 0; j < percent / 2; j++)); do
+        bar="${bar}#"
+    done
+    # Ensure the progress bar is exactly 50 characters wide
+    printf "\r[%s%s] %d%%" "$bar" $(printf "%-50s" "") "$percent"
+    RAND_NUM_STR=$(od -A n -t dL -N 2 /dev/urandom | tr -d ' ')
+
+    # Bash natively handles 64-bit integers on 64-bit systems.
+    # We explicitly specify the number is a long decimal for safety in the next step.
+    # This variable now holds the raw 64-bit unsigned integer value.
+    UNSIGNED_16BIT=$RAND_NUM_STR
+
+    # To treat it as signed, we need to manually implement two's complement logic
+    # for the most significant bit.
+    # The maximum positive signed 64-bit integer is 2^63 - 1.
+    MAX_SIGNED=$(( 2**15 - 1 ))
+
+    # Check if the generated number is larger than the max positive signed number.
+    if [[ $UNSIGNED_16BIT -gt $MAX_SIGNED ]]; then
+        # If it is, subtract 2^64 to get the negative representation.
+        # 2^64 is too large for bash, so we do subtraction in two parts:
+        # 2^64 = 2 * 2^63
+        SIGNED_16BIT=$(( UNSIGNED_16BIT - 2 * 2**15 ))
+    else
+        SIGNED_16BIT=$UNSIGNED_16BIT
+    fi
+
+    echo "$SIGNED_16BIT" >> $BIT_16_DATA
+done
 
 # echo "Generating 1m 32 bit signed numbers"
 # # Generate random numbers and append to the file
