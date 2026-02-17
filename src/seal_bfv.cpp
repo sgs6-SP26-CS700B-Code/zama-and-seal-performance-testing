@@ -67,7 +67,7 @@ void seal_bfv_test_driver_32_no_mult(const std::vector<int32_t>& data)
     parms.set_poly_modulus_degree(poly_modulus_degree);
     parms.set_coeff_modulus(CoeffModulus::BFVDefault(poly_modulus_degree));
     // Prime must be 1 bit more than the bitlength of the plaintext, so bit_size is 33?
-    parms.set_plain_modulus(PlainModulus::Batching(poly_modulus_degree, 36));
+    parms.set_plain_modulus(PlainModulus::Batching(poly_modulus_degree, 33));
     SEALContext context(parms);
     print_parameters(context);
     cout << "Parameter validation (success): " << context.parameter_error_message() << endl;
@@ -273,7 +273,7 @@ void seal_bfv_test_driver_32_fixed_mults(const std::vector<int32_t>& data)
     parms.set_poly_modulus_degree(poly_modulus_degree);
     parms.set_coeff_modulus(CoeffModulus::BFVDefault(poly_modulus_degree));
     // Prime must be 1 bit more than the bitlength of the plaintext, so bit_size is 33?
-    parms.set_plain_modulus(PlainModulus::Batching(poly_modulus_degree, 36));
+    parms.set_plain_modulus(PlainModulus::Batching(poly_modulus_degree, 33));
     SEALContext context(parms);
     print_parameters(context);
     cout << "Parameter validation (success): " << context.parameter_error_message() << endl;
