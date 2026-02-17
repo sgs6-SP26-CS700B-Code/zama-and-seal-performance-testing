@@ -1,0 +1,2100 @@
+Begining to read 1m lines of signed 64 bit ints into 64 bit buffer from file: ./1m-64-bit-data.data
+Finished reading 1m lines of signed 64 bit ints into 64 bit buffer from file: ./1m-64-bit-data.data
+Begining to read 1m lines of signed 32 bit ints into 32 bit buffer from file: ./1m-32-bit-data.data
+Finished reading 1m lines of signed 32 bit ints into 32 bit buffer from file: ./1m-32-bit-data.data
+Begining to read 1m lines of signed 32 bit ints into 64 bit buffer from file: ./1m-32-bit-data.data
+Finished reading 1m lines of signed 32 bit ints into 64 bit buffer from file: ./1m-32-bit-data.data
+Begining SEAL Tests: Note, this runs on 1 thread, and current parameter configuration does not always have accurate results... Need to figure out fine tuning better, but I currently suspect this is from overflows or underflows
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BFV 32 batch]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BFV
+|   poly_modulus_degree: 32768
+|   coeff_modulus size: 881 (55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 56) bits
+|   plain_modulus: 1099510054913
+\
+Parameter validation (success): valid
+Batching Slot Count = 32768
+
+==========================================================================
+  Timing Results for: Seal bfv batch encode first half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 435us
+	| Time taken (nanoseconds)  | 435601ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv batch encode second half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 517us
+	| Time taken (nanoseconds)  | 517706ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt batch a 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 46ms
+	| Time taken (microseconds) | 46820us
+	| Time taken (nanoseconds)  | 46820512ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt batch b 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 43ms
+	| Time taken (microseconds) | 43452us
+	| Time taken (nanoseconds)  | 43452086ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 4ms
+	| Time taken (microseconds) | 4878us
+	| Time taken (nanoseconds)  | 4878731ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 4ms
+	| Time taken (microseconds) | 4875us
+	| Time taken (nanoseconds)  | 4875302ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode batched 32 bit added in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 22ms
+	| Time taken (microseconds) | 22019us
+	| Time taken (nanoseconds)  | 22019768ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode batched 32 bit subtracted in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 20ms
+	| Time taken (microseconds) | 20433us
+	| Time taken (nanoseconds)  | 20433859ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: SEAL 512 Batch 32 bit BFV
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1198ms
+	| Time taken (microseconds) | 1198585us
+	| Time taken (nanoseconds)  | 1198585212ns
+--------------------------------------------------------------------------
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BGV 32 batch]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 32768
+|   coeff_modulus size: 881 (55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 56) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 32768
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode first half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 439us
+	| Time taken (nanoseconds)  | 439694ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode second half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 435us
+	| Time taken (nanoseconds)  | 435390ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt batch a 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 70ms
+	| Time taken (microseconds) | 70267us
+	| Time taken (nanoseconds)  | 70267512ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt batch b 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 71ms
+	| Time taken (microseconds) | 71856us
+	| Time taken (nanoseconds)  | 71856406ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2787us
+	| Time taken (nanoseconds)  | 2787526ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv subtract two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2763us
+	| Time taken (nanoseconds)  | 2763249ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit added in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 16ms
+	| Time taken (microseconds) | 16814us
+	| Time taken (nanoseconds)  | 16814818ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit subtracted in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15379us
+	| Time taken (nanoseconds)  | 15379242ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: SEAL 512 Batch 32 bit BGV
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 900ms
+	| Time taken (microseconds) | 900397us
+	| Time taken (nanoseconds)  | 900397888ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BFV 32 batch]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BFV
+|   poly_modulus_degree: 32768
+|   coeff_modulus size: 881 (55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 56) bits
+|   plain_modulus: 1099510054913
+\
+Parameter validation (success): valid
+Batching Slot Count = 32768
+
+==========================================================================
+  Timing Results for: Seal bfv batch encode first half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 455us
+	| Time taken (nanoseconds)  | 455839ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv batch encode second half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 455us
+	| Time taken (nanoseconds)  | 455667ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt batch a 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 42ms
+	| Time taken (microseconds) | 42500us
+	| Time taken (nanoseconds)  | 42500181ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt batch b 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 40ms
+	| Time taken (microseconds) | 40815us
+	| Time taken (nanoseconds)  | 40815323ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2788us
+	| Time taken (nanoseconds)  | 2788065ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2767us
+	| Time taken (nanoseconds)  | 2767259ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode batched 32 bit added in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 20ms
+	| Time taken (microseconds) | 20838us
+	| Time taken (nanoseconds)  | 20838180ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode batched 32 bit subtracted in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 19ms
+	| Time taken (microseconds) | 19701us
+	| Time taken (nanoseconds)  | 19701144ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: SEAL 1024 Batch 32 bit BFV
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 835ms
+	| Time taken (microseconds) | 835936us
+	| Time taken (nanoseconds)  | 835936317ns
+--------------------------------------------------------------------------
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BGV 32 batch]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 32768
+|   coeff_modulus size: 881 (55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 56) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 32768
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode first half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 441us
+	| Time taken (nanoseconds)  | 441261ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode second half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 444us
+	| Time taken (nanoseconds)  | 444089ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt batch a 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 68ms
+	| Time taken (microseconds) | 68530us
+	| Time taken (nanoseconds)  | 68530860ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt batch b 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 68ms
+	| Time taken (microseconds) | 68964us
+	| Time taken (nanoseconds)  | 68964126ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2829us
+	| Time taken (nanoseconds)  | 2829791ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv subtract two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2777us
+	| Time taken (nanoseconds)  | 2777962ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit added in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15527us
+	| Time taken (nanoseconds)  | 15527801ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit subtracted in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15185us
+	| Time taken (nanoseconds)  | 15185575ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: SEAL 1024 Batch 32 bit BGV
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 890ms
+	| Time taken (microseconds) | 890302us
+	| Time taken (nanoseconds)  | 890302142ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BFV 32 batch]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BFV
+|   poly_modulus_degree: 32768
+|   coeff_modulus size: 881 (55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 56) bits
+|   plain_modulus: 1099510054913
+\
+Parameter validation (success): valid
+Batching Slot Count = 32768
+
+==========================================================================
+  Timing Results for: Seal bfv batch encode first half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 459us
+	| Time taken (nanoseconds)  | 459822ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv batch encode second half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 446us
+	| Time taken (nanoseconds)  | 446124ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt batch a 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 41ms
+	| Time taken (microseconds) | 41426us
+	| Time taken (nanoseconds)  | 41426766ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt batch b 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 41ms
+	| Time taken (microseconds) | 41070us
+	| Time taken (nanoseconds)  | 41070142ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2775us
+	| Time taken (nanoseconds)  | 2775569ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2746us
+	| Time taken (nanoseconds)  | 2746849ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode batched 32 bit added in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 19ms
+	| Time taken (microseconds) | 19950us
+	| Time taken (nanoseconds)  | 19950858ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode batched 32 bit subtracted in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 19ms
+	| Time taken (microseconds) | 19793us
+	| Time taken (nanoseconds)  | 19793313ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: SEAL 2048 Batch 32 bit BFV
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 839ms
+	| Time taken (microseconds) | 839116us
+	| Time taken (nanoseconds)  | 839116207ns
+--------------------------------------------------------------------------
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BGV 32 batch]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 32768
+|   coeff_modulus size: 881 (55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 56) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 32768
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode first half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 435us
+	| Time taken (nanoseconds)  | 435657ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode second half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 436us
+	| Time taken (nanoseconds)  | 436661ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt batch a 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 68ms
+	| Time taken (microseconds) | 68978us
+	| Time taken (nanoseconds)  | 68978011ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt batch b 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 69ms
+	| Time taken (microseconds) | 69960us
+	| Time taken (nanoseconds)  | 69960503ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2796us
+	| Time taken (nanoseconds)  | 2796012ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv subtract two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2769us
+	| Time taken (nanoseconds)  | 2769922ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit added in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 14ms
+	| Time taken (microseconds) | 14918us
+	| Time taken (nanoseconds)  | 14918171ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit subtracted in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15438us
+	| Time taken (nanoseconds)  | 15438099ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: SEAL 2048 Batch 32 bit BGV
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 893ms
+	| Time taken (microseconds) | 893735us
+	| Time taken (nanoseconds)  | 893735239ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BFV 32 batch]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BFV
+|   poly_modulus_degree: 32768
+|   coeff_modulus size: 881 (55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 56) bits
+|   plain_modulus: 1099510054913
+\
+Parameter validation (success): valid
+Batching Slot Count = 32768
+
+==========================================================================
+  Timing Results for: Seal bfv batch encode first half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 469us
+	| Time taken (nanoseconds)  | 469808ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv batch encode second half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 457us
+	| Time taken (nanoseconds)  | 457896ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt batch a 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 41ms
+	| Time taken (microseconds) | 41652us
+	| Time taken (nanoseconds)  | 41652034ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt batch b 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 40ms
+	| Time taken (microseconds) | 40772us
+	| Time taken (nanoseconds)  | 40772467ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2781us
+	| Time taken (nanoseconds)  | 2781354ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2762us
+	| Time taken (nanoseconds)  | 2762036ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode batched 32 bit added in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 20ms
+	| Time taken (microseconds) | 20306us
+	| Time taken (nanoseconds)  | 20306119ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode batched 32 bit subtracted in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 19ms
+	| Time taken (microseconds) | 19850us
+	| Time taken (nanoseconds)  | 19850684ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: SEAL 4096 Batch 32 bit BFV
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 840ms
+	| Time taken (microseconds) | 840710us
+	| Time taken (nanoseconds)  | 840710286ns
+--------------------------------------------------------------------------
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BGV 32 batch]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 32768
+|   coeff_modulus size: 881 (55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 56) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 32768
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode first half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 445us
+	| Time taken (nanoseconds)  | 445022ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode second half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 442us
+	| Time taken (nanoseconds)  | 442458ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt batch a 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 68ms
+	| Time taken (microseconds) | 68660us
+	| Time taken (nanoseconds)  | 68660455ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt batch b 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 69ms
+	| Time taken (microseconds) | 69239us
+	| Time taken (nanoseconds)  | 69239319ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2817us
+	| Time taken (nanoseconds)  | 2817718ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv subtract two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2769us
+	| Time taken (nanoseconds)  | 2769623ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit added in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15443us
+	| Time taken (nanoseconds)  | 15443739ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit subtracted in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15168us
+	| Time taken (nanoseconds)  | 15168952ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: SEAL 4096 Batch 32 bit BGV
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 893ms
+	| Time taken (microseconds) | 893639us
+	| Time taken (nanoseconds)  | 893639790ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BFV 32 batch]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BFV
+|   poly_modulus_degree: 32768
+|   coeff_modulus size: 881 (55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 56) bits
+|   plain_modulus: 1099510054913
+\
+Parameter validation (success): valid
+Batching Slot Count = 32768
+
+==========================================================================
+  Timing Results for: Seal bfv batch encode first half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 471us
+	| Time taken (nanoseconds)  | 471045ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv batch encode second half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 456us
+	| Time taken (nanoseconds)  | 456502ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt batch a 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 41ms
+	| Time taken (microseconds) | 41615us
+	| Time taken (nanoseconds)  | 41615057ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt batch b 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 40ms
+	| Time taken (microseconds) | 40532us
+	| Time taken (nanoseconds)  | 40532707ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2796us
+	| Time taken (nanoseconds)  | 2796329ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2754us
+	| Time taken (nanoseconds)  | 2754393ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode batched 32 bit added in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 19ms
+	| Time taken (microseconds) | 19978us
+	| Time taken (nanoseconds)  | 19978322ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode batched 32 bit subtracted in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 19ms
+	| Time taken (microseconds) | 19684us
+	| Time taken (nanoseconds)  | 19684709ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: SEAL 8192 Batch 32 bit BFV
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 838ms
+	| Time taken (microseconds) | 838383us
+	| Time taken (nanoseconds)  | 838383857ns
+--------------------------------------------------------------------------
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BGV 32 batch]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 32768
+|   coeff_modulus size: 881 (55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 55 + 56) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 32768
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode first half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 472us
+	| Time taken (nanoseconds)  | 472983ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode second half 32 bit dataset in 64bit encoder
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 459us
+	| Time taken (nanoseconds)  | 459035ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt batch a 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 69ms
+	| Time taken (microseconds) | 69012us
+	| Time taken (nanoseconds)  | 69012902ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt batch b 32 bit in 64 encode
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 69ms
+	| Time taken (microseconds) | 69411us
+	| Time taken (nanoseconds)  | 69411524ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2829us
+	| Time taken (nanoseconds)  | 2829061ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv subtract two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2776us
+	| Time taken (nanoseconds)  | 2776882ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit added in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15428us
+	| Time taken (nanoseconds)  | 15428856ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit subtracted in 64 bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15461us
+	| Time taken (nanoseconds)  | 15461171ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: SEAL 8192 Batch 32 bit BGV
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 893ms
+	| Time taken (microseconds) | 893849us
+	| Time taken (nanoseconds)  | 893849789ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BFV 32]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BFV
+|   poly_modulus_degree: 4096
+|   coeff_modulus size: 109 (36 + 36 + 37) bits
+|   plain_modulus: 8589852673
+\
+Parameter validation (success): valid
+
+==========================================================================
+  Timing Results for: Seal bfv encode plaintext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 43ms
+	| Time taken (microseconds) | 43791us
+	| Time taken (nanoseconds)  | 43791771ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt ciphertext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1099ms
+	| Time taken (microseconds) | 1099267us
+	| Time taken (nanoseconds)  | 1099267168ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 71ms
+	| Time taken (microseconds) | 71880us
+	| Time taken (nanoseconds)  | 71880438ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 76ms
+	| Time taken (microseconds) | 76292us
+	| Time taken (nanoseconds)  | 76292266ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 102ms
+	| Time taken (microseconds) | 102833us
+	| Time taken (nanoseconds)  | 102833451ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 105ms
+	| Time taken (microseconds) | 105212us
+	| Time taken (nanoseconds)  | 105212541ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 347ms
+	| Time taken (microseconds) | 347676us
+	| Time taken (nanoseconds)  | 347676918ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 349ms
+	| Time taken (microseconds) | 349081us
+	| Time taken (nanoseconds)  | 349081935ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 350ms
+	| Time taken (microseconds) | 350124us
+	| Time taken (nanoseconds)  | 350124670ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 349ms
+	| Time taken (microseconds) | 349312us
+	| Time taken (nanoseconds)  | 349312114ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal 1k 32 bit BFV
+==========================================================================
+	| Time taken (seconds)      | 2s
+	| Time taken (milliseconds) | 2899ms
+	| Time taken (microseconds) | 2899746us
+	| Time taken (nanoseconds)  | 2899746202ns
+--------------------------------------------------------------------------
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BGV 32]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 4096
+|   coeff_modulus size: 109 (36 + 36 + 37) bits
+\
+Parameter validation (success): valid
+
+==========================================================================
+  Timing Results for: Seal bgv encode plaintext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 44ms
+	| Time taken (microseconds) | 44446us
+	| Time taken (nanoseconds)  | 44446469ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt ciphertext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1519ms
+	| Time taken (microseconds) | 1519192us
+	| Time taken (nanoseconds)  | 1519192067ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv add two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 35ms
+	| Time taken (microseconds) | 35778us
+	| Time taken (nanoseconds)  | 35778741ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv subtract two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 36ms
+	| Time taken (microseconds) | 36351us
+	| Time taken (nanoseconds)  | 36351719ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv add one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 180ms
+	| Time taken (microseconds) | 180493us
+	| Time taken (nanoseconds)  | 180493883ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv subtract one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 180ms
+	| Time taken (microseconds) | 180555us
+	| Time taken (nanoseconds)  | 180555298ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 234ms
+	| Time taken (microseconds) | 234297us
+	| Time taken (nanoseconds)  | 234297133ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 231ms
+	| Time taken (microseconds) | 231774us
+	| Time taken (nanoseconds)  | 231774083ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 230ms
+	| Time taken (microseconds) | 230689us
+	| Time taken (nanoseconds)  | 230689869ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 230ms
+	| Time taken (microseconds) | 230021us
+	| Time taken (nanoseconds)  | 230021294ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal 1k 32 bit BGV
+==========================================================================
+	| Time taken (seconds)      | 2s
+	| Time taken (milliseconds) | 2927ms
+	| Time taken (microseconds) | 2927932us
+	| Time taken (nanoseconds)  | 2927932140ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BFV 32]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BFV
+|   poly_modulus_degree: 4096
+|   coeff_modulus size: 109 (36 + 36 + 37) bits
+|   plain_modulus: 8589852673
+\
+Parameter validation (success): valid
+
+==========================================================================
+  Timing Results for: Seal bfv encode plaintext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 523ms
+	| Time taken (microseconds) | 523402us
+	| Time taken (nanoseconds)  | 523402475ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt ciphertext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 10s
+	| Time taken (milliseconds) | 10737ms
+	| Time taken (microseconds) | 10737159us
+	| Time taken (nanoseconds)  | 10737159532ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 709ms
+	| Time taken (microseconds) | 709752us
+	| Time taken (nanoseconds)  | 709752316ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 718ms
+	| Time taken (microseconds) | 718742us
+	| Time taken (nanoseconds)  | 718742921ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1000ms
+	| Time taken (microseconds) | 1000289us
+	| Time taken (nanoseconds)  | 1000289457ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1019ms
+	| Time taken (microseconds) | 1019818us
+	| Time taken (nanoseconds)  | 1019818395ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 3s
+	| Time taken (milliseconds) | 3604ms
+	| Time taken (microseconds) | 3604435us
+	| Time taken (nanoseconds)  | 3604435328ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 3s
+	| Time taken (milliseconds) | 3472ms
+	| Time taken (microseconds) | 3472716us
+	| Time taken (nanoseconds)  | 3472716844ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 3s
+	| Time taken (milliseconds) | 3477ms
+	| Time taken (microseconds) | 3477208us
+	| Time taken (nanoseconds)  | 3477208475ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 3s
+	| Time taken (milliseconds) | 3474ms
+	| Time taken (microseconds) | 3474251us
+	| Time taken (nanoseconds)  | 3474251893ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal 10k 32 bit BFV
+==========================================================================
+	| Time taken (seconds)      | 28s
+	| Time taken (milliseconds) | 28743ms
+	| Time taken (microseconds) | 28743534us
+	| Time taken (nanoseconds)  | 28743534783ns
+--------------------------------------------------------------------------
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BGV 32]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 4096
+|   coeff_modulus size: 109 (36 + 36 + 37) bits
+\
+Parameter validation (success): valid
+
+==========================================================================
+  Timing Results for: Seal bgv encode plaintext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 439ms
+	| Time taken (microseconds) | 439595us
+	| Time taken (nanoseconds)  | 439595120ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt ciphertext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 15s
+	| Time taken (milliseconds) | 15199ms
+	| Time taken (microseconds) | 15199130us
+	| Time taken (nanoseconds)  | 15199130717ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv add two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 357ms
+	| Time taken (microseconds) | 357702us
+	| Time taken (nanoseconds)  | 357702213ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv subtract two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 361ms
+	| Time taken (microseconds) | 361727us
+	| Time taken (nanoseconds)  | 361727532ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv add one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1802ms
+	| Time taken (microseconds) | 1802960us
+	| Time taken (nanoseconds)  | 1802960303ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv subtract one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 2s
+	| Time taken (milliseconds) | 2055ms
+	| Time taken (microseconds) | 2055848us
+	| Time taken (nanoseconds)  | 2055848756ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 2s
+	| Time taken (milliseconds) | 2290ms
+	| Time taken (microseconds) | 2290259us
+	| Time taken (nanoseconds)  | 2290259784ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 2s
+	| Time taken (milliseconds) | 2295ms
+	| Time taken (microseconds) | 2295389us
+	| Time taken (nanoseconds)  | 2295389872ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 2s
+	| Time taken (milliseconds) | 2289ms
+	| Time taken (microseconds) | 2289795us
+	| Time taken (nanoseconds)  | 2289795978ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 2s
+	| Time taken (milliseconds) | 2299ms
+	| Time taken (microseconds) | 2299543us
+	| Time taken (nanoseconds)  | 2299543308ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal 10k 32 bit BGV
+==========================================================================
+	| Time taken (seconds)      | 29s
+	| Time taken (milliseconds) | 29396ms
+	| Time taken (microseconds) | 29396982us
+	| Time taken (nanoseconds)  | 29396982838ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BFV 32]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BFV
+|   poly_modulus_degree: 4096
+|   coeff_modulus size: 109 (36 + 36 + 37) bits
+|   plain_modulus: 8589852673
+\
+Parameter validation (success): valid
+
+==========================================================================
+  Timing Results for: Seal bfv encode plaintext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 5s
+	| Time taken (milliseconds) | 5164ms
+	| Time taken (microseconds) | 5164084us
+	| Time taken (nanoseconds)  | 5164084744ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt ciphertext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 107s
+	| Time taken (milliseconds) | 107490ms
+	| Time taken (microseconds) | 107490713us
+	| Time taken (nanoseconds)  | 107490713375ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 7s
+	| Time taken (milliseconds) | 7022ms
+	| Time taken (microseconds) | 7022584us
+	| Time taken (nanoseconds)  | 7022584319ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 7s
+	| Time taken (milliseconds) | 7073ms
+	| Time taken (microseconds) | 7073866us
+	| Time taken (nanoseconds)  | 7073866401ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 9s
+	| Time taken (milliseconds) | 9929ms
+	| Time taken (microseconds) | 9929739us
+	| Time taken (nanoseconds)  | 9929739095ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 10s
+	| Time taken (milliseconds) | 10199ms
+	| Time taken (microseconds) | 10199013us
+	| Time taken (nanoseconds)  | 10199013356ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 34s
+	| Time taken (milliseconds) | 34594ms
+	| Time taken (microseconds) | 34594280us
+	| Time taken (nanoseconds)  | 34594280305ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 34s
+	| Time taken (milliseconds) | 34611ms
+	| Time taken (microseconds) | 34611785us
+	| Time taken (nanoseconds)  | 34611785944ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 34s
+	| Time taken (milliseconds) | 34714ms
+	| Time taken (microseconds) | 34714491us
+	| Time taken (nanoseconds)  | 34714491497ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 34s
+	| Time taken (milliseconds) | 34689ms
+	| Time taken (microseconds) | 34689955us
+	| Time taken (nanoseconds)  | 34689955891ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal 100k 32 bit BFV
+==========================================================================
+	| Time taken (seconds)      | 285s
+	| Time taken (milliseconds) | 285507ms
+	| Time taken (microseconds) | 285507500us
+	| Time taken (nanoseconds)  | 285507500857ns
+--------------------------------------------------------------------------
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BGV 32]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 4096
+|   coeff_modulus size: 109 (36 + 36 + 37) bits
+\
+Parameter validation (success): valid
+
+==========================================================================
+  Timing Results for: Seal bgv encode plaintext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 4s
+	| Time taken (milliseconds) | 4388ms
+	| Time taken (microseconds) | 4388422us
+	| Time taken (nanoseconds)  | 4388422817ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt ciphertext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 151s
+	| Time taken (milliseconds) | 151002ms
+	| Time taken (microseconds) | 151002422us
+	| Time taken (nanoseconds)  | 151002422248ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv add two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 3s
+	| Time taken (milliseconds) | 3539ms
+	| Time taken (microseconds) | 3539363us
+	| Time taken (nanoseconds)  | 3539363820ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv subtract two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 3s
+	| Time taken (milliseconds) | 3577ms
+	| Time taken (microseconds) | 3577895us
+	| Time taken (nanoseconds)  | 3577895607ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv add one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 17s
+	| Time taken (milliseconds) | 17922ms
+	| Time taken (microseconds) | 17922173us
+	| Time taken (nanoseconds)  | 17922173679ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv subtract one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 17s
+	| Time taken (milliseconds) | 17885ms
+	| Time taken (microseconds) | 17885874us
+	| Time taken (nanoseconds)  | 17885874648ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 22s
+	| Time taken (milliseconds) | 22812ms
+	| Time taken (microseconds) | 22812565us
+	| Time taken (nanoseconds)  | 22812565352ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 22s
+	| Time taken (milliseconds) | 22810ms
+	| Time taken (microseconds) | 22810200us
+	| Time taken (nanoseconds)  | 22810200506ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 22s
+	| Time taken (milliseconds) | 22928ms
+	| Time taken (microseconds) | 22928578us
+	| Time taken (nanoseconds)  | 22928578421ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 22s
+	| Time taken (milliseconds) | 22860ms
+	| Time taken (microseconds) | 22860672us
+	| Time taken (nanoseconds)  | 22860672006ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal 100k 32 bit BGV
+==========================================================================
+	| Time taken (seconds)      | 289s
+	| Time taken (milliseconds) | 289746ms
+	| Time taken (microseconds) | 289746302us
+	| Time taken (nanoseconds)  | 289746302835ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+ Skipping the following normal tests for time limitations: 250k, 500k, 1mBegining Zama Tests: Note, this runs on 16 threads, will take more work to limit
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+0
+Begining zama tests
+
+==========================================================================
+  Timing Results for: Zama Encrypt 32bit in 32bit space signed int
+==========================================================================
+	| Time taken (seconds)      | 2s
+	| Time taken (milliseconds) | 2155ms
+	| Time taken (microseconds) | 2155891us
+	| Time taken (nanoseconds)  | 2155891961ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama add 32bit in 32bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 127s
+	| Time taken (milliseconds) | 127063ms
+	| Time taken (microseconds) | 127063747us
+	| Time taken (nanoseconds)  | 127063747359ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama add 32bit in 32bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 127s
+	| Time taken (milliseconds) | 127174ms
+	| Time taken (microseconds) | 127174854us
+	| Time taken (nanoseconds)  | 127174854945ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama sub 32bit in 32bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 127s
+	| Time taken (milliseconds) | 127139ms
+	| Time taken (microseconds) | 127139019us
+	| Time taken (nanoseconds)  | 127139019898ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama sub 32bit in 32bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 126s
+	| Time taken (milliseconds) | 126895ms
+	| Time taken (microseconds) | 126895540us
+	| Time taken (nanoseconds)  | 126895540238ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt added 32bit in 32bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 20ms
+	| Time taken (microseconds) | 20426us
+	| Time taken (nanoseconds)  | 20426831ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt added 32bit in 32bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 19ms
+	| Time taken (microseconds) | 19677us
+	| Time taken (nanoseconds)  | 19677304ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt sub 32bit in 32bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 19ms
+	| Time taken (microseconds) | 19768us
+	| Time taken (nanoseconds)  | 19768512ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt subtracted 32bit in 32bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 19ms
+	| Time taken (microseconds) | 19478us
+	| Time taken (nanoseconds)  | 19478562ns
+--------------------------------------------------------------------------
+Data Free
+Key Free
+
+==========================================================================
+  Timing Results for: Zama 1k 32 bit no mult
+==========================================================================
+	| Time taken (seconds)      | 511s
+	| Time taken (milliseconds) | 511484ms
+	| Time taken (microseconds) | 511484321us
+	| Time taken (nanoseconds)  | 511484321916ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+0
+Begining zama tests
+
+==========================================================================
+  Timing Results for: Zama Encrypt 32bit in 64bit space signed int
+==========================================================================
+	| Time taken (seconds)      | 4s
+	| Time taken (milliseconds) | 4097ms
+	| Time taken (microseconds) | 4097128us
+	| Time taken (nanoseconds)  | 4097128820ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama add 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 256s
+	| Time taken (milliseconds) | 256798ms
+	| Time taken (microseconds) | 256798937us
+	| Time taken (nanoseconds)  | 256798937260ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama add 32bit in 64bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 235s
+	| Time taken (milliseconds) | 235862ms
+	| Time taken (microseconds) | 235862972us
+	| Time taken (nanoseconds)  | 235862972776ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama sub 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 255s
+	| Time taken (milliseconds) | 255979ms
+	| Time taken (microseconds) | 255979162us
+	| Time taken (nanoseconds)  | 255979162491ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama sub 32bit in 64bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 235s
+	| Time taken (milliseconds) | 235345ms
+	| Time taken (microseconds) | 235345817us
+	| Time taken (nanoseconds)  | 235345817071ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt added 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 47ms
+	| Time taken (microseconds) | 47439us
+	| Time taken (nanoseconds)  | 47439496ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt added 32bit in 64bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 41ms
+	| Time taken (microseconds) | 41523us
+	| Time taken (nanoseconds)  | 41523401ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt sub 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 39ms
+	| Time taken (microseconds) | 39694us
+	| Time taken (nanoseconds)  | 39694266ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt subtracted 32bit in 64bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 39ms
+	| Time taken (microseconds) | 39294us
+	| Time taken (nanoseconds)  | 39294317ns
+--------------------------------------------------------------------------
+Data Free
+Key Free
+
+==========================================================================
+  Timing Results for: Zama 1k 32 bit in 64 buffer no mult
+==========================================================================
+	| Time taken (seconds)      | 988s
+	| Time taken (milliseconds) | 988888ms
+	| Time taken (microseconds) | 988888586us
+	| Time taken (nanoseconds)  | 988888586577ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+0
+Begining zama tests
+
+==========================================================================
+  Timing Results for: Zama Encrypt 32bit in 64bit space signed int
+==========================================================================
+	| Time taken (seconds)      | 4s
+	| Time taken (milliseconds) | 4101ms
+	| Time taken (microseconds) | 4101672us
+	| Time taken (nanoseconds)  | 4101672646ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama mult 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 4088s
+	| Time taken (milliseconds) | 4088937ms
+	| Time taken (microseconds) | 4088937375us
+	| Time taken (nanoseconds)  | 4088937375571ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama mult 32bit in 64bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 1093s
+	| Time taken (milliseconds) | 1093871ms
+	| Time taken (microseconds) | 1093871922us
+	| Time taken (nanoseconds)  | 1093871922171ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt mult 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 48ms
+	| Time taken (microseconds) | 48015us
+	| Time taken (nanoseconds)  | 48015181ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt multiplied 32bit in 64bit space space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 45ms
+	| Time taken (microseconds) | 45160us
+	| Time taken (nanoseconds)  | 45160331ns
+--------------------------------------------------------------------------
+Data Free
+Key Free
+
+==========================================================================
+  Timing Results for: Zama 1k 32 bit in 64 buffer only mult
+==========================================================================
+	| Time taken (seconds)      | 5187s
+	| Time taken (milliseconds) | 5187628ms
+	| Time taken (microseconds) | 5187628316us
+	| Time taken (nanoseconds)  | 5187628316456ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+0
+Begining zama tests
+
+==========================================================================
+  Timing Results for: Zama Encrypt 32bit in 32bit space signed int
+==========================================================================
+	| Time taken (seconds)      | 20s
+	| Time taken (milliseconds) | 20783ms
+	| Time taken (microseconds) | 20783963us
+	| Time taken (nanoseconds)  | 20783963015ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama add 32bit in 32bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 1260s
+	| Time taken (milliseconds) | 1260454ms
+	| Time taken (microseconds) | 1260454726us
+	| Time taken (nanoseconds)  | 1260454726455ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama add 32bit in 32bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 1251s
+	| Time taken (milliseconds) | 1251812ms
+	| Time taken (microseconds) | 1251812521us
+	| Time taken (nanoseconds)  | 1251812521693ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama sub 32bit in 32bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 1251s
+	| Time taken (milliseconds) | 1251328ms
+	| Time taken (microseconds) | 1251328566us
+	| Time taken (nanoseconds)  | 1251328566985ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama sub 32bit in 32bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 1252s
+	| Time taken (milliseconds) | 1252853ms
+	| Time taken (microseconds) | 1252853366us
+	| Time taken (nanoseconds)  | 1252853366862ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt added 32bit in 32bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 203ms
+	| Time taken (microseconds) | 203192us
+	| Time taken (nanoseconds)  | 203192866ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt added 32bit in 32bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 195ms
+	| Time taken (microseconds) | 195715us
+	| Time taken (nanoseconds)  | 195715306ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt sub 32bit in 32bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 195ms
+	| Time taken (microseconds) | 195841us
+	| Time taken (nanoseconds)  | 195841644ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt subtracted 32bit in 32bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 195ms
+	| Time taken (microseconds) | 195624us
+	| Time taken (nanoseconds)  | 195624406ns
+--------------------------------------------------------------------------
+Data Free
+Key Free
+
+==========================================================================
+  Timing Results for: Zama 10k 32 bit no mult
+==========================================================================
+	| Time taken (seconds)      | 5038s
+	| Time taken (milliseconds) | 5038864ms
+	| Time taken (microseconds) | 5038864329us
+	| Time taken (nanoseconds)  | 5038864329401ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+0
+Begining zama tests
+
+==========================================================================
+  Timing Results for: Zama Encrypt 32bit in 64bit space signed int
+==========================================================================
+	| Time taken (seconds)      | 41s
+	| Time taken (milliseconds) | 41124ms
+	| Time taken (microseconds) | 41124141us
+	| Time taken (nanoseconds)  | 41124141724ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama add 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 2573s
+	| Time taken (milliseconds) | 2573396ms
+	| Time taken (microseconds) | 2573396485us
+	| Time taken (nanoseconds)  | 2573396485644ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama add 32bit in 64bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 2354s
+	| Time taken (milliseconds) | 2354239ms
+	| Time taken (microseconds) | 2354239015us
+	| Time taken (nanoseconds)  | 2354239015436ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama sub 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 2555s
+	| Time taken (milliseconds) | 2555285ms
+	| Time taken (microseconds) | 2555285665us
+	| Time taken (nanoseconds)  | 2555285665209ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama sub 32bit in 64bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 2355s
+	| Time taken (milliseconds) | 2355560ms
+	| Time taken (microseconds) | 2355560575us
+	| Time taken (nanoseconds)  | 2355560575012ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt added 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 392ms
+	| Time taken (microseconds) | 392604us
+	| Time taken (nanoseconds)  | 392604931ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt added 32bit in 64bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 377ms
+	| Time taken (microseconds) | 377132us
+	| Time taken (nanoseconds)  | 377132232ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt sub 32bit in 64bit space signed int Cipher Cipher
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 378ms
+	| Time taken (microseconds) | 378936us
+	| Time taken (nanoseconds)  | 378936919ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt subtracted 32bit in 64bit space signed int Cipher Scalar
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 375ms
+	| Time taken (microseconds) | 375379us
+	| Time taken (nanoseconds)  | 375379651ns
+--------------------------------------------------------------------------
+Data Free
+Key Free
+
+==========================================================================
+  Timing Results for: Zama 10k 32 bit in 64 buffer no mult
+==========================================================================
+	| Time taken (seconds)      | 9882s
+	| Time taken (milliseconds) | 9882200ms
+	| Time taken (microseconds) | 9882200509us
+	| Time taken (nanoseconds)  | 9882200509881ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+ Skipping the following tests for time limitations: 10k mult, 100k, 250k, 500k, 1m
