@@ -21,7 +21,9 @@ Additionally, the data used is included with this repo to keep things simple, ev
 
 ---
 
-Current configuration is for zama and seal to run, seal first with all tests, zama multi threaded for a small amount of tests. I need to figure out the fine tuning for SEAL parameters (or see if there is an issue with overflows from signed values?), particularly for multiplication. That being said, the current code is whats being used to collect the next stage of data. The next batch will try to fix these, as well as test out packing in zama in an attempt to optimize things?
+Current configuration is for zama and seal to run, seal first with all tests, zama multi threaded for a small amount of tests. I need to figure out the fine tuning for SEAL parameters (or see if there is an issue with overflows from signed values?), particularly for multiplication. That being said, the current code is whats being used to collect the next stage of data. The next batch will try to fix these.
+
+Additionally, Packing for Zama was investigated partially, but as I looked deeper into how to test it and measure it, it turns out I would need two dedicated apps developed to test it so I can accurately compare memory usage of applications before and after. The code I was working on can be found in the src directory in .old files.
 
 ---
 

@@ -29,3 +29,25 @@ void printTimingResults(
 
     std::cout << "--------------------------------------------------------------------------\n";
 }
+
+
+
+void printSizeInUnits(size_t sizeInBytes, const std::string& testName)
+{
+    std::cout << "\n";
+    std::cout << "==========================================================================\n";
+    std::cout << "  Size Information for: " << testName << "\n";
+    std::cout << "==========================================================================\n";
+
+    // Convert to various units
+    size_t sizeInBits = sizeInBytes * 8;
+    size_t sizeInKB   = sizeInBytes / 1024;
+    size_t sizeInMB   = sizeInKB / 1024;
+
+    std::cout << "\t| Size (bits)        | " << sizeInBits << " bits\n";
+    std::cout << "\t| Size (bytes)       | " << sizeInBytes << " bytes\n";
+    std::cout << "\t| Size (kilobytes)   | " << sizeInKB << " KB\n";
+    std::cout << "\t| Size (megabytes)   | " << sizeInMB << " MB\n";
+
+    std::cout << "--------------------------------------------------------------------------\n";
+}

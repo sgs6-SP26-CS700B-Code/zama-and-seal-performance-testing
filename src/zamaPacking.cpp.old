@@ -1,0 +1,129 @@
+
+#include <iterator>
+#include <zama.hpp>
+#include <testTimer.hpp>
+
+#include "tfhe.h"
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#include <assert.h>
+
+
+template <typename T>
+size_t getVecByteSize(std::vector<T>& data)
+{
+    // Shrink the vector's capacity to match its size
+    data.shrink_to_fit();
+
+    // Calculate the memory used by the vector's elements
+    size_t elementMemory = data.size() * sizeof(T);
+
+    // Calculate the total memory used (size of the vector object itself)
+    size_t totalMemory = elementMemory + sizeof(std::vector<T>);
+
+    return totalMemory;
+}
+
+void zama_test_driver_packing(std::vector<int32_t>& data)
+{
+
+    int ok = 0;
+    std::cout << ok << std::endl;
+    // Initialize client key and public key
+    ConfigBuilder*    config_builder     = nullptr;
+    Config*           config             = nullptr;
+    ClientKey*        client_key         = nullptr;
+    CompactPublicKey* compact_public_key = nullptr;
+
+    // Step 1: Create the default ConfigBuilder
+    if(config_builder_default(&config_builder) != 0) {
+        printf("Error: Failed to create default config builder\n");
+        return;
+    }
+
+
+    // Step 2: Build the final Config from the ConfigBuilder
+    if(config_builder_build(config_builder, &config) != 0) {
+        printf("Error: Failed to build config from builder\n");
+        return;
+    }
+
+    // Step 3: Now generate the client key using the built config
+    if(client_key_generate(config, &client_key) != 0) {
+        printf("Error: Failed to create client key\n");
+        return;
+    }
+
+    // Step 4: Generate the compact public key from the client key
+    if(compact_public_key_new(client_key, &compact_public_key) != 0) {
+        printf("Error: Failed to create compact public key\n");
+        return;
+    }
+
+    // Now we can proceed with the packing and encryption logic
+
+    // Create a new compact ciphertext list builder
+    CompactCiphertextListBuilder* builder = nullptr;
+    if(compact_ciphertext_list_builder_new(compact_public_key, &builder) != 0) {
+        printf("Error: Failed to create compact ciphertext list builder\n");
+        return;
+    }
+
+    // Create vectors to hold the encrypted values
+    std::vector<FheInt32*> encrypted_data;
+
+    std::cout << "Begining zama tests" << std::endl;
+    std::cout << std::flush;
+    //=============================================================================================
+    // Begin Tests
+    //=============================================================================================
+
+    printSizeInUnits(getVecByteSize(data), "Zama Raw Data Vector");
+
+
+    //==============================[Encrypt 32 bit Signed int]=======================================
+    // Encrypt each value in the input data vector
+    for(const auto& value : data) {
+        ok                   = compact_ciphertext_list_builder_push_i32(builder, value);
+        assert(ok == 0);
+    }
+    printSizeInUnits(sizeof(&builder), "Zama Raw Builder Object Vector");
+    std::cout << std::flush;
+
+
+
+    //==============================[Decrypt Added 32 bit Signed Int Cipher to Scalar]=======================================
+
+    // Decrypt the results and store them in a new vector
+    std::vector<int32_t> decrypted_results;
+    // auto start = std::chrono::high_resolution_clock::now();
+    for(FheInt32* result : encrypted_data) {
+        int32_t decrypted_value;
+        ok = fhe_int32_decrypt(result, client_key, &decrypted_value);
+        assert(ok == 0);
+        decrypted_results.push_back(decrypted_value);
+    }
+    // auto end = std::chrono::high_resolution_clock::now();
+    // printTimingResults(start, end, "Zama decrypt added 32bit in 32bit space signed int Cipher Scalar");
+    std::cout << std::flush;
+
+
+
+    //=============================================================================================
+    // End Tests
+    //=============================================================================================
+
+
+    //==============================[Cleanup]=======================================
+
+    std::cout << "Data Free" << std::endl;
+    // Clean up ciphertexts and keys
+    for(FheInt32* encrypted_value : encrypted_data) {
+        fhe_int32_destroy(encrypted_value);
+    }
+
+    std::cout << "Key Free" << std::endl;
+    client_key_destroy(client_key);
+    server_key_destroy(server_key);
+}

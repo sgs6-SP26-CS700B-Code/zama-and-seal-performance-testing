@@ -10,3 +10,6 @@ void printTimingResults(
     const std::chrono::high_resolution_clock::time_point& start,
     const std::chrono::high_resolution_clock::time_point& end,
     const std::string&                                    testName);
+
+
+void printSizeInUnits(size_t sizeInBytes, const std::string& testName);

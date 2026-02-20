@@ -1,0 +1,116 @@
+#include <stdio.h>
+#include <stdint.h>
+#include "tfhe_rs.h"  // Assuming this is where TFHE-RS library is included
+
+int main() {
+    struct ConfigBuilder *config_builder = NULL;
+    struct Config *config = NULL;
+    struct ClientKey *client_key = NULL;
+    struct CompactPublicKey *compact_public_key = NULL;
+
+    // Step 1: Create the default ConfigBuilder
+    if (config_builder_default(&config_builder) != 0) {
+        printf("Error: Failed to create default config builder\n");
+        return -1;
+    }
+
+    // Step 2: Optionally enable compression if needed
+    // Example: struct CompressionParameters compression_params = {...}; // Define your compression parameters
+    // if (config_builder_enable_compression(&config_builder, &compression_params) != 0) {
+    //     printf("Error: Failed to enable compression\n");
+    //     return -1;
+    // }
+
+    // Step 3: Optionally, use custom parameters (if you have any)
+    // Example: struct ShortintPBSParameters shortint_params = {...}; // Define your custom parameters
+    // if (config_builder_use_custom_parameters(&config_builder, shortint_params) != 0) {
+    //     printf("Error: Failed to set custom parameters\n");
+    //     return -1;
+    // }
+
+    // Step 4: Build the final Config from the ConfigBuilder
+    if (config_builder_build(config_builder, &config) != 0) {
+        printf("Error: Failed to build config from builder\n");
+        return -1;
+    }
+
+    // Step 5: Now generate the client key using the built config
+    if (client_key_generate(config, &client_key) != 0) {
+        printf("Error: Failed to create client key\n");
+        return -1;
+    }
+
+    // Step 6: Generate the compact public key from the client key
+    if (compact_public_key_new(client_key, &compact_public_key) != 0) {
+        printf("Error: Failed to create compact public key\n");
+        return -1;
+    }
+
+    // Now we can proceed with the packing and encryption logic
+
+    // Create a new compact ciphertext list builder
+    struct CompactCiphertextListBuilder *builder = NULL;
+    if (compact_ciphertext_list_builder_new(compact_public_key, &builder) != 0) {
+        printf("Error: Failed to create compact ciphertext list builder\n");
+        return -1;
+    }
+
+    // Pack two integers into the builder (example values)
+    int32_t x = 12345;
+    int32_t y = 67890;
+    if (compact_ciphertext_list_builder_push_i32(builder, x) != 0) {
+        printf("Error: Failed to push i32\n");
+        return -1;
+    }
+    if (compact_ciphertext_list_builder_push_i32(builder, y) != 0) {
+        printf("Error: Failed to push i32\n");
+        return -1;
+    }
+
+    // Now, build the packed list
+    struct CompactCiphertextList *packed_list = NULL;
+    if (compact_ciphertext_list_builder_build(builder, &packed_list) != 0) {
+        printf("Error: Failed to build packed list\n");
+        return -1;
+    }
+
+    // Expand the packed list to get the individual encrypted values
+    struct CompactCiphertextListExpander *expander = NULL;
+    if (compact_ciphertext_list_expand(packed_list, &expander) != 0) {
+        printf("Error: Failed to expand packed list\n");
+        return -1;
+    }
+
+    // Extract the individual encrypted values (e.g., x and y) from the expanded list
+    struct FheInt32 *enc_x = NULL;
+    struct FheInt32 *enc_y = NULL;
+
+    if (compact_ciphertext_list_expander_get_fhe_int32(expander, 0, &enc_x) != 0) {
+        printf("Error: Failed to get encrypted x\n");
+        return -1;
+    }
+    if (compact_ciphertext_list_expander_get_fhe_int32(expander, 1, &enc_y) != 0) {
+        printf("Error: Failed to get encrypted y\n");
+        return -1;
+    }
+
+    // Perform homomorphic addition (x + y) on the encrypted values
+    struct FheInt32 *enc_sum = NULL;
+    if (fhe_int32_add(enc_x, enc_y, &enc_sum) != 0) {
+        printf("Error: Failed to perform addition on encrypted values\n");
+        return -1;
+    }
+
+    // At this point, `enc_sum` contains the encrypted result of `x + y`.
+
+    // Cleanup
+    compact_ciphertext_list_expander_destroy(expander);
+    compact_ciphertext_list_destroy(packed_list);
+    compact_ciphertext_list_builder_destroy(builder);
+    compact_public_key_destroy(compact_public_key);
+    client_key_destroy(client_key);
+    config_destroy(config);
+    config_builder_destroy(config_builder);
+
+    return 0;
+}
