@@ -85,6 +85,14 @@ using oneHotUInt10Vec = std::vector<tenBitUInt>;
 std::vector<char> extractEachDigit(uint32_t num);
 
 ///-----------------------------------------------------------------------------
+/// @brief Extracts each digit in a uint32_t in big endian format
+///
+/// @param[in] num = the uint32_t number
+/// @return std::vector<char> = the broken up digits in big endian
+///-----------------------------------------------------------------------------
+std::array<char,10> extractEachDigitArr(uint32_t num);
+
+///-----------------------------------------------------------------------------
 /// @brief Inverse of extractEachDigit, creates a number from digits
 ///
 /// @param[in] digits = the vector of digits in big endian

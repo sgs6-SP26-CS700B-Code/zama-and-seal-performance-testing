@@ -5,6 +5,7 @@
 #include <string>
 #include <algorithm>
 #include <iostream>
+#include <array>
 
 namespace oneHotEncodeing {
 
@@ -22,6 +23,23 @@ std::vector<char> extractEachDigit(uint32_t num){
 
     // Reverse the vector to make it big-endian (LSB at the end)
     std::reverse(result.begin(), result.end());
+    return result;
+}
+
+
+std::array<char,10> extractEachDigitArr(uint32_t num)
+{
+    std::array<char,10> result;
+
+    // Convert the number to string to easily access each digit
+    std::string num_str = std::to_string(num);
+
+    // Insert each character of the string into the result vector
+    int i = 9;
+    for (char digit : num_str) {
+        result[i] = digit;
+        i--;
+    }
     return result;
 }
 
