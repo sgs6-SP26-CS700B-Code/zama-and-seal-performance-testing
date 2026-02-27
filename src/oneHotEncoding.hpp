@@ -7,7 +7,7 @@
 
 namespace oneHotEncodeing {
 
-static const std::map<char, uint32_t> digitToOneHotUInt32{
+static const std::map<uint8_t, uint32_t> digitToOneHotUInt32{
     {0, 0000000001},
     {1, 0000000010},
     {2, 0000000100},
@@ -20,7 +20,7 @@ static const std::map<char, uint32_t> digitToOneHotUInt32{
     {9, 1000000000}
 };
 
-static const std::map<uint32_t, char> uInt32OneHotToDigit{
+static const std::map<uint32_t, uint8_t> uInt32OneHotToDigit{
     {0000000001, 0},
     {0000000010, 1},
     {0000000100, 2},
@@ -47,7 +47,7 @@ struct tenBitUInt {
     uint16_t tenBitUInt : 10;
 };
 
-static const std::map<char, tenBitUInt> digitToOneHotUInt10{
+static const std::map<uint8_t, tenBitUInt> digitToOneHotUInt10{
     {0, {0b0000000001}},
     {1, {0b0000000010}},
     {2, {0b0000000100}},
@@ -69,7 +69,7 @@ struct CustomCompare {
 };
 
 
-static const std::map<tenBitUInt, char, CustomCompare> uInt10OneHotToDigit{
+static const std::map<tenBitUInt, uint8_t, CustomCompare> uInt10OneHotToDigit{
     {{0b0000000001}, 0},
     {{0b0000000010}, 1},
     {{0b0000000100}, 2},
@@ -89,17 +89,17 @@ using oneHotUInt10Vec = std::vector<tenBitUInt>;
 /// @brief Extracts each digit in a uint32_t in big endian format
 ///
 /// @param[in] num = the uint32_t number
-/// @return std::vector<char> = the broken up digits in big endian
+/// @return std::vector<uint8_t> = the broken up digits in big endian
 ///-----------------------------------------------------------------------------
-std::vector<char> extractEachDigit(uint32_t num);
+std::vector<uint8_t> extractEachDigit(uint32_t num);
 
 ///-----------------------------------------------------------------------------
 /// @brief Extracts each digit in a uint32_t in big endian format
 ///
 /// @param[in] num = the uint32_t number
-/// @return std::vector<char> = the broken up digits in big endian
+/// @return std::vector<uint8_t> = the broken up digits in big endian
 ///-----------------------------------------------------------------------------
-std::array<char, 10> extractEachDigitArr(uint32_t num);
+std::array<uint8_t, 10> extractEachDigitArr(uint32_t num);
 
 ///-----------------------------------------------------------------------------
 /// @brief Inverse of extractEachDigit, creates a number from digits
@@ -107,7 +107,7 @@ std::array<char, 10> extractEachDigitArr(uint32_t num);
 /// @param[in] digits = the vector of digits in big endian
 /// @return uint32_t = the completed number
 ///-----------------------------------------------------------------------------
-uint32_t digitVectorToUInt32_t(const std::vector<char>& digits);
+uint32_t digitVectorToUInt32_t(const std::vector<uint8_t>& digits);
 
 oneHotUInt32Vec oneHotEncodeUInt32(uint32_t num);
 oneHotUInt10Vec oneHotEncodeUInt10(uint32_t num);

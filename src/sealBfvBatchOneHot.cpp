@@ -117,7 +117,7 @@ void seal_bfv_one_hot_encode_32_batch_8190_digits(const std::vector<uint32_t>& d
     Plaintext        encoded_batched_plaintext_data_a;
     vector<uint64_t> encoded_values_a(batch_encoder.slot_count(), 0);
     auto             start = std::chrono::high_resolution_clock::now();
-    for(int i = 0; i <= 8190; i += 0) {
+    for(int i = 0; i < 8190; i += 0) {
         int j = 0;
         for(auto oneHotNumArr : data_one_hot) {
             encoded_values_a[i] = oneHotNumArr[j];
@@ -138,7 +138,7 @@ void seal_bfv_one_hot_encode_32_batch_8190_digits(const std::vector<uint32_t>& d
     Plaintext        encoded_batched_plaintext_data_b;
     vector<uint64_t> encoded_values_b(batch_encoder.slot_count(), 0);
     start = std::chrono::high_resolution_clock::now();
-    for(int i = 0; i <= 8190; i += 0) {
+    for(int i = 0; i < 8190; i += 0) {
         int j = 0;
         for(auto oneHotNumArr : data_one_hot) {
             encoded_values_a[i] = oneHotNumArr[j];
@@ -158,7 +158,7 @@ void seal_bfv_one_hot_encode_32_batch_8190_digits(const std::vector<uint32_t>& d
     Ciphertext encrypted_data_a;
     encryptor.encrypt(encoded_batched_plaintext_data_a, encrypted_data_a);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bfv encrypt batch a 32 bit in 64 encode");
+    printTimingResults(start, end, "Seal bfv encrypt batch a 8190 digits B (819 10 digits values, 32 bit unsigned values)");
     std::cout << std::flush;
 
     //==============================[encrypt encoded batch b plaintext 32 bit unsigned int]=======================================
@@ -167,7 +167,7 @@ void seal_bfv_one_hot_encode_32_batch_8190_digits(const std::vector<uint32_t>& d
     Ciphertext encrypted_data_b;
     encryptor.encrypt(encoded_batched_plaintext_data_b, encrypted_data_b);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bfv encrypt batch b 32 bit in 64 encode");
+    printTimingResults(start, end, "Seal bfv encrypt batch b 8190 digits B (819 10 digits values, 32 bit unsigned values)");
     std::cout << std::flush;
 
     //==============================[Add batch 32 bit Cipher unsigned int]=======================================
@@ -176,7 +176,7 @@ void seal_bfv_one_hot_encode_32_batch_8190_digits(const std::vector<uint32_t>& d
     Ciphertext a_plus_b_batch;
     evaluator.add(encrypted_data_a, encrypted_data_b, a_plus_b_batch);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bfv add two batch 32bit ciphers in single slot 64bit vector");
+    printTimingResults(start, end, "Seal bfv add two batch  8190 digits B (819 10 digits values, 32 bit unsigned values)");
     std::cout << std::flush;
 
     //==============================[mult batch 32 bit Cipher unsigned int]=======================================
@@ -185,7 +185,7 @@ void seal_bfv_one_hot_encode_32_batch_8190_digits(const std::vector<uint32_t>& d
     Ciphertext a_mult_b_batch;
     evaluator.multiply(encrypted_data_a, encrypted_data_b, a_mult_b_batch);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bfv subtract two batch 32bit ciphers in single slot 64bit vector");
+    printTimingResults(start, end, "Seal bfv mult two batch 8190 digits B (819 10 digits values, 32 bit unsigned values)r");
     std::cout << std::flush;
 
 
@@ -197,7 +197,7 @@ void seal_bfv_one_hot_encode_32_batch_8190_digits(const std::vector<uint32_t>& d
     decryptor.decrypt(a_plus_b_batch, plain_encoded_add);
     batch_encoder.decode(plain_encoded_add, decoded_values_add);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bfv decrypt and decode batched 32 bit added in 64 bit vector");
+    printTimingResults(start, end, "Seal bfv decrypt and decode batched added");
     std::cout << std::flush;
 
 
@@ -209,7 +209,7 @@ void seal_bfv_one_hot_encode_32_batch_8190_digits(const std::vector<uint32_t>& d
     decryptor.decrypt(a_mult_b_batch, plain_encoded_mult);
     batch_encoder.decode(plain_encoded_mult, decoded_values_mult);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bfv decrypt and decode batched 32 bit mult in 64 bit vector");
+    printTimingResults(start, end, "Seal bfv decrypt and decode batched mult");
     std::cout << std::flush;
 
     //==============================[Assert Accuracy]=======================================
