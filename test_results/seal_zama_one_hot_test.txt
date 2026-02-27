@@ -1,0 +1,166 @@
+Begining to read 1m lines of signed 32 bit ints into 32 bit buffer from file: ./1m-32-bit-data.data
+Finished reading 1m lines of signed 32 bit ints into 32 bit buffer from file: ./1m-32-bit-data.data
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL 8190 digits (819 values)]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BFV
+|   poly_modulus_degree: 8192
+|   coeff_modulus size: 218 (43 + 43 + 44 + 44 + 44) bits
+|   plain_modulus: 1152921504606830593
+\
+Parameter validation (success) 8190: valid
+Batching Slot Count = 8192
+
+==========================================================================
+  Timing Results for: Seal BFV Batch encode 8190 digits A (819 10 digits values, 32 bit unsigned values)
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 149us
+	| Time taken (nanoseconds)  | 149306ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal BFV Batch encode 8190 digits B (819 10 digits values, 32 bit unsigned values)
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 165us
+	| Time taken (nanoseconds)  | 165688ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt batch a 8190 digits B (819 10 digits values, 32 bit unsigned values)
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 4ms
+	| Time taken (microseconds) | 4950us
+	| Time taken (nanoseconds)  | 4950884ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt batch b 8190 digits B (819 10 digits values, 32 bit unsigned values)
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 4ms
+	| Time taken (microseconds) | 4267us
+	| Time taken (nanoseconds)  | 4267776ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add two batch  8190 digits B (819 10 digits values, 32 bit unsigned values)
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 400us
+	| Time taken (nanoseconds)  | 400462ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv mult two batch 8190 digits B (819 10 digits values, 32 bit unsigned values)r
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 18ms
+	| Time taken (microseconds) | 18845us
+	| Time taken (nanoseconds)  | 18845913ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode batched added
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2118us
+	| Time taken (nanoseconds)  | 2118117ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode batched mult
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 3ms
+	| Time taken (microseconds) | 3340us
+	| Time taken (nanoseconds)  | 3340819ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: sealOneHot BFV
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 72ms
+	| Time taken (microseconds) | 72427us
+	| Time taken (nanoseconds)  | 72427424ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-[Zama 819 32 bit numbers, 8190 digit]-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+0
+Begining zama tests
+
+==========================================================================
+  Timing Results for: Zama Encrypt 8190 bits (819 10 digits values, 10 digits encoded into 10 bit one hot, 32 bit unsigned starting values)
+==========================================================================
+	| Time taken (seconds)      | 5s
+	| Time taken (milliseconds) | 5279ms
+	| Time taken (microseconds) | 5279264us
+	| Time taken (nanoseconds)  | 5279264142ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama bitwise or 8190 bits (819 10 digits values, 10 digits encoded into 10 bit one hot, 32 bit unsigned starting values)
+==========================================================================
+	| Time taken (seconds)      | 337s
+	| Time taken (milliseconds) | 337120ms
+	| Time taken (microseconds) | 337120226us
+	| Time taken (nanoseconds)  | 337120226332ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama bitwise and 8190 bits (819 10 digits values, 10 digits encoded into 10 bit one hot, 32 bit unsigned starting values)
+==========================================================================
+	| Time taken (seconds)      | 336s
+	| Time taken (milliseconds) | 336396ms
+	| Time taken (microseconds) | 336396974us
+	| Time taken (nanoseconds)  | 336396974915ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt or data
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 105ms
+	| Time taken (microseconds) | 105173us
+	| Time taken (nanoseconds)  | 105173363ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt or data
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 72ms
+	| Time taken (microseconds) | 72818us
+	| Time taken (nanoseconds)  | 72818482ns
+--------------------------------------------------------------------------
+Data Free
+Key Free
+
+==========================================================================
+  Timing Results for: zamaOneHot
+==========================================================================
+	| Time taken (seconds)      | 679s
+	| Time taken (milliseconds) | 679949ms
+	| Time taken (microseconds) | 679949993us
+	| Time taken (nanoseconds)  | 679949993852ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
