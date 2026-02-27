@@ -25,17 +25,17 @@ void bulk_seal_tests(
 
 
 
-//     testSeal_32_batch(1024, "SEAL 512 Batch 32 bit", data32);
-//     testSeal_32_batch(2048, "SEAL 1024 Batch 32 bit", data32);
-//     testSeal_32_batch(4096, "SEAL 2048 Batch 32 bit", data32);
-//     testSeal_32_batch(8192, "SEAL 4096 Batch 32 bit", data32);
-//     testSeal_32_batch(16384, "SEAL 8192 Batch 32 bit", data32);
+    //     testSeal_32_batch(1024, "SEAL 512 Batch 32 bit", data32);
+    //     testSeal_32_batch(2048, "SEAL 1024 Batch 32 bit", data32);
+    //     testSeal_32_batch(4096, "SEAL 2048 Batch 32 bit", data32);
+    //     testSeal_32_batch(8192, "SEAL 4096 Batch 32 bit", data32);
+    //     testSeal_32_batch(16384, "SEAL 8192 Batch 32 bit", data32);
     // testSeal_32_batch(32768, "SEAL 16384 Batch 32 bit", data32);
     // testSeal_32_batch(32768 * 2, "SEAL 32768 Batch 32 bit", data32);
 
-//     testSeal_32(1000, "Seal 1k 32 bit", data32);
-//     testSeal_32(10000, "Seal 10k 32 bit", data32);
-//     testSeal_32(100000, "Seal 100k 32 bit", data32);
+    //     testSeal_32(1000, "Seal 1k 32 bit", data32);
+    //     testSeal_32(10000, "Seal 10k 32 bit", data32);
+    //     testSeal_32(100000, "Seal 100k 32 bit", data32);
     // testSeal_32(250000, "Seal 250k 32 bit", data32);
     // testSeal_32(500000, "Seal 500k 32 bit", data32);
     // testSeal_32(1000000, "Seal 1m 32 bit", data32);
@@ -74,7 +74,8 @@ void testSeal_32(size_t dataQuantity, const string& testName, const std::vector<
     cout << "|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|" << endl << endl;
 }
 
-void testSeal_32_oneHot(size_t dataQuantity, const std::string& testName, const std::vector<uint32_t>& data){
+void testSeal_32_oneHot(size_t dataQuantity, const std::string& testName, const std::vector<uint32_t>& data)
+{
 
     auto dataToTest = getFirstNValuesU32(data, dataQuantity);
     cout << endl
@@ -84,7 +85,9 @@ void testSeal_32_oneHot(size_t dataQuantity, const std::string& testName, const 
 
     auto start = std::chrono::high_resolution_clock::now(); // Record start time
     cout << endl
-         << "|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL 8190 digits (819 values)]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|" << endl;
+         << "|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL 8190 digits (819 "
+            "values)]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|"
+         << endl;
     seal_bfv_one_hot_encode_32_batch_8190_digits(dataToTest);
     auto end = std::chrono::high_resolution_clock::now(); // Record end time
     // Pass the start time, end time, and test name to the print function

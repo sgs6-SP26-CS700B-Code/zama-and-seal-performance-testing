@@ -36,7 +36,7 @@ int main()
 
     // currently does 819*2 because I forgot I can just loop to make it not the same value. Meh, actual
     // arithmetic is across 819.
-    testSeal_32_oneHot(819*2, "sealOneHot", unsign32BitData);
+    testSeal_32_oneHot(819 * 2, "sealOneHot", unsign32BitData);
 
     testZama_32_oneHot(819, "zamaOneHot", unsign32BitData);
 

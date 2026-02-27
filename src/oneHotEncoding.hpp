@@ -7,7 +7,7 @@
 
 namespace oneHotEncodeing {
 
-static const std::map<char, uint32_t> digitToOneHotUInt32 {
+static const std::map<char, uint32_t> digitToOneHotUInt32{
     {0, 0000000001},
     {1, 0000000010},
     {2, 0000000100},
@@ -20,7 +20,7 @@ static const std::map<char, uint32_t> digitToOneHotUInt32 {
     {9, 1000000000}
 };
 
-static const std::map<uint32_t, char> uInt32OneHotToDigit {
+static const std::map<uint32_t, char> uInt32OneHotToDigit{
     {0000000001, 0},
     {0000000010, 1},
     {0000000100, 2},
@@ -47,7 +47,7 @@ struct tenBitUInt {
     uint16_t tenBitUInt : 10;
 };
 
-static const std::map<char,tenBitUInt> digitToOneHotUInt10 {
+static const std::map<char, tenBitUInt> digitToOneHotUInt10{
     {0, {0b0000000001}},
     {1, {0b0000000010}},
     {2, {0b0000000100}},
@@ -61,14 +61,15 @@ static const std::map<char,tenBitUInt> digitToOneHotUInt10 {
 };
 
 struct CustomCompare {
-    bool operator()(const tenBitUInt& a, const tenBitUInt& b) const {
+    bool operator()(const tenBitUInt& a, const tenBitUInt& b) const
+    {
         // Custom logic: sort by string length
-        return a.tenBitUInt< b.tenBitUInt;
+        return a.tenBitUInt < b.tenBitUInt;
     }
 };
 
 
-static const std::map<tenBitUInt,char,CustomCompare> uInt10OneHotToDigit {
+static const std::map<tenBitUInt, char, CustomCompare> uInt10OneHotToDigit{
     {{0b0000000001}, 0},
     {{0b0000000010}, 1},
     {{0b0000000100}, 2},
@@ -98,7 +99,7 @@ std::vector<char> extractEachDigit(uint32_t num);
 /// @param[in] num = the uint32_t number
 /// @return std::vector<char> = the broken up digits in big endian
 ///-----------------------------------------------------------------------------
-std::array<char,10> extractEachDigitArr(uint32_t num);
+std::array<char, 10> extractEachDigitArr(uint32_t num);
 
 ///-----------------------------------------------------------------------------
 /// @brief Inverse of extractEachDigit, creates a number from digits
@@ -110,10 +111,10 @@ uint32_t digitVectorToUInt32_t(const std::vector<char>& digits);
 
 oneHotUInt32Vec oneHotEncodeUInt32(uint32_t num);
 oneHotUInt10Vec oneHotEncodeUInt10(uint32_t num);
-uint32_t oneHotDecodeUInt32(const oneHotUInt32Vec& num);
-uint32_t oneHotDecodeUInt10(const oneHotUInt10Vec& num);
+uint32_t        oneHotDecodeUInt32(const oneHotUInt32Vec& num);
+uint32_t        oneHotDecodeUInt10(const oneHotUInt10Vec& num);
 
 
 uint32_t oneHotAddWithoutNormalize(const std::vector<uint32_t>& a, const std::vector<uint32_t>& b);
 
-};
+}; // namespace oneHotEncodeing

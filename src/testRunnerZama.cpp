@@ -33,14 +33,17 @@ void testZama_32_no_mult(size_t dataQuantity, const string& testName, const std:
     cout << "|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|" << endl;
     cout << "|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|" << endl << endl;
 }
-void testZama_32_oneHot(size_t dataQuantity, const std::string& testName, const std::vector<uint32_t>& data){
+void testZama_32_oneHot(size_t dataQuantity, const std::string& testName, const std::vector<uint32_t>& data)
+{
 
 
     auto dataToTest = getFirstNValuesU32(data, dataQuantity);
     cout << endl
          << endl
          << "|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|" << endl;
-    cout << "|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-[Zama 819 32 bit numbers, 8190 digit]-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|" << endl;
+    cout << "|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-[Zama 819 32 bit numbers, 8190 "
+            "digit]-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|"
+         << endl;
     // Sample function you want to time
     auto start = std::chrono::high_resolution_clock::now(); // Record start time
     zama_test_driver_one_hot_8190_digit(dataToTest);

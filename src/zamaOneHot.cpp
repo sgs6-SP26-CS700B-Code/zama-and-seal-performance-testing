@@ -47,15 +47,15 @@ void zama_test_driver_one_hot_8190_digit(const std::vector<uint32_t>& data)
     // Encode and splitup data. Yes this can be more optimized, but this is quick and dirty, and we
     // are less interested in this performance.
     std::vector<oneHotEncodeing::oneHotUInt10Vec> dataEncodedOneHot{};
-    for (auto num : data){
+    for(auto num : data) {
         auto oneNumOneHotEncodedBitVec = oneHotEncodeing::oneHotEncodeUInt10(num);
         dataEncodedOneHot.push_back(oneNumOneHotEncodedBitVec);
     }
 
     std::vector<oneHotEncodeing::tenBitUInt> oneHotData{};
-    for (int i = 0; i < dataEncodedOneHot.size(); ++i) {
-        for (auto encodedVal : dataEncodedOneHot[i]) {
-            oneHotData.push_back(encodedVal);  // Add to dataset1
+    for(int i = 0; i < dataEncodedOneHot.size(); ++i) {
+        for(auto encodedVal : dataEncodedOneHot[i]) {
+            oneHotData.push_back(encodedVal); // Add to dataset1
         }
     }
 
@@ -65,12 +65,16 @@ void zama_test_driver_one_hot_8190_digit(const std::vector<uint32_t>& data)
     auto start = std::chrono::high_resolution_clock::now();
     for(const auto& value : oneHotData) {
         FheUint10* ciphertext = nullptr;
-        ok                   = fhe_uint10_try_encrypt_with_client_key_u16(value.tenBitUInt, client_key, &ciphertext);
+        ok                    = fhe_uint10_try_encrypt_with_client_key_u16(value.tenBitUInt, client_key, &ciphertext);
         assert(ok == 0);
         encrypted_data.push_back(ciphertext);
     }
     auto end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Zama Encrypt 8190 bits (819 10 digits values, 10 digits encoded into 10 bit one hot, 32 bit unsigned starting values)");
+    printTimingResults(
+        start,
+        end,
+        "Zama Encrypt 8190 bits (819 10 digits values, 10 digits encoded into 10 bit one hot, 32 bit unsigned starting "
+        "values)");
     std::cout << std::flush;
 
 
@@ -93,7 +97,11 @@ void zama_test_driver_one_hot_8190_digit(const std::vector<uint32_t>& data)
     }
 
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Zama bitwise or 8190 bits (819 10 digits values, 10 digits encoded into 10 bit one hot, 32 bit unsigned starting values)");
+    printTimingResults(
+        start,
+        end,
+        "Zama bitwise or 8190 bits (819 10 digits values, 10 digits encoded into 10 bit one hot, 32 bit unsigned "
+        "starting values)");
     std::cout << std::flush;
 
 
@@ -116,7 +124,11 @@ void zama_test_driver_one_hot_8190_digit(const std::vector<uint32_t>& data)
     }
 
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Zama bitwise and 8190 bits (819 10 digits values, 10 digits encoded into 10 bit one hot, 32 bit unsigned starting values)");
+    printTimingResults(
+        start,
+        end,
+        "Zama bitwise and 8190 bits (819 10 digits values, 10 digits encoded into 10 bit one hot, 32 bit unsigned "
+        "starting values)");
     std::cout << std::flush;
 
 
