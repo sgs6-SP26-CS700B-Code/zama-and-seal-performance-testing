@@ -1,6 +1,7 @@
-// #include "seal.hpp"
+#include "seal.hpp"
 #include "seal/plaintext.h"
 #include "testTimer.hpp"
+#include <cmath>
 #include <iomanip>
 #include <seal/seal.h>
 #include <array>
@@ -58,28 +59,36 @@ inline void print_parameters(const seal::SEALContext& context)
 }
 
 
-void seal_bgv_test_driver_32_no_mult(const std::vector<int32_t>& data)
+void seal_ckks_test_driver_32_no_mult(const std::vector<int32_t>& data)
 {
     //==============================[Parameter Setup]=======================================
-    EncryptionParameters parms(scheme_type::bgv);
+    EncryptionParameters parms(scheme_type::ckks);
     size_t               poly_modulus_degree =
-        4096; // It seems this being lowered helps with the mixed signed cases... but that lowers security?
+        8192; // It seems this being lowered helps with the mixed signed cases... but that lowers security?
     parms.set_poly_modulus_degree(poly_modulus_degree);
-    parms.set_coeff_modulus(CoeffModulus::BFVDefault(poly_modulus_degree));
+    parms.set_coeff_modulus(CoeffModulus::Create(poly_modulus_degree, { 60, 40, 40, 60 }));
     // Prime must be 1 bit more than the bitlength of the plaintext, so bit_size is 33?
-    parms.set_plain_modulus(PlainModulus::Batching(poly_modulus_degree, 33));
+    // parms.set_plain_modulus(PlainModulus::Batching(poly_modulus_degree, 33));
     SEALContext context(parms);
     print_parameters(context);
     cout << "Parameter validation (success): " << context.parameter_error_message() << endl;
 
     //==============================[Key Setup]=======================================
-    KeyGenerator     keygen(context);
-    const SecretKey& secret_key = keygen.secret_key();
-    PublicKey        public_key;
+
+    KeyGenerator keygen(context);
+    auto secret_key = keygen.secret_key();
+    PublicKey public_key;
     keygen.create_public_key(public_key);
+    RelinKeys relin_keys;
+    keygen.create_relin_keys(relin_keys);
+    GaloisKeys gal_keys;
+    keygen.create_galois_keys(gal_keys);
 
     //==============================[Function Setup?]=======================================
-    BatchEncoder batch_encoder(context);
+    // BatchEncoder batch_encoder(context);
+
+    double scale = pow(2.0, 40);
+    CKKSEncoder encoder(context);
     Encryptor    encryptor(context, public_key);
     Evaluator    evaluator(context);
     Decryptor    decryptor(context, secret_key);
@@ -95,14 +104,14 @@ void seal_bgv_test_driver_32_no_mult(const std::vector<int32_t>& data)
     std::vector<Plaintext> encoded_plaintext_data;
     auto                   start = std::chrono::high_resolution_clock::now();
     for(const auto& value : data) {
-        vector<int64_t> encoded_value(batch_encoder.slot_count(), 0);
+        vector<double_t> encoded_value(encoder.slot_count(), 0);
         encoded_value[0] = value;
         Plaintext plain;
-        batch_encoder.encode(encoded_value, plain);
+        encoder.encode(encoded_value, scale,  plain);
         encoded_plaintext_data.push_back(plain);
     }
     auto end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv encode plaintext single 32bit in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks encode plaintext single 32bit in single slot 64bit vector");
     std::cout << std::flush;
 
     //==============================[encrypt encoded plaintext 32 bit Signed int]=======================================
@@ -115,7 +124,7 @@ void seal_bgv_test_driver_32_no_mult(const std::vector<int32_t>& data)
         encrypted_data.push_back(encrypted);
     }
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv encrypt ciphertext single 32bit in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks encrypt ciphertext single 32bit in single slot 64bit vector");
     std::cout << std::flush;
 
     //==============================[Add 32 bit Cipher Signed int]=======================================
@@ -130,7 +139,7 @@ void seal_bgv_test_driver_32_no_mult(const std::vector<int32_t>& data)
         encrypted_add_data.push_back(x_plus_y);
     }
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv add two 32bit ciphers in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks add two 32bit ciphers in single slot 64bit vector");
     std::cout << std::flush;
 
     //==============================[subtract 32 bit Cipher Signed int]=======================================
@@ -145,7 +154,7 @@ void seal_bgv_test_driver_32_no_mult(const std::vector<int32_t>& data)
         encrypted_sub_data.push_back(x_plus_y);
     }
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv subtract two 32bit ciphers in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks subtract two 32bit ciphers in single slot 64bit vector");
     std::cout << std::flush;
 
 
@@ -161,7 +170,7 @@ void seal_bgv_test_driver_32_no_mult(const std::vector<int32_t>& data)
         encrypted_add_plain_data.push_back(x_plus_y);
     }
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv add one 32bit cipher and 1 plain in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks add one 32bit cipher and 1 plain in single slot 64bit vector");
     std::cout << std::flush;
 
     //==============================[subtract 32 bit Cipher and plain Signed int]=======================================
@@ -176,69 +185,69 @@ void seal_bgv_test_driver_32_no_mult(const std::vector<int32_t>& data)
         encrypted_sub_plain_data.push_back(x_plus_y);
     }
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv subtract one 32bit cipher and 1 plain in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks subtract one 32bit cipher and 1 plain in single slot 64bit vector");
     std::cout << std::flush;
 
 
     //==============================[decrypt & decode added ciphertext 32 bit Signed int]=======================================
 
-    std::vector<int32_t> add_plaintext;
+    std::vector<double> add_plaintext;
     start = std::chrono::high_resolution_clock::now();
     for(const auto& value : encrypted_add_data) {
         Plaintext plain_encoded;
         decryptor.decrypt(value, plain_encoded);
-        std::vector<int64_t> plain_decoded;
-        batch_encoder.decode(plain_encoded, plain_decoded);
+        std::vector<double> plain_decoded;
+        encoder.decode(plain_encoded, plain_decoded);
         add_plaintext.push_back(plain_decoded[0]);
     }
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv decrypt and decode added single 32bit in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks decrypt and decode added single 32bit in single slot 64bit vector");
     std::cout << std::flush;
 
     //==============================[decrypt & decode subtracted ciphertext 32 bit Signed int]=======================================
 
-    std::vector<int32_t> sub_plaintext;
+    std::vector<double> sub_plaintext;
     start = std::chrono::high_resolution_clock::now();
     for(const auto& value : encrypted_sub_data) {
         Plaintext plain_encoded;
         decryptor.decrypt(value, plain_encoded);
-        std::vector<int64_t> plain_decoded;
-        batch_encoder.decode(plain_encoded, plain_decoded);
+        std::vector<double> plain_decoded;
+        encoder.decode(plain_encoded, plain_decoded);
         sub_plaintext.push_back(plain_decoded[0]);
     }
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv decrypt and decode subtracted single 32bit in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks decrypt and decode subtracted single 32bit in single slot 64bit vector");
     std::cout << std::flush;
 
 
     //==============================[decrypt & decode added plain ciphertext 32 bit Signed int]=======================================
 
-    std::vector<int32_t> add_plain_plaintext;
+    std::vector<double> add_plain_plaintext;
     start = std::chrono::high_resolution_clock::now();
     for(const auto& value : encrypted_add_plain_data) {
         Plaintext plain_encoded;
         decryptor.decrypt(value, plain_encoded);
-        std::vector<int64_t> plain_decoded;
-        batch_encoder.decode(plain_encoded, plain_decoded);
+        std::vector<double> plain_decoded;
+        encoder.decode(plain_encoded, plain_decoded);
         add_plain_plaintext.push_back(plain_decoded[0]);
     }
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv decrypt and decode added single 32bit in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks decrypt and decode added single 32bit in single slot 64bit vector");
     std::cout << std::flush;
 
     //==============================[decrypt & decode subtracted plain ciphertext 32 bit Signed int]=======================================
 
-    std::vector<int32_t> sub_plain_plaintext;
+    std::vector<double> sub_plain_plaintext;
     start = std::chrono::high_resolution_clock::now();
     for(const auto& value : encrypted_sub_plain_data) {
         Plaintext plain_encoded;
         decryptor.decrypt(value, plain_encoded);
-        std::vector<int64_t> plain_decoded;
-        batch_encoder.decode(plain_encoded, plain_decoded);
+        std::vector<double> plain_decoded;
+        encoder.decode(plain_encoded, plain_decoded);
         sub_plain_plaintext.push_back(plain_decoded[0]);
     }
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv decrypt and decode subtracted single 32bit in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks decrypt and decode subtracted single 32bit in single slot 64bit vector");
     std::cout << std::flush;
 
     //==============================[Assert Accuracy]=======================================
@@ -264,31 +273,40 @@ void seal_bgv_test_driver_32_no_mult(const std::vector<int32_t>& data)
 }
 
 /// @todo multiplication is not accurate in any case... Not certain what is wrong, likely need param tuning
-void seal_bgv_test_driver_32_fixed_mults(const std::vector<int32_t>& data)
+void seal_ckks_test_driver_32_fixed_mults(const std::vector<int32_t>& data)
 {
-    //==============================[Parameter Setup]=======================================
-    EncryptionParameters parms(scheme_type::bgv);
+     //==============================[Parameter Setup]=======================================
+    EncryptionParameters parms(scheme_type::ckks);
     size_t               poly_modulus_degree =
-        4096; // It seems this being lowered helps with the mixed signed cases... but that lowers security?
+        8192; // It seems this being lowered helps with the mixed signed cases... but that lowers security?
     parms.set_poly_modulus_degree(poly_modulus_degree);
-    parms.set_coeff_modulus(CoeffModulus::BFVDefault(poly_modulus_degree));
+    parms.set_coeff_modulus(CoeffModulus::Create(poly_modulus_degree, { 60, 40, 40, 60 }));
     // Prime must be 1 bit more than the bitlength of the plaintext, so bit_size is 33?
-    parms.set_plain_modulus(PlainModulus::Batching(poly_modulus_degree, 40));
+    // parms.set_plain_modulus(PlainModulus::Batching(poly_modulus_degree, 33));
     SEALContext context(parms);
     print_parameters(context);
     cout << "Parameter validation (success): " << context.parameter_error_message() << endl;
 
     //==============================[Key Setup]=======================================
-    KeyGenerator     keygen(context);
-    const SecretKey& secret_key = keygen.secret_key();
-    PublicKey        public_key;
+
+    KeyGenerator keygen(context);
+    auto secret_key = keygen.secret_key();
+    PublicKey public_key;
     keygen.create_public_key(public_key);
+    RelinKeys relin_keys;
+    keygen.create_relin_keys(relin_keys);
+    GaloisKeys gal_keys;
+    keygen.create_galois_keys(gal_keys);
 
     //==============================[Function Setup?]=======================================
-    BatchEncoder batch_encoder(context);
+    // BatchEncoder batch_encoder(context);
+
+    double scale = pow(2.0, 40);
+    CKKSEncoder batch_encoder(context);
     Encryptor    encryptor(context, public_key);
     Evaluator    evaluator(context);
     Decryptor    decryptor(context, secret_key);
+
 
     //=============================================================================================
     // Begin Tests
@@ -301,14 +319,14 @@ void seal_bgv_test_driver_32_fixed_mults(const std::vector<int32_t>& data)
     std::vector<Plaintext> encoded_plaintext_data;
     auto                   start = std::chrono::high_resolution_clock::now();
     for(const auto& value : data) {
-        vector<int64_t> encoded_value(batch_encoder.slot_count(), 0);
+        vector<double> encoded_value(batch_encoder.slot_count(), 0);
         encoded_value[0] = value;
         Plaintext plain;
-        batch_encoder.encode(encoded_value, plain);
+        batch_encoder.encode(encoded_value, scale, plain);
         encoded_plaintext_data.push_back(plain);
     }
     auto end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv encode plaintext single 32bit in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks encode plaintext single 32bit in single slot 64bit vector");
     std::cout << std::flush;
 
     //==============================[encrypt encoded plaintext 32 bit Signed int]=======================================
@@ -321,7 +339,7 @@ void seal_bgv_test_driver_32_fixed_mults(const std::vector<int32_t>& data)
         encrypted_data.push_back(encrypted);
     }
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv encrypt ciphertext single 32bit in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks encrypt ciphertext single 32bit in single slot 64bit vector");
     std::cout << std::flush;
 
     //==============================[mult 5 32 bit Cipher Signed int]=======================================
@@ -337,23 +355,23 @@ void seal_bgv_test_driver_32_fixed_mults(const std::vector<int32_t>& data)
         encrypted_mult_5_data.push_back(x_plus_y);
     }
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv multiply one 32bit ciphers by 5 in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks multiply one 32bit ciphers by 5 in single slot 64bit vector");
     std::cout << std::flush;
 
 
     //==============================[decrypt & decode subtracted ciphertext 32 bit Signed int]=======================================
 
-    std::vector<int64_t> mult_5_plaintext;
+    std::vector<double> mult_5_plaintext;
     start = std::chrono::high_resolution_clock::now();
     for(const auto& value : encrypted_mult_5_data) {
         Plaintext plain_encoded;
         decryptor.decrypt(value, plain_encoded);
-        std::vector<int64_t> plain_decoded;
+        std::vector<double> plain_decoded;
         batch_encoder.decode(plain_encoded, plain_decoded);
         mult_5_plaintext.push_back(plain_decoded[0]);
     }
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv decrypt and decode mult 5 single 39bit in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks decrypt and decode mult 5 single 39bit in single slot 64bit vector");
     std::cout << std::flush;
 
     //==============================[Assert Accuracy]=======================================
@@ -378,29 +396,36 @@ void seal_bgv_test_driver_32_fixed_mults(const std::vector<int32_t>& data)
 
 
 
-void seal_bgv_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
+void seal_ckks_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
 {
-    //==============================[Parameter Setup]=======================================
-    EncryptionParameters parms(scheme_type::bgv);
+        //==============================[Parameter Setup]=======================================
+    EncryptionParameters parms(scheme_type::ckks);
     size_t               poly_modulus_degree =
         32768; // It seems this being lowered helps with the mixed signed cases... but that lowers security?
     parms.set_poly_modulus_degree(poly_modulus_degree);
-    parms.set_coeff_modulus(CoeffModulus::BFVDefault(poly_modulus_degree));
-    parms.set_plain_modulus(PlainModulus::Batching(poly_modulus_degree, 40));
+    parms.set_coeff_modulus(CoeffModulus::Create(poly_modulus_degree, { 60, 40, 40, 60 }));
+    // Prime must be 1 bit more than the bitlength of the plaintext, so bit_size is 33?
+    // parms.set_plain_modulus(PlainModulus::Batching(poly_modulus_degree, 33));
     SEALContext context(parms);
     print_parameters(context);
     cout << "Parameter validation (success): " << context.parameter_error_message() << endl;
 
     //==============================[Key Setup]=======================================
-    KeyGenerator     keygen(context);
-    const SecretKey& secret_key = keygen.secret_key();
-    PublicKey        public_key;
+
+    KeyGenerator keygen(context);
+    auto secret_key = keygen.secret_key();
+    PublicKey public_key;
     keygen.create_public_key(public_key);
     RelinKeys relin_keys;
     keygen.create_relin_keys(relin_keys);
+    GaloisKeys gal_keys;
+    keygen.create_galois_keys(gal_keys);
 
     //==============================[Function Setup?]=======================================
-    BatchEncoder batch_encoder(context);
+    // BatchEncoder batch_encoder(context);
+
+    double scale = pow(2.0, 40);
+    CKKSEncoder batch_encoder(context);
     Encryptor    encryptor(context, public_key);
     Evaluator    evaluator(context);
     Decryptor    decryptor(context, secret_key);
@@ -416,14 +441,14 @@ void seal_bgv_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
     // encode each value in the input data vector
 
     Plaintext       encoded_batched_plaintext_data_a;
-    vector<int64_t> encoded_values_a(batch_encoder.slot_count(), 0);
+    vector<double> encoded_values_a(batch_encoder.slot_count(), 0);
     auto            start = std::chrono::high_resolution_clock::now();
     for(int i = 0; i < data.size(); i++) {
         encoded_values_a[i] = data[i];
     }
-    batch_encoder.encode(encoded_values_a, encoded_batched_plaintext_data_a);
+    batch_encoder.encode(encoded_values_a, scale, encoded_batched_plaintext_data_a);
     auto end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv batch encode first half 32 bit dataset in 64bit encoder");
+    printTimingResults(start, end, "Seal ckks batch encode first half 32 bit dataset in 64bit encoder");
     std::cout << std::flush;
 
 
@@ -431,16 +456,16 @@ void seal_bgv_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
     // encode each value in the input data vector
 
     Plaintext       encoded_batched_plaintext_data_b;
-    vector<int64_t> encoded_values_b(batch_encoder.slot_count(), 0);
+    vector<double> encoded_values_b(batch_encoder.slot_count(), 0);
     start = std::chrono::high_resolution_clock::now();
     int j = 0;
     for(int i = data.size() / 2; i < data.size(); i++) {
         encoded_values_b[j] = data[i];
         j++;
     }
-    batch_encoder.encode(encoded_values_b, encoded_batched_plaintext_data_b);
+    batch_encoder.encode(encoded_values_b, scale, encoded_batched_plaintext_data_b);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv batch encode second half 32 bit dataset in 64bit encoder");
+    printTimingResults(start, end, "Seal ckks batch encode second half 32 bit dataset in 64bit encoder");
     std::cout << std::flush;
 
     //==============================[encrypt encoded batch a plaintext 32 bit Signed int]=======================================
@@ -449,7 +474,7 @@ void seal_bgv_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
     Ciphertext encrypted_data_a;
     encryptor.encrypt(encoded_batched_plaintext_data_a, encrypted_data_a);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv encrypt batch a 32 bit in 64 encode");
+    printTimingResults(start, end, "Seal ckks encrypt batch a 32 bit in 64 encode");
     std::cout << std::flush;
 
     //==============================[encrypt encoded batch b plaintext 32 bit Signed int]=======================================
@@ -458,7 +483,7 @@ void seal_bgv_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
     Ciphertext encrypted_data_b;
     encryptor.encrypt(encoded_batched_plaintext_data_b, encrypted_data_b);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv encrypt batch b 32 bit in 64 encode");
+    printTimingResults(start, end, "Seal ckks encrypt batch b 32 bit in 64 encode");
     std::cout << std::flush;
 
     //==============================[Add batch 32 bit Cipher Signed int]=======================================
@@ -467,7 +492,7 @@ void seal_bgv_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
     Ciphertext a_plus_b_batch;
     evaluator.add(encrypted_data_a, encrypted_data_b, a_plus_b_batch);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv add two batch 32bit ciphers in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks add two batch 32bit ciphers in single slot 64bit vector");
     std::cout << std::flush;
 
     //==============================[subtract batch 32 bit Cipher Signed int]=======================================
@@ -476,31 +501,31 @@ void seal_bgv_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
     Ciphertext a_subtract_b_batch;
     evaluator.sub(encrypted_data_a, encrypted_data_b, a_subtract_b_batch);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv subtract two batch 32bit ciphers in single slot 64bit vector");
+    printTimingResults(start, end, "Seal ckks subtract two batch 32bit ciphers in single slot 64bit vector");
     std::cout << std::flush;
 
 
     //==============================[decrypt & decode added ciphertext 32 bit Signed int]=======================================
 
     start = std::chrono::high_resolution_clock::now();
-    vector<int64_t> decoded_values_add(batch_encoder.slot_count(), 0);
+    vector<double> decoded_values_add(batch_encoder.slot_count(), 0);
     Plaintext       plain_encoded_add;
     decryptor.decrypt(a_plus_b_batch, plain_encoded_add);
     batch_encoder.decode(plain_encoded_add, decoded_values_add);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv decrypt and decode batched 32 bit added in 64 bit vector");
+    printTimingResults(start, end, "Seal ckks decrypt and decode batched 32 bit added in 64 bit vector");
     std::cout << std::flush;
 
 
     //==============================[decrypt & decode subtracted ciphertext 32 bit Signed int]=======================================
 
     start = std::chrono::high_resolution_clock::now();
-    vector<int64_t> decoded_values_sub(batch_encoder.slot_count(), 0);
+    vector<double> decoded_values_sub(batch_encoder.slot_count(), 0);
     Plaintext       plain_encoded_sub;
     decryptor.decrypt(a_subtract_b_batch, plain_encoded_sub);
     batch_encoder.decode(plain_encoded_sub, decoded_values_sub);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bgv decrypt and decode batched 32 bit subtracted in 64 bit vector");
+    printTimingResults(start, end, "Seal ckks decrypt and decode batched 32 bit subtracted in 64 bit vector");
     std::cout << std::flush;
 
     //==============================[Assert Accuracy]=======================================

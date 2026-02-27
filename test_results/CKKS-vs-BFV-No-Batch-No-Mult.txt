@@ -1,0 +1,478 @@
+Begining to read 1m lines of signed 64 bit ints into 64 bit buffer from file: ./1m-64-bit-data.data
+Finished reading 1m lines of signed 64 bit ints into 64 bit buffer from file: ./1m-64-bit-data.data
+Begining to read 1m lines of signed 32 bit ints into 32 bit buffer from file: ./1m-32-bit-data.data
+Finished reading 1m lines of signed 32 bit ints into 32 bit buffer from file: ./1m-32-bit-data.data
+Begining to read 1m lines of signed 32 bit ints into 64 bit buffer from file: ./1m-32-bit-data.data
+Finished reading 1m lines of signed 32 bit ints into 64 bit buffer from file: ./1m-32-bit-data.data
+Begining SEAL Tests: Note, this runs on 1 thread, and current parameter configuration does not always have accurate results... Need to figure out fine tuning better, but I currently suspect this is from overflows or underflows
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BFV 32]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BFV
+|   poly_modulus_degree: 4096
+|   coeff_modulus size: 109 (36 + 36 + 37) bits
+|   plain_modulus: 8589852673
+\
+Parameter validation (success): valid
+
+==========================================================================
+  Timing Results for: Seal bfv encode plaintext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 67ms
+	| Time taken (microseconds) | 67899us
+	| Time taken (nanoseconds)  | 67899067ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt ciphertext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1283ms
+	| Time taken (microseconds) | 1283654us
+	| Time taken (nanoseconds)  | 1283654467ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 72ms
+	| Time taken (microseconds) | 72607us
+	| Time taken (nanoseconds)  | 72607092ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 74ms
+	| Time taken (microseconds) | 74189us
+	| Time taken (nanoseconds)  | 74189756ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 100ms
+	| Time taken (microseconds) | 100877us
+	| Time taken (nanoseconds)  | 100877203ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 103ms
+	| Time taken (microseconds) | 103027us
+	| Time taken (nanoseconds)  | 103027397ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 350ms
+	| Time taken (microseconds) | 350548us
+	| Time taken (nanoseconds)  | 350548886ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 347ms
+	| Time taken (microseconds) | 347453us
+	| Time taken (nanoseconds)  | 347453572ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 347ms
+	| Time taken (microseconds) | 347969us
+	| Time taken (nanoseconds)  | 347969679ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 347ms
+	| Time taken (microseconds) | 347509us
+	| Time taken (nanoseconds)  | 347509227ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal 1k 32 bit BFV
+==========================================================================
+	| Time taken (seconds)      | 3s
+	| Time taken (milliseconds) | 3103ms
+	| Time taken (microseconds) | 3103574us
+	| Time taken (nanoseconds)  | 3103574552ns
+--------------------------------------------------------------------------
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL ckks 32]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: CKKS
+|   poly_modulus_degree: 8192
+|   coeff_modulus size: 200 (60 + 40 + 40 + 60) bits
+\
+Parameter validation (success): valid
+
+==========================================================================
+  Timing Results for: Seal ckks encode plaintext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 581ms
+	| Time taken (microseconds) | 581954us
+	| Time taken (nanoseconds)  | 581954730ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks encrypt ciphertext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 3s
+	| Time taken (milliseconds) | 3581ms
+	| Time taken (microseconds) | 3581577us
+	| Time taken (nanoseconds)  | 3581577253ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks add two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 218ms
+	| Time taken (microseconds) | 218083us
+	| Time taken (nanoseconds)  | 218083912ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks subtract two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 232ms
+	| Time taken (microseconds) | 232274us
+	| Time taken (nanoseconds)  | 232274949ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks add one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 251ms
+	| Time taken (microseconds) | 251143us
+	| Time taken (nanoseconds)  | 251143271ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks subtract one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 201ms
+	| Time taken (microseconds) | 201470us
+	| Time taken (nanoseconds)  | 201470498ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 964ms
+	| Time taken (microseconds) | 964044us
+	| Time taken (nanoseconds)  | 964044813ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 963ms
+	| Time taken (microseconds) | 963579us
+	| Time taken (nanoseconds)  | 963579492ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 961ms
+	| Time taken (microseconds) | 961689us
+	| Time taken (nanoseconds)  | 961689777ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 964ms
+	| Time taken (microseconds) | 964369us
+	| Time taken (nanoseconds)  | 964369416ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal 1k 32 bit ckks
+==========================================================================
+	| Time taken (seconds)      | 9s
+	| Time taken (milliseconds) | 9082ms
+	| Time taken (microseconds) | 9082277us
+	| Time taken (nanoseconds)  | 9082277449ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BFV 32]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BFV
+|   poly_modulus_degree: 4096
+|   coeff_modulus size: 109 (36 + 36 + 37) bits
+|   plain_modulus: 8589852673
+\
+Parameter validation (success): valid
+
+==========================================================================
+  Timing Results for: Seal bfv encode plaintext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 512ms
+	| Time taken (microseconds) | 512418us
+	| Time taken (nanoseconds)  | 512418672ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv encrypt ciphertext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 10s
+	| Time taken (milliseconds) | 10678ms
+	| Time taken (microseconds) | 10678294us
+	| Time taken (nanoseconds)  | 10678294059ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 713ms
+	| Time taken (microseconds) | 713146us
+	| Time taken (nanoseconds)  | 713146165ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 712ms
+	| Time taken (microseconds) | 712318us
+	| Time taken (nanoseconds)  | 712318878ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv add one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 995ms
+	| Time taken (microseconds) | 995438us
+	| Time taken (nanoseconds)  | 995438252ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv subtract one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1019ms
+	| Time taken (microseconds) | 1019762us
+	| Time taken (nanoseconds)  | 1019762040ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 3s
+	| Time taken (milliseconds) | 3513ms
+	| Time taken (microseconds) | 3513424us
+	| Time taken (nanoseconds)  | 3513424063ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 3s
+	| Time taken (milliseconds) | 3444ms
+	| Time taken (microseconds) | 3444328us
+	| Time taken (nanoseconds)  | 3444328034ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 3s
+	| Time taken (milliseconds) | 3439ms
+	| Time taken (microseconds) | 3439307us
+	| Time taken (nanoseconds)  | 3439307879ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bfv decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 3s
+	| Time taken (milliseconds) | 3443ms
+	| Time taken (microseconds) | 3443851us
+	| Time taken (nanoseconds)  | 3443851842ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal 10k 32 bit BFV
+==========================================================================
+	| Time taken (seconds)      | 28s
+	| Time taken (milliseconds) | 28477ms
+	| Time taken (microseconds) | 28477569us
+	| Time taken (nanoseconds)  | 28477569164ns
+--------------------------------------------------------------------------
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL ckks 32]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: CKKS
+|   poly_modulus_degree: 8192
+|   coeff_modulus size: 200 (60 + 40 + 40 + 60) bits
+\
+Parameter validation (success): valid
+
+==========================================================================
+  Timing Results for: Seal ckks encode plaintext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 5s
+	| Time taken (milliseconds) | 5760ms
+	| Time taken (microseconds) | 5760075us
+	| Time taken (nanoseconds)  | 5760075431ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks encrypt ciphertext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 35s
+	| Time taken (milliseconds) | 35708ms
+	| Time taken (microseconds) | 35708168us
+	| Time taken (nanoseconds)  | 35708168555ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks add two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 2s
+	| Time taken (milliseconds) | 2242ms
+	| Time taken (microseconds) | 2242254us
+	| Time taken (nanoseconds)  | 2242254221ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks subtract two 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 2s
+	| Time taken (milliseconds) | 2233ms
+	| Time taken (microseconds) | 2233582us
+	| Time taken (nanoseconds)  | 2233582433ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks add one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 2s
+	| Time taken (milliseconds) | 2045ms
+	| Time taken (microseconds) | 2045150us
+	| Time taken (nanoseconds)  | 2045150132ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks subtract one 32bit cipher and 1 plain in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 2s
+	| Time taken (milliseconds) | 2057ms
+	| Time taken (microseconds) | 2057619us
+	| Time taken (nanoseconds)  | 2057619560ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 9s
+	| Time taken (milliseconds) | 9899ms
+	| Time taken (microseconds) | 9899553us
+	| Time taken (nanoseconds)  | 9899553458ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 9s
+	| Time taken (milliseconds) | 9920ms
+	| Time taken (microseconds) | 9920238us
+	| Time taken (nanoseconds)  | 9920238999ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks decrypt and decode added single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 10s
+	| Time taken (milliseconds) | 10341ms
+	| Time taken (microseconds) | 10341511us
+	| Time taken (nanoseconds)  | 10341511081ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal ckks decrypt and decode subtracted single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 10s
+	| Time taken (milliseconds) | 10267ms
+	| Time taken (microseconds) | 10267407us
+	| Time taken (nanoseconds)  | 10267407243ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal 10k 32 bit ckks
+==========================================================================
+	| Time taken (seconds)      | 90s
+	| Time taken (milliseconds) | 90626ms
+	| Time taken (microseconds) | 90626062us
+	| Time taken (nanoseconds)  | 90626062202ns
+--------------------------------------------------------------------------
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[SEAL BFV 32]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+/
+| Encryption parameters :
+|   scheme: BFV
+|   poly_modulus_degree: 4096
+|   coeff_modulus size: 109 (36 + 36 + 37) bits
+|   plain_modulus: 8589852673
+\
+Parameter validation (success): valid
+
+==========================================================================
+  Timing Results for: Seal bfv encode plaintext single 32bit in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 5s
+	| Time taken (milliseconds) | 5148ms
+	| Time taken (microseconds) | 5148234us
+	| Time taken (nanoseconds)  | 5148234572ns
+--------------------------------------------------------------------------
