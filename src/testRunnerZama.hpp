@@ -7,6 +7,7 @@
 void testZama_32_no_mult(size_t dataQuantity, const std::string& testName, const std::vector<int32_t>& data);
 
 void testZama_64_no_mult(size_t dataQuantity, const std::string& testName, const std::vector<int64_t>& data);
+void testZama_32_oneHot(size_t dataQuantity, const std::string& testName, const std::vector<uint32_t>& data);
 
 void testZama_32_in_64_mult(size_t dataQuantity, const std::string& testName, const std::vector<int64_t>& data);
 

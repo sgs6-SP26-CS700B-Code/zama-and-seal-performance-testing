@@ -60,7 +60,15 @@ static const std::map<char,tenBitUInt> digitToOneHotUInt10 {
     {9, {0b1000000000}}
 };
 
-static const std::map<tenBitUInt,char> uInt10OneHotToDigit {
+struct CustomCompare {
+    bool operator()(const tenBitUInt& a, const tenBitUInt& b) const {
+        // Custom logic: sort by string length
+        return a.tenBitUInt< b.tenBitUInt;
+    }
+};
+
+
+static const std::map<tenBitUInt,char,CustomCompare> uInt10OneHotToDigit {
     {{0b0000000001}, 0},
     {{0b0000000010}, 1},
     {{0b0000000100}, 2},
