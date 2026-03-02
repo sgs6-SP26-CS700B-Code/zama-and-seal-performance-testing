@@ -66,7 +66,7 @@ void seal_ckks_test_driver_32_no_mult(const std::vector<int32_t>& data)
     size_t               poly_modulus_degree =
         8192; // It seems this being lowered helps with the mixed signed cases... but that lowers security?
     parms.set_poly_modulus_degree(poly_modulus_degree);
-    parms.set_coeff_modulus(CoeffModulus::Create(poly_modulus_degree, { 60, 40, 40, 60 }));
+    parms.set_coeff_modulus(CoeffModulus::Create(poly_modulus_degree, {60, 40, 40, 60}));
     // Prime must be 1 bit more than the bitlength of the plaintext, so bit_size is 33?
     // parms.set_plain_modulus(PlainModulus::Batching(poly_modulus_degree, 33));
     SEALContext context(parms);
@@ -76,8 +76,8 @@ void seal_ckks_test_driver_32_no_mult(const std::vector<int32_t>& data)
     //==============================[Key Setup]=======================================
 
     KeyGenerator keygen(context);
-    auto secret_key = keygen.secret_key();
-    PublicKey public_key;
+    auto         secret_key = keygen.secret_key();
+    PublicKey    public_key;
     keygen.create_public_key(public_key);
     RelinKeys relin_keys;
     keygen.create_relin_keys(relin_keys);
@@ -87,11 +87,11 @@ void seal_ckks_test_driver_32_no_mult(const std::vector<int32_t>& data)
     //==============================[Function Setup?]=======================================
     // BatchEncoder batch_encoder(context);
 
-    double scale = pow(2.0, 40);
+    double      scale = pow(2.0, 40);
     CKKSEncoder encoder(context);
-    Encryptor    encryptor(context, public_key);
-    Evaluator    evaluator(context);
-    Decryptor    decryptor(context, secret_key);
+    Encryptor   encryptor(context, public_key);
+    Evaluator   evaluator(context);
+    Decryptor   decryptor(context, secret_key);
 
     //=============================================================================================
     // Begin Tests
@@ -107,7 +107,7 @@ void seal_ckks_test_driver_32_no_mult(const std::vector<int32_t>& data)
         vector<double_t> encoded_value(encoder.slot_count(), 0);
         encoded_value[0] = value;
         Plaintext plain;
-        encoder.encode(encoded_value, scale,  plain);
+        encoder.encode(encoded_value, scale, plain);
         encoded_plaintext_data.push_back(plain);
     }
     auto end = std::chrono::high_resolution_clock::now();
@@ -275,12 +275,12 @@ void seal_ckks_test_driver_32_no_mult(const std::vector<int32_t>& data)
 /// @todo multiplication is not accurate in any case... Not certain what is wrong, likely need param tuning
 void seal_ckks_test_driver_32_fixed_mults(const std::vector<int32_t>& data)
 {
-     //==============================[Parameter Setup]=======================================
+    //==============================[Parameter Setup]=======================================
     EncryptionParameters parms(scheme_type::ckks);
     size_t               poly_modulus_degree =
         8192; // It seems this being lowered helps with the mixed signed cases... but that lowers security?
     parms.set_poly_modulus_degree(poly_modulus_degree);
-    parms.set_coeff_modulus(CoeffModulus::Create(poly_modulus_degree, { 60, 40, 40, 60 }));
+    parms.set_coeff_modulus(CoeffModulus::Create(poly_modulus_degree, {60, 40, 40, 60}));
     // Prime must be 1 bit more than the bitlength of the plaintext, so bit_size is 33?
     // parms.set_plain_modulus(PlainModulus::Batching(poly_modulus_degree, 33));
     SEALContext context(parms);
@@ -290,8 +290,8 @@ void seal_ckks_test_driver_32_fixed_mults(const std::vector<int32_t>& data)
     //==============================[Key Setup]=======================================
 
     KeyGenerator keygen(context);
-    auto secret_key = keygen.secret_key();
-    PublicKey public_key;
+    auto         secret_key = keygen.secret_key();
+    PublicKey    public_key;
     keygen.create_public_key(public_key);
     RelinKeys relin_keys;
     keygen.create_relin_keys(relin_keys);
@@ -301,11 +301,11 @@ void seal_ckks_test_driver_32_fixed_mults(const std::vector<int32_t>& data)
     //==============================[Function Setup?]=======================================
     // BatchEncoder batch_encoder(context);
 
-    double scale = pow(2.0, 40);
+    double      scale = pow(2.0, 40);
     CKKSEncoder batch_encoder(context);
-    Encryptor    encryptor(context, public_key);
-    Evaluator    evaluator(context);
-    Decryptor    decryptor(context, secret_key);
+    Encryptor   encryptor(context, public_key);
+    Evaluator   evaluator(context);
+    Decryptor   decryptor(context, secret_key);
 
 
     //=============================================================================================
@@ -398,12 +398,12 @@ void seal_ckks_test_driver_32_fixed_mults(const std::vector<int32_t>& data)
 
 void seal_ckks_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
 {
-        //==============================[Parameter Setup]=======================================
+    //==============================[Parameter Setup]=======================================
     EncryptionParameters parms(scheme_type::ckks);
     size_t               poly_modulus_degree =
         32768; // It seems this being lowered helps with the mixed signed cases... but that lowers security?
     parms.set_poly_modulus_degree(poly_modulus_degree);
-    parms.set_coeff_modulus(CoeffModulus::Create(poly_modulus_degree, { 60, 40, 40, 60 }));
+    parms.set_coeff_modulus(CoeffModulus::Create(poly_modulus_degree, {60, 40, 40, 60}));
     // Prime must be 1 bit more than the bitlength of the plaintext, so bit_size is 33?
     // parms.set_plain_modulus(PlainModulus::Batching(poly_modulus_degree, 33));
     SEALContext context(parms);
@@ -413,8 +413,8 @@ void seal_ckks_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
     //==============================[Key Setup]=======================================
 
     KeyGenerator keygen(context);
-    auto secret_key = keygen.secret_key();
-    PublicKey public_key;
+    auto         secret_key = keygen.secret_key();
+    PublicKey    public_key;
     keygen.create_public_key(public_key);
     RelinKeys relin_keys;
     keygen.create_relin_keys(relin_keys);
@@ -424,11 +424,11 @@ void seal_ckks_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
     //==============================[Function Setup?]=======================================
     // BatchEncoder batch_encoder(context);
 
-    double scale = pow(2.0, 40);
+    double      scale = pow(2.0, 40);
     CKKSEncoder batch_encoder(context);
-    Encryptor    encryptor(context, public_key);
-    Evaluator    evaluator(context);
-    Decryptor    decryptor(context, secret_key);
+    Encryptor   encryptor(context, public_key);
+    Evaluator   evaluator(context);
+    Decryptor   decryptor(context, secret_key);
 
     //=============================================================================================
     // Begin Tests
@@ -440,9 +440,9 @@ void seal_ckks_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
     //==============================[encode plaintext 32 bit Signed int a]=======================================
     // encode each value in the input data vector
 
-    Plaintext       encoded_batched_plaintext_data_a;
+    Plaintext      encoded_batched_plaintext_data_a;
     vector<double> encoded_values_a(batch_encoder.slot_count(), 0);
-    auto            start = std::chrono::high_resolution_clock::now();
+    auto           start = std::chrono::high_resolution_clock::now();
     for(int i = 0; i < data.size(); i++) {
         encoded_values_a[i] = data[i];
     }
@@ -455,7 +455,7 @@ void seal_ckks_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
     //==============================[encode plaintext 32 bit Signed int b]=======================================
     // encode each value in the input data vector
 
-    Plaintext       encoded_batched_plaintext_data_b;
+    Plaintext      encoded_batched_plaintext_data_b;
     vector<double> encoded_values_b(batch_encoder.slot_count(), 0);
     start = std::chrono::high_resolution_clock::now();
     int j = 0;
@@ -509,7 +509,7 @@ void seal_ckks_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
 
     start = std::chrono::high_resolution_clock::now();
     vector<double> decoded_values_add(batch_encoder.slot_count(), 0);
-    Plaintext       plain_encoded_add;
+    Plaintext      plain_encoded_add;
     decryptor.decrypt(a_plus_b_batch, plain_encoded_add);
     batch_encoder.decode(plain_encoded_add, decoded_values_add);
     end = std::chrono::high_resolution_clock::now();
@@ -521,7 +521,7 @@ void seal_ckks_test_driver_32_no_mult_batch(const std::vector<int32_t>& data)
 
     start = std::chrono::high_resolution_clock::now();
     vector<double> decoded_values_sub(batch_encoder.slot_count(), 0);
-    Plaintext       plain_encoded_sub;
+    Plaintext      plain_encoded_sub;
     decryptor.decrypt(a_subtract_b_batch, plain_encoded_sub);
     batch_encoder.decode(plain_encoded_sub, decoded_values_sub);
     end = std::chrono::high_resolution_clock::now();

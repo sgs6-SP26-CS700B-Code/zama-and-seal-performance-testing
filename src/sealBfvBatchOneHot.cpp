@@ -158,7 +158,8 @@ void seal_bfv_one_hot_encode_32_batch_8190_digits(const std::vector<uint32_t>& d
     Ciphertext encrypted_data_a;
     encryptor.encrypt(encoded_batched_plaintext_data_a, encrypted_data_a);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bfv encrypt batch a 8190 digits B (819 10 digits values, 32 bit unsigned values)");
+    printTimingResults(
+        start, end, "Seal bfv encrypt batch a 8190 digits B (819 10 digits values, 32 bit unsigned values)");
     std::cout << std::flush;
 
     //==============================[encrypt encoded batch b plaintext 32 bit unsigned int]=======================================
@@ -167,7 +168,8 @@ void seal_bfv_one_hot_encode_32_batch_8190_digits(const std::vector<uint32_t>& d
     Ciphertext encrypted_data_b;
     encryptor.encrypt(encoded_batched_plaintext_data_b, encrypted_data_b);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bfv encrypt batch b 8190 digits B (819 10 digits values, 32 bit unsigned values)");
+    printTimingResults(
+        start, end, "Seal bfv encrypt batch b 8190 digits B (819 10 digits values, 32 bit unsigned values)");
     std::cout << std::flush;
 
     //==============================[Add batch 32 bit Cipher unsigned int]=======================================
@@ -176,7 +178,8 @@ void seal_bfv_one_hot_encode_32_batch_8190_digits(const std::vector<uint32_t>& d
     Ciphertext a_plus_b_batch;
     evaluator.add(encrypted_data_a, encrypted_data_b, a_plus_b_batch);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bfv add two batch  8190 digits B (819 10 digits values, 32 bit unsigned values)");
+    printTimingResults(
+        start, end, "Seal bfv add two batch  8190 digits B (819 10 digits values, 32 bit unsigned values)");
     std::cout << std::flush;
 
     //==============================[mult batch 32 bit Cipher unsigned int]=======================================
@@ -185,7 +188,8 @@ void seal_bfv_one_hot_encode_32_batch_8190_digits(const std::vector<uint32_t>& d
     Ciphertext a_mult_b_batch;
     evaluator.multiply(encrypted_data_a, encrypted_data_b, a_mult_b_batch);
     end = std::chrono::high_resolution_clock::now();
-    printTimingResults(start, end, "Seal bfv mult two batch 8190 digits B (819 10 digits values, 32 bit unsigned values)r");
+    printTimingResults(
+        start, end, "Seal bfv mult two batch 8190 digits B (819 10 digits values, 32 bit unsigned values)r");
     std::cout << std::flush;
 
 

@@ -79,7 +79,7 @@ oneHotUInt10Vec oneHotEncodeUInt10(uint32_t num)
 
 uint32_t oneHotDecodeUInt32(const oneHotUInt32Vec& num)
 {
-    uint32_t          result{};
+    uint32_t             result{};
     std::vector<uint8_t> digits{};
     for(auto bit32OneHotEncodedDigit : num) {
         digits.push_back(uInt32OneHotToDigit.at(bit32OneHotEncodedDigit));
@@ -90,7 +90,7 @@ uint32_t oneHotDecodeUInt32(const oneHotUInt32Vec& num)
 
 uint32_t oneHotDecodeUInt10(const oneHotUInt10Vec& num)
 {
-    uint32_t          result{};
+    uint32_t             result{};
     std::vector<uint8_t> digits{};
     for(auto bit10OneHotEncodedDigit : num) {
         digits.push_back(uInt10OneHotToDigit.at(bit10OneHotEncodedDigit));

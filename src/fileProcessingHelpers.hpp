@@ -17,6 +17,8 @@ std::vector<int32_t> readFileToInt32Vector(const std::string& filename, size_t m
 //==============================[uint32 & uint64 data reading & spliting]=======================================
 
 
+std::vector<uint32_t> getFirstNValuesU32FromU16(const std::vector<uint16_t>& input, size_t N);
+
 std::vector<uint32_t> getFirstNValuesU32(const std::vector<uint32_t>& input, size_t N);
 
 std::vector<uint64_t> getFirstNValuesU64(const std::vector<uint64_t>& input, size_t N);
@@ -24,3 +26,5 @@ std::vector<uint64_t> getFirstNValuesU64(const std::vector<uint64_t>& input, siz
 std::vector<uint64_t> readFileToUInt64Vector(const std::string& filename, size_t maxLines);
 
 std::vector<uint32_t> readFileToUInt32Vector(const std::string& filename, size_t maxLines);
+
+std::vector<uint16_t> readFileToUInt16Vector(const std::string& filename, size_t maxLines);
