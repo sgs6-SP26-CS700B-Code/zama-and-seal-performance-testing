@@ -181,9 +181,14 @@ void zama_test_serial_compute(const std::vector<uint32_t>& data)
     // config_builder_build(builder, &config);
 
 
-    // Uncomment this and comment above if you want true default config.
+    // // Uncomment this and comment above if you want true default config.
+    // config_builder_default(&builder);
+    // // Populate the config
+    // config_builder_build(builder, &config);
+
     config_builder_default(&builder);
-    // Populate the config
+    config_builder_use_custom_parameters(&builder,
+                                         SHORTINT_V1_5_PARAM_MESSAGE_2_CARRY_2_PBS_KS_GAUSSIAN_2M128);
     config_builder_build(builder, &config);
 
     ClientKey* client_key = nullptr;
