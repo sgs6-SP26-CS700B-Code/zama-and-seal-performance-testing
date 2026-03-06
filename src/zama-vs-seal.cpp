@@ -1,4 +1,5 @@
 
+#include <ostream>
 #include <zama-vs-seal.hpp>
 #include <testTimer.hpp>
 
@@ -187,8 +188,7 @@ void zama_test_serial_compute(const std::vector<uint32_t>& data)
     // config_builder_build(builder, &config);
 
     config_builder_default(&builder);
-    config_builder_use_custom_parameters(&builder,
-                                         SHORTINT_V1_5_PARAM_MESSAGE_2_CARRY_2_PBS_KS_GAUSSIAN_2M128);
+    config_builder_use_custom_parameters(&builder, SHORTINT_V1_5_PARAM_MESSAGE_2_CARRY_2_PBS_KS_GAUSSIAN_2M128);
     config_builder_build(builder, &config);
 
     ClientKey* client_key = nullptr;
@@ -379,6 +379,22 @@ void seal_test_16384_batch_size(const std::vector<uint32_t>& data)
     print_offset(data);
     cout << endl;
 
+
+    // Get the size of the vector in terms of elements
+    size_t num_elements = data.size();
+
+    // Size of each element in the vector (uint32_t is 4 bytes)
+    size_t element_size = sizeof(uint32_t);
+
+    // Calculate the size of the vector's storage (including its capacity)
+    size_t total_size = num_elements * element_size + sizeof(data);
+
+    std::cout << "Size of vector storage (in bytes): " << total_size << std::endl;
+
+    // You can also check the size of the internal data buffer
+    std::cout << "Capacity in elements: " << data.capacity() << std::endl;
+    std::cout << "Size of the data buffer in bytes: " << data.capacity() * element_size << std::endl;
+
     //==============================[Parameter Setup]=======================================
     EncryptionParameters parms(scheme_type::bgv);
     size_t               poly_modulus_degree =
@@ -445,6 +461,12 @@ void seal_test_16384_batch_size(const std::vector<uint32_t>& data)
     printTimingResults(start, end, "Seal bgv batch encode dataset a");
     std::cout << std::flush;
 
+    long size = 0;
+    for(const auto& value : encoded_values_a) {
+        size += value.save_size();
+    }
+    cout << "\n Upper Bound size in bytes of batched plaintext vector A: " << size << std::endl << std::flush;
+
 
     vector<Plaintext> encoded_values_b{};
     start = std::chrono::high_resolution_clock::now();
@@ -475,6 +497,11 @@ void seal_test_16384_batch_size(const std::vector<uint32_t>& data)
     printTimingResults(start, end, "Seal bgv batch encode dataset b");
     std::cout << std::flush;
 
+    size = 0;
+    for(const auto& value : encoded_values_b) {
+        size += value.save_size();
+    }
+    cout << "\n Upper Bound size in bytes of batched plaintext vector B: " << size << std::endl << std::flush;
 
     //==============================[encrypt encoded batch a]=======================================
 
@@ -489,8 +516,11 @@ void seal_test_16384_batch_size(const std::vector<uint32_t>& data)
     printTimingResults(start, end, "Seal bgv encrypt all batches in set A");
     std::cout << std::flush;
 
-    cout << "\nSize for first ciphertext in set a: " << encrypted_data_a[0].size() << endl;
-    cout << "\nSize Capacity for first ciphertext in set a: " << encrypted_data_a[0].size_capacity() << endl;
+    size = 0;
+    for(const auto& value : encrypted_data_a) {
+        size += value.save_size();
+    }
+    cout << "\n Upper Bound size in bytes of ciphertext vector A: " << size << std::endl << std::flush;
 
 
     //==============================[encrypt encoded batch b]=======================================
@@ -506,8 +536,11 @@ void seal_test_16384_batch_size(const std::vector<uint32_t>& data)
     printTimingResults(start, end, "Seal bgv encrypt all batches in set B");
     std::cout << std::flush;
 
-    cout << "\nSize for first ciphertext in set b: " << encrypted_data_b[0].size() << endl;
-    cout << "\nSize Capacity for first ciphertext in set b: " << encrypted_data_b[0].size_capacity() << endl;
+    size = 0;
+    for(const auto& value : encrypted_data_b) {
+        size += value.save_size();
+    }
+    cout << "\n Upper Bound size in bytes of ciphertext vector B: " << size << std::endl << std::flush;
 
     //==============================[Add batch 32 bit Cipher Signed int]=======================================
 
@@ -521,8 +554,14 @@ void seal_test_16384_batch_size(const std::vector<uint32_t>& data)
     end = std::chrono::high_resolution_clock::now();
     printTimingResults(start, end, "Seal bgv add two batch 32bit ciphers in single slot 64bit vector");
     std::cout << std::flush;
-    cout << "\nSize for first ciphertext in added set: " << a_plus_b_batch[0].size() << endl;
-    cout << "\nSize Capacity for first ciphertext in added set: " << a_plus_b_batch[0].size_capacity() << endl;
+
+
+    size = 0;
+    for(const auto& value : a_plus_b_batch) {
+        size += value.save_size();
+    }
+    cout << "\n Upper Bound size in bytes of added ciphertext vector a_plus_b_batch: " << size << std::endl
+         << std::flush;
 
     //==============================[mult batch 32 bit Cipher Signed int]=======================================
 
@@ -536,8 +575,14 @@ void seal_test_16384_batch_size(const std::vector<uint32_t>& data)
     end = std::chrono::high_resolution_clock::now();
     printTimingResults(start, end, "Seal bgv multiply two batch 32bit ciphers in single slot 64bit vector");
     std::cout << std::flush;
-    cout << "\nSize for first ciphertext in multiplied set: " << a_mul_b_batch[0].size() << endl;
-    cout << "\nSize Capacity for first ciphertext in multiplied set: " << a_mul_b_batch[0].size_capacity() << endl;
+
+
+    size = 0;
+    for(const auto& value : a_mul_b_batch) {
+        size += value.save_size();
+    }
+    cout << "\n Upper Bound size in bytes of multiplied ciphertext vector a_mul_b_batch: " << size << std::endl
+         << std::flush;
 
 
     //==============================[decrypt & decode added ciphertext 32 bit Signed int]=======================================

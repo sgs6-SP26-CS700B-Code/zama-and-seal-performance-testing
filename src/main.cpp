@@ -42,22 +42,29 @@ int main()
     // cout << "Finished reading 1m lines of signed 32 bit ints into 32 bit buffer from file: " << dataFile32 << endl;
 
 
-    cout << "\nPerforming seal 16384 batch size on 800 value dataset:\n\n";
-    std::cout << std::flush;
-    seal_test_16384_batch_size(getFirstNValuesU32FromU16(u16BitData, 800));
+    // cout << "\nPerforming seal 16384 batch size on 800 value dataset:\n\n";
+    // std::cout << std::flush;
+    // seal_test_16384_batch_size(getFirstNValuesU32FromU16(u16BitData, 800));
 
-    cout << "\nPerforming zama serial compute on 800 value dataset:\n\n";
-    std::cout << std::flush;
-    zama_test_serial_compute(getFirstNValuesU32FromU16(u16BitData, 800));
+    // cout << "\nPerforming zama serial compute on 800 value dataset:\n\n";
+    // std::cout << std::flush;
+    // zama_test_serial_compute(getFirstNValuesU32FromU16(u16BitData, 800));
 
 
     cout << "\nPerforming seal 16384 batch size on 1 mil value dataset:\n\n";
+    cout << "\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n";
+    cout << "\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n";
     std::cout << std::flush;
-    seal_test_16384_batch_size(getFirstNValuesU32FromU16(u16BitData, 1000000));
+    auto data = getFirstNValuesU32FromU16(u16BitData, 1000000);
 
-    cout << "\nPerforming zama serial compute on 1 mil value dataset:\n\n";
-    std::cout << std::flush;
-    zama_test_serial_compute(getFirstNValuesU32FromU16(u16BitData, 1000000));
+    for (int i = 1; i<=10; i++) {
+        cout << "SEAL TEST # " << i << endl;
+        seal_test_16384_batch_size(data);
+    }
+
+    // cout << "\nPerforming zama serial compute on 1 mil value dataset:\n\n";
+    // std::cout << std::flush;
+    // zama_test_serial_compute(getFirstNValuesU32FromU16(u16BitData, 1000000));
 
 
 

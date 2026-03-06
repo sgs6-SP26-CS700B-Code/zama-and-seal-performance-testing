@@ -1,0 +1,2179 @@
+
+Benchmarking integer::neg_parallelized/integer::neg_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_...: Collecting 15 samples in est
+integer::neg_parallelized/integer::neg_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_...
+                        time:   [17.149 ms 17.412 ms 17.766 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high mild
+Benchmarking integer::neg_parallelized/integer::neg_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #2: Collecting 15 samples in 
+integer::neg_parallelized/integer::neg_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #2
+                        time:   [127.40 ms 129.71 ms 131.47 ms]
+integer::neg_parallelized/integer::neg_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #3
+                        time:   [118.60 ms 120.18 ms 121.55 ms]
+integer::neg_parallelized/integer::neg_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #4
+                        time:   [119.37 ms 120.29 ms 122.10 ms]
+integer::neg_parallelized/integer::neg_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #5
+                        time:   [173.93 ms 174.88 ms 176.02 ms]
+integer::neg_parallelized/integer::neg_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #6
+                        time:   [219.92 ms 220.16 ms 220.41 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) low severe
+integer::neg_parallelized/integer::neg_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #7
+                        time:   [441.74 ms 442.03 ms 442.44 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+Benchmarking integer::neg_parallelized/integer::neg_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 109.3s, enable flat sampling, or reduce sample count to 10.
+integer::neg_parallelized/integer::neg_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #8
+                        time:   [902.40 ms 906.05 ms 909.93 ms]
+
+integer::abs_parallelized/integer::abs_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_...
+                        time:   [133.13 ns 134.22 ns 135.90 ns]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::abs_parallelized/integer::abs_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #2
+                        time:   [1.9786 µs 1.9953 µs 2.0242 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+integer::abs_parallelized/integer::abs_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #3
+                        time:   [3.6870 µs 3.7199 µs 3.7578 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::abs_parallelized/integer::abs_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #4
+                        time:   [6.6942 µs 6.6988 µs 6.7099 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+integer::abs_parallelized/integer::abs_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #5
+                        time:   [8.1574 µs 8.2458 µs 8.3942 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+integer::abs_parallelized/integer::abs_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #6
+                        time:   [13.867 µs 14.137 µs 14.457 µs]
+Found 3 outliers among 15 measurements (20.00%)
+  2 (13.33%) high mild
+  1 (6.67%) high severe
+integer::abs_parallelized/integer::abs_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #7
+                        time:   [58.082 µs 58.666 µs 59.205 µs]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high severe
+integer::abs_parallelized/integer::abs_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #8
+                        time:   [120.00 µs 121.80 µs 124.71 µs]
+
+integer::add_parallelized/integer::add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_...
+                        time:   [32.234 ms 33.026 ms 34.287 ms]
+integer::add_parallelized/integer::add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #2
+                        time:   [108.91 ms 111.39 ms 113.15 ms]
+integer::add_parallelized/integer::add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #3
+                        time:   [114.53 ms 116.76 ms 120.05 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::add_parallelized/integer::add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #4
+                        time:   [117.52 ms 117.82 ms 118.13 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::add_parallelized/integer::add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #5
+                        time:   [187.47 ms 188.28 ms 188.81 ms]
+integer::add_parallelized/integer::add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #6
+                        time:   [239.67 ms 239.97 ms 240.29 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high severe
+integer::add_parallelized/integer::add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #7
+                        time:   [497.20 ms 498.36 ms 499.94 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::add_parallelized/integer::add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #8
+                        time:   [1.0880 s 1.0896 s 1.0914 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+
+integer::unsigned_overflowing_add_parallelized/integer::unsigned_overflowing_add_parallelized::V1_5_...
+                        time:   [30.719 ms 32.666 ms 34.280 ms]
+integer::unsigned_overflowing_add_parallelized/integer::unsigned_overflowing_add_parallelized::V1_5_... #2
+                        time:   [112.25 ms 114.11 ms 115.85 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::unsigned_overflowing_add_parallelized/integer::unsigned_overflowing_add_parallelized::V1_5_... #3
+                        time:   [115.46 ms 117.36 ms 119.10 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::unsigned_overflowing_add_parallelized/integer::unsigned_overflowing_add_parallelized::V1_5_... #4
+                        time:   [133.53 ms 133.80 ms 134.09 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::unsigned_overflowing_add_parallelized/integer::unsigned_overflowing_add_parallelized::V1_5_... #5
+                        time:   [186.21 ms 187.00 ms 187.67 ms]
+integer::unsigned_overflowing_add_parallelized/integer::unsigned_overflowing_add_parallelized::V1_5_... #6
+                        time:   [253.97 ms 254.72 ms 255.35 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low severe
+  1 (6.67%) low mild
+Benchmarking integer::unsigned_overflowing_add_parallelized/integer::unsigned_overflowing_add_parallelized::V1_5_... #7: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 61.9s, enable flat sampling, or reduce sample count to 10.
+integer::unsigned_overflowing_add_parallelized/integer::unsigned_overflowing_add_parallelized::V1_5_... #7
+                        time:   [512.62 ms 513.63 ms 514.34 ms]
+integer::unsigned_overflowing_add_parallelized/integer::unsigned_overflowing_add_parallelized::V1_5_... #8
+                        time:   [1.1035 s 1.1050 s 1.1066 s]
+
+integer::sub_parallelized/integer::sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_...
+                        time:   [31.931 ms 33.152 ms 34.819 ms]
+integer::sub_parallelized/integer::sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #2
+                        time:   [106.25 ms 107.74 ms 108.96 ms]
+Found 4 outliers among 15 measurements (26.67%)
+  2 (13.33%) low mild
+  2 (13.33%) high mild
+integer::sub_parallelized/integer::sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #3
+                        time:   [114.76 ms 117.21 ms 119.01 ms]
+integer::sub_parallelized/integer::sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #4
+                        time:   [117.70 ms 118.11 ms 118.41 ms]
+integer::sub_parallelized/integer::sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #5
+                        time:   [187.34 ms 188.64 ms 189.84 ms]
+integer::sub_parallelized/integer::sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #6
+                        time:   [241.10 ms 249.00 ms 262.68 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+Benchmarking integer::sub_parallelized/integer::sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #7: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 60.6s, enable flat sampling, or reduce sample count to 10.
+integer::sub_parallelized/integer::sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #7
+                        time:   [497.90 ms 499.48 ms 501.54 ms]
+integer::sub_parallelized/integer::sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #8
+                        time:   [1.0881 s 1.0897 s 1.0915 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+
+integer::unsigned_overflowing_sub_parallelized/integer::unsigned_overflowing_sub_parallelized::V1_5_...
+                        time:   [29.575 ms 30.418 ms 31.160 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) low mild
+integer::unsigned_overflowing_sub_parallelized/integer::unsigned_overflowing_sub_parallelized::V1_5_... #2
+                        time:   [110.49 ms 112.18 ms 114.04 ms]
+integer::unsigned_overflowing_sub_parallelized/integer::unsigned_overflowing_sub_parallelized::V1_5_... #3
+                        time:   [114.69 ms 116.57 ms 118.35 ms]
+integer::unsigned_overflowing_sub_parallelized/integer::unsigned_overflowing_sub_parallelized::V1_5_... #4
+                        time:   [133.28 ms 133.52 ms 133.74 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low severe
+  1 (6.67%) low mild
+integer::unsigned_overflowing_sub_parallelized/integer::unsigned_overflowing_sub_parallelized::V1_5_... #5
+                        time:   [187.04 ms 188.02 ms 188.77 ms]
+integer::unsigned_overflowing_sub_parallelized/integer::unsigned_overflowing_sub_parallelized::V1_5_... #6
+                        time:   [253.82 ms 254.21 ms 254.65 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+Benchmarking integer::unsigned_overflowing_sub_parallelized/integer::unsigned_overflowing_sub_parallelized::V1_5_... #7: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 61.8s, enable flat sampling, or reduce sample count to 10.
+integer::unsigned_overflowing_sub_parallelized/integer::unsigned_overflowing_sub_parallelized::V1_5_... #7
+                        time:   [513.74 ms 514.49 ms 515.19 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::unsigned_overflowing_sub_parallelized/integer::unsigned_overflowing_sub_parallelized::V1_5_... #8
+                        time:   [1.1064 s 1.1083 s 1.1106 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+
+integer::mul_parallelized/integer::mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_...
+                        time:   [17.133 ms 17.339 ms 17.597 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+integer::mul_parallelized/integer::mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #2
+                        time:   [177.16 ms 178.16 ms 179.25 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high severe
+integer::mul_parallelized/integer::mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #3
+                        time:   [323.05 ms 325.68 ms 331.11 ms]
+integer::mul_parallelized/integer::mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #4
+                        time:   [1.0008 s 1.0030 s 1.0055 s]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high mild
+integer::mul_parallelized/integer::mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #5
+                        time:   [1.5964 s 1.6009 s 1.6057 s]
+integer::mul_parallelized/integer::mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #6
+                        time:   [3.7750 s 3.7815 s 3.7886 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+Benchmarking integer::mul_parallelized/integer::mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #7: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 222.4s, or reduce sample count to 10.
+integer::mul_parallelized/integer::mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #7
+                        time:   [14.688 s 14.701 s 14.714 s]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high mild
+Benchmarking integer::mul_parallelized/integer::mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 878.2s, or reduce sample count to 10.
+integer::mul_parallelized/integer::mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #8
+                        time:   [58.012 s 58.058 s 58.114 s]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+
+integer::unsigned_overflowing_mul_parallelized/integer::unsigned_overflowing_mul_parallelized::V1_5_...
+                        time:   [132.45 ms 137.70 ms 140.69 ms]
+integer::unsigned_overflowing_mul_parallelized/integer::unsigned_overflowing_mul_parallelized::V1_5_... #2
+                        time:   [308.82 ms 311.67 ms 314.45 ms]
+Benchmarking integer::unsigned_overflowing_mul_parallelized/integer::unsigned_overflowing_mul_parallelized::V1_5_... #3: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 68.6s, enable flat sampling, or reduce sample count to 10.
+integer::unsigned_overflowing_mul_parallelized/integer::unsigned_overflowing_mul_parallelized::V1_5_... #3
+                        time:   [514.27 ms 519.78 ms 529.51 ms]
+integer::unsigned_overflowing_mul_parallelized/integer::unsigned_overflowing_mul_parallelized::V1_5_... #4
+                        time:   [1.4871 s 1.4892 s 1.4912 s]
+integer::unsigned_overflowing_mul_parallelized/integer::unsigned_overflowing_mul_parallelized::V1_5_... #5
+                        time:   [2.2316 s 2.2359 s 2.2401 s]
+Benchmarking integer::unsigned_overflowing_mul_parallelized/integer::unsigned_overflowing_mul_parallelized::V1_5_... #6: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 80.9s, or reduce sample count to 10.
+integer::unsigned_overflowing_mul_parallelized/integer::unsigned_overflowing_mul_parallelized::V1_5_... #6
+                        time:   [5.3035 s 5.3189 s 5.3386 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+Benchmarking integer::unsigned_overflowing_mul_parallelized/integer::unsigned_overflowing_mul_parallelized::V1_5_... #7: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 308.2s, or reduce sample count to 10.
+integer::unsigned_overflowing_mul_parallelized/integer::unsigned_overflowing_mul_parallelized::V1_5_... #7
+                        time:   [20.352 s 20.370 s 20.392 s]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+Benchmarking integer::unsigned_overflowing_mul_parallelized/integer::unsigned_overflowing_mul_parallelized::V1_5_... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 1198.7s, or reduce sample count to 10.
+integer::unsigned_overflowing_mul_parallelized/integer::unsigned_overflowing_mul_parallelized::V1_5_... #8
+                        time:   [79.827 s 79.899 s 79.980 s]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high mild
+
+integer::div_rem_parallelized/integer::div_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_T...
+                        time:   [233.00 ms 235.64 ms 238.22 ms]
+Benchmarking integer::div_rem_parallelized/integer::div_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_T... #2: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 112.3s, enable flat sampling, or reduce sample count to 10.
+integer::div_rem_parallelized/integer::div_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_T... #2
+                        time:   [944.02 ms 951.92 ms 958.72 ms]
+integer::div_rem_parallelized/integer::div_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_T... #3
+                        time:   [2.2687 s 2.2847 s 2.3005 s]
+Benchmarking integer::div_rem_parallelized/integer::div_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_T... #4: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 98.3s, or reduce sample count to 10.
+integer::div_rem_parallelized/integer::div_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_T... #4
+                        time:   [5.6843 s 5.7081 s 5.7330 s]
+Benchmarking integer::div_rem_parallelized/integer::div_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_T... #5: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 126.2s, or reduce sample count to 10.
+integer::div_rem_parallelized/integer::div_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_T... #5
+                        time:   [8.4282 s 8.4457 s 8.4624 s]
+Benchmarking integer::div_rem_parallelized/integer::div_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_T... #6: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 299.2s, or reduce sample count to 10.
+integer::div_rem_parallelized/integer::div_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_T... #6
+                        time:   [19.941 s 19.961 s 19.984 s]
+Benchmarking integer::div_rem_parallelized/integer::div_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_T... #7: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 1114.5s, or reduce sample count to 10.
+integer::div_rem_parallelized/integer::div_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_T... #7
+                        time:   [74.130 s 74.185 s 74.239 s]
+Benchmarking integer::div_rem_parallelized/integer::div_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_T... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 4591.5s, or reduce sample count to 10.
+integer::div_rem_parallelized/integer::div_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_T... #8
+                        time:   [306.11 s 306.25 s 306.43 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+
+integer::bitand_parallelized/integer::bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN...
+                        time:   [16.844 ms 17.017 ms 17.179 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high severe
+integer::bitand_parallelized/integer::bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN... #2
+                        time:   [36.170 ms 36.643 ms 37.177 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::bitand_parallelized/integer::bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN... #3
+                        time:   [38.806 ms 39.454 ms 39.998 ms]
+integer::bitand_parallelized/integer::bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN... #4
+                        time:   [33.568 ms 33.628 ms 33.682 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::bitand_parallelized/integer::bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN... #5
+                        time:   [53.783 ms 53.923 ms 54.119 ms]
+integer::bitand_parallelized/integer::bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN... #6
+                        time:   [67.145 ms 67.213 ms 67.309 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::bitand_parallelized/integer::bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN... #7
+                        time:   [133.82 ms 134.04 ms 134.25 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::bitand_parallelized/integer::bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN... #8
+                        time:   [268.60 ms 269.14 ms 269.65 ms]
+
+integer::bitnot/integer::bitnot::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128::2_bits
+                        time:   [380.74 ns 380.90 ns 381.11 ns]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::bitnot/integer::bitnot::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128::8_bits
+                        time:   [2.8778 µs 2.8790 µs 2.8799 µs]
+integer::bitnot/integer::bitnot::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128::16_bits
+                        time:   [5.9918 µs 6.0216 µs 6.0496 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::bitnot/integer::bitnot::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128::32_bits
+                        time:   [11.126 µs 11.137 µs 11.144 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::bitnot/integer::bitnot::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128::40_bits
+                        time:   [13.721 µs 13.739 µs 13.773 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::bitnot/integer::bitnot::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128::64_bits
+                        time:   [22.504 µs 22.557 µs 22.662 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::bitnot/integer::bitnot::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128::128_bits
+                        time:   [77.179 µs 77.735 µs 78.670 µs]
+integer::bitnot/integer::bitnot::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128::256_bits
+                        time:   [183.09 µs 184.29 µs 184.87 µs]
+
+integer::bitor_parallelized/integer::bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF...
+                        time:   [16.850 ms 16.884 ms 16.949 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::bitor_parallelized/integer::bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #2
+                        time:   [36.383 ms 36.917 ms 37.358 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::bitor_parallelized/integer::bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #3
+                        time:   [39.141 ms 39.768 ms 40.322 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::bitor_parallelized/integer::bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #4
+                        time:   [33.778 ms 33.814 ms 33.850 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::bitor_parallelized/integer::bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #5
+                        time:   [54.125 ms 54.270 ms 54.398 ms]
+integer::bitor_parallelized/integer::bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #6
+                        time:   [66.952 ms 67.107 ms 67.293 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::bitor_parallelized/integer::bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #7
+                        time:   [133.52 ms 133.66 ms 133.87 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::bitor_parallelized/integer::bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #8
+                        time:   [264.72 ms 265.72 ms 266.90 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+
+integer::bitxor_parallelized/integer::bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN...
+                        time:   [16.902 ms 16.965 ms 17.026 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::bitxor_parallelized/integer::bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN... #2
+                        time:   [36.716 ms 37.053 ms 37.436 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high mild
+integer::bitxor_parallelized/integer::bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN... #3
+                        time:   [38.680 ms 39.517 ms 40.538 ms]
+integer::bitxor_parallelized/integer::bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN... #4
+                        time:   [33.666 ms 33.721 ms 33.769 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::bitxor_parallelized/integer::bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN... #5
+                        time:   [54.249 ms 54.450 ms 54.648 ms]
+integer::bitxor_parallelized/integer::bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN... #6
+                        time:   [66.764 ms 66.910 ms 67.078 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::bitxor_parallelized/integer::bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN... #7
+                        time:   [133.84 ms 134.14 ms 134.54 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::bitxor_parallelized/integer::bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUN... #8
+                        time:   [267.51 ms 268.22 ms 268.78 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+
+integer::left_shift_parallelized/integer::left_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32...
+                        time:   [16.740 ms 16.867 ms 16.996 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high severe
+integer::left_shift_parallelized/integer::left_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #2
+                        time:   [121.00 ms 122.98 ms 124.96 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::left_shift_parallelized/integer::left_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #3
+                        time:   [173.80 ms 174.57 ms 175.34 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::left_shift_parallelized/integer::left_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #4
+                        time:   [250.83 ms 251.06 ms 251.35 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) low severe
+integer::left_shift_parallelized/integer::left_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #5
+                        time:   [402.26 ms 402.71 ms 403.06 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+Benchmarking integer::left_shift_parallelized/integer::left_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #6: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 66.5s, enable flat sampling, or reduce sample count to 10.
+integer::left_shift_parallelized/integer::left_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #6
+                        time:   [553.12 ms 553.64 ms 554.25 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high mild
+integer::left_shift_parallelized/integer::left_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #7
+                        time:   [1.2424 s 1.2437 s 1.2452 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::left_shift_parallelized/integer::left_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8
+                        time:   [2.7100 s 2.7140 s 2.7183 s]
+
+integer::right_shift_parallelized/integer::right_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS...
+                        time:   [16.746 ms 16.774 ms 16.854 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::right_shift_parallelized/integer::right_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #2
+                        time:   [119.45 ms 121.29 ms 123.71 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::right_shift_parallelized/integer::right_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #3
+                        time:   [173.80 ms 174.36 ms 174.92 ms]
+integer::right_shift_parallelized/integer::right_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #4
+                        time:   [251.14 ms 251.51 ms 251.89 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::right_shift_parallelized/integer::right_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #5
+                        time:   [401.65 ms 401.99 ms 402.34 ms]
+Benchmarking integer::right_shift_parallelized/integer::right_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #6: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 66.5s, enable flat sampling, or reduce sample count to 10.
+integer::right_shift_parallelized/integer::right_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #6
+                        time:   [552.84 ms 553.54 ms 554.43 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::right_shift_parallelized/integer::right_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #7
+                        time:   [1.2442 s 1.2459 s 1.2475 s]
+integer::right_shift_parallelized/integer::right_shift_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #8
+                        time:   [2.7158 s 2.7226 s 2.7301 s]
+
+integer::rotate_left_parallelized/integer::rotate_left_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS...
+                        time:   [16.782 ms 16.859 ms 16.971 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::rotate_left_parallelized/integer::rotate_left_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #2
+                        time:   [111.23 ms 112.30 ms 114.16 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::rotate_left_parallelized/integer::rotate_left_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #3
+                        time:   [177.66 ms 178.09 ms 178.70 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::rotate_left_parallelized/integer::rotate_left_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #4
+                        time:   [268.60 ms 268.75 ms 268.92 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  2 (13.33%) low severe
+  1 (6.67%) high mild
+integer::rotate_left_parallelized/integer::rotate_left_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #5
+                        time:   [404.93 ms 405.24 ms 405.51 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+Benchmarking integer::rotate_left_parallelized/integer::rotate_left_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #6: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 69.0s, enable flat sampling, or reduce sample count to 10.
+integer::rotate_left_parallelized/integer::rotate_left_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #6
+                        time:   [571.25 ms 572.01 ms 572.97 ms]
+integer::rotate_left_parallelized/integer::rotate_left_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #7
+                        time:   [1.2627 s 1.2636 s 1.2645 s]
+integer::rotate_left_parallelized/integer::rotate_left_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #8
+                        time:   [2.7392 s 2.7428 s 2.7469 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+
+integer::rotate_right_parallelized/integer::rotate_right_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_...
+                        time:   [16.770 ms 16.894 ms 17.026 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) high mild
+  2 (13.33%) high severe
+integer::rotate_right_parallelized/integer::rotate_right_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #2
+                        time:   [111.44 ms 112.78 ms 113.89 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::rotate_right_parallelized/integer::rotate_right_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #3
+                        time:   [177.50 ms 178.20 ms 178.83 ms]
+integer::rotate_right_parallelized/integer::rotate_right_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #4
+                        time:   [268.77 ms 268.92 ms 269.04 ms]
+Found 4 outliers among 15 measurements (26.67%)
+  2 (13.33%) low severe
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::rotate_right_parallelized/integer::rotate_right_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #5
+                        time:   [407.08 ms 407.44 ms 407.87 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+Benchmarking integer::rotate_right_parallelized/integer::rotate_right_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #6: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 68.9s, enable flat sampling, or reduce sample count to 10.
+integer::rotate_right_parallelized/integer::rotate_right_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #6
+                        time:   [572.80 ms 573.38 ms 573.96 ms]
+integer::rotate_right_parallelized/integer::rotate_right_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #7
+                        time:   [1.2639 s 1.2657 s 1.2678 s]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::rotate_right_parallelized/integer::rotate_right_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #8
+                        time:   [2.7438 s 2.7480 s 2.7521 s]
+
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_5_ctxts::V1_5_PARAM_MESS...
+                        time:   [44.600 ms 45.626 ms 46.541 ms]
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_10_ctxts::V1_5_PARAM_MES...
+                        time:   [89.702 ms 92.239 ms 95.499 ms]
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_20_ctxts::V1_5_PARAM_MES...
+                        time:   [102.66 ms 104.19 ms 105.75 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_5_ctxts::V1_5_PARAM_MESS... #2
+                        time:   [147.56 ms 149.35 ms 151.44 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_10_ctxts::V1_5_PARAM_MES... #2
+                        time:   [180.90 ms 183.12 ms 184.84 ms]
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_20_ctxts::V1_5_PARAM_MES... #2
+                        time:   [222.99 ms 223.89 ms 224.56 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_5_ctxts::V1_5_PARAM_MESS... #3
+                        time:   [140.55 ms 141.69 ms 143.07 ms]
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_10_ctxts::V1_5_PARAM_MES... #3
+                        time:   [183.91 ms 189.34 ms 198.53 ms]
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_20_ctxts::V1_5_PARAM_MES... #3
+                        time:   [267.08 ms 268.07 ms 269.29 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_5_ctxts::V1_5_PARAM_MESS... #4
+                        time:   [182.19 ms 182.39 ms 182.49 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_10_ctxts::V1_5_PARAM_MES... #4
+                        time:   [316.60 ms 317.00 ms 317.33 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+Benchmarking integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_20_ctxts::V1_5_PARAM_MES... #4: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 61.9s, enable flat sampling, or reduce sample count to 10.
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_20_ctxts::V1_5_PARAM_MES... #4
+                        time:   [514.71 ms 515.07 ms 515.43 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_5_ctxts::V1_5_PARAM_MESS... #5
+                        time:   [271.75 ms 272.21 ms 272.58 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_10_ctxts::V1_5_PARAM_MES... #5
+                        time:   [436.32 ms 437.01 ms 437.58 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low severe
+  1 (6.67%) high mild
+Benchmarking integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_20_ctxts::V1_5_PARAM_MES... #5: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 83.4s, enable flat sampling, or reduce sample count to 10.
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_20_ctxts::V1_5_PARAM_MES... #5
+                        time:   [692.77 ms 693.41 ms 694.16 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high severe
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_5_ctxts::V1_5_PARAM_MESS... #6
+                        time:   [371.48 ms 372.04 ms 372.57 ms]
+Benchmarking integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_10_ctxts::V1_5_PARAM_MES... #6: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 76.8s, enable flat sampling, or reduce sample count to 10.
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_10_ctxts::V1_5_PARAM_MES... #6
+                        time:   [641.27 ms 642.54 ms 644.18 ms]
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_20_ctxts::V1_5_PARAM_MES... #6
+                        time:   [1.0387 s 1.0409 s 1.0436 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+Benchmarking integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_5_ctxts::V1_5_PARAM_MESS... #7: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 91.8s, enable flat sampling, or reduce sample count to 10.
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_5_ctxts::V1_5_PARAM_MESS... #7
+                        time:   [763.30 ms 764.47 ms 765.88 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_10_ctxts::V1_5_PARAM_MES... #7
+                        time:   [1.3025 s 1.3044 s 1.3062 s]
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_20_ctxts::V1_5_PARAM_MES... #7
+                        time:   [2.0993 s 2.1039 s 2.1092 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_5_ctxts::V1_5_PARAM_MESS... #8
+                        time:   [1.6206 s 1.6230 s 1.6254 s]
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_10_ctxts::V1_5_PARAM_MES... #8
+                        time:   [2.6950 s 2.7002 s 2.7060 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+Benchmarking integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_20_ctxts::V1_5_PARAM_MES... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 65.2s, or reduce sample count to 10.
+integer::sum_ciphertexts_parallelized/integer::sum_ciphertexts_parallelized_20_ctxts::V1_5_PARAM_MES... #8
+                        time:   [4.2954 s 4.3101 s 4.3309 s]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+
+integer::leading_zeros_parallelized/integer::leading_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_...
+                        time:   [16.734 ms 16.764 ms 16.832 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) high mild
+  2 (13.33%) high severe
+integer::leading_zeros_parallelized/integer::leading_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #2
+                        time:   [188.41 ms 191.11 ms 194.26 ms]
+integer::leading_zeros_parallelized/integer::leading_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #3
+                        time:   [299.25 ms 304.72 ms 309.98 ms]
+integer::leading_zeros_parallelized/integer::leading_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #4
+                        time:   [293.99 ms 294.97 ms 296.08 ms]
+integer::leading_zeros_parallelized/integer::leading_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #5
+                        time:   [414.78 ms 415.84 ms 417.18 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+Benchmarking integer::leading_zeros_parallelized/integer::leading_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #6: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 69.8s, enable flat sampling, or reduce sample count to 10.
+integer::leading_zeros_parallelized/integer::leading_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #6
+                        time:   [488.96 ms 492.22 ms 498.33 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+integer::leading_zeros_parallelized/integer::leading_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #7
+                        time:   [1.0131 s 1.0151 s 1.0173 s]
+integer::leading_zeros_parallelized/integer::leading_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #8
+                        time:   [2.1905 s 2.1946 s 2.1989 s]
+
+integer::leading_ones_parallelized/integer::leading_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_...
+                        time:   [16.643 ms 16.755 ms 16.900 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::leading_ones_parallelized/integer::leading_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #2
+                        time:   [179.54 ms 184.73 ms 188.10 ms]
+integer::leading_ones_parallelized/integer::leading_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #3
+                        time:   [298.04 ms 301.55 ms 305.78 ms]
+integer::leading_ones_parallelized/integer::leading_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #4
+                        time:   [294.83 ms 295.84 ms 296.68 ms]
+integer::leading_ones_parallelized/integer::leading_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #5
+                        time:   [413.77 ms 415.12 ms 416.61 ms]
+Benchmarking integer::leading_ones_parallelized/integer::leading_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #6: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 70.2s, enable flat sampling, or reduce sample count to 10.
+integer::leading_ones_parallelized/integer::leading_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #6
+                        time:   [487.91 ms 491.48 ms 497.05 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high mild
+integer::leading_ones_parallelized/integer::leading_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #7
+                        time:   [1.0164 s 1.0183 s 1.0205 s]
+integer::leading_ones_parallelized/integer::leading_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #8
+                        time:   [2.1960 s 2.2000 s 2.2038 s]
+
+integer::trailing_zeros_parallelized/integer::trailing_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARR...
+                        time:   [16.746 ms 16.832 ms 16.931 ms]
+Found 4 outliers among 15 measurements (26.67%)
+  1 (6.67%) low severe
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::trailing_zeros_parallelized/integer::trailing_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARR... #2
+                        time:   [183.88 ms 186.91 ms 189.98 ms]
+integer::trailing_zeros_parallelized/integer::trailing_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARR... #3
+                        time:   [291.58 ms 299.96 ms 307.97 ms]
+integer::trailing_zeros_parallelized/integer::trailing_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARR... #4
+                        time:   [296.20 ms 297.01 ms 298.23 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::trailing_zeros_parallelized/integer::trailing_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARR... #5
+                        time:   [414.72 ms 415.57 ms 416.41 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+Benchmarking integer::trailing_zeros_parallelized/integer::trailing_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARR... #6: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 70.5s, enable flat sampling, or reduce sample count to 10.
+integer::trailing_zeros_parallelized/integer::trailing_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARR... #6
+                        time:   [487.07 ms 490.13 ms 496.56 ms]
+integer::trailing_zeros_parallelized/integer::trailing_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARR... #7
+                        time:   [1.0145 s 1.0162 s 1.0179 s]
+integer::trailing_zeros_parallelized/integer::trailing_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARR... #8
+                        time:   [2.1879 s 2.1942 s 2.2025 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+
+integer::trailing_ones_parallelized/integer::trailing_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_...
+                        time:   [16.663 ms 16.743 ms 16.873 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+integer::trailing_ones_parallelized/integer::trailing_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #2
+                        time:   [179.56 ms 182.76 ms 187.54 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::trailing_ones_parallelized/integer::trailing_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #3
+                        time:   [300.23 ms 303.03 ms 306.76 ms]
+integer::trailing_ones_parallelized/integer::trailing_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #4
+                        time:   [296.33 ms 296.98 ms 297.55 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low severe
+  1 (6.67%) high mild
+integer::trailing_ones_parallelized/integer::trailing_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #5
+                        time:   [414.26 ms 415.54 ms 416.78 ms]
+Benchmarking integer::trailing_ones_parallelized/integer::trailing_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #6: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 70.5s, enable flat sampling, or reduce sample count to 10.
+integer::trailing_ones_parallelized/integer::trailing_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #6
+                        time:   [486.99 ms 488.19 ms 489.40 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+integer::trailing_ones_parallelized/integer::trailing_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #7
+                        time:   [1.0163 s 1.0183 s 1.0204 s]
+integer::trailing_ones_parallelized/integer::trailing_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #8
+                        time:   [2.1935 s 2.1974 s 2.2016 s]
+
+integer::ilog2_parallelized/integer::ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF...
+                        time:   [185.99 ms 192.05 ms 197.10 ms]
+integer::ilog2_parallelized/integer::ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #2
+                        time:   [221.27 ms 226.28 ms 232.45 ms]
+integer::ilog2_parallelized/integer::ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #3
+                        time:   [343.43 ms 347.96 ms 351.44 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::ilog2_parallelized/integer::ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #4
+                        time:   [327.05 ms 328.92 ms 330.47 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::ilog2_parallelized/integer::ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #5
+                        time:   [481.38 ms 482.78 ms 484.01 ms]
+Benchmarking integer::ilog2_parallelized/integer::ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #6: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 75.1s, enable flat sampling, or reduce sample count to 10.
+integer::ilog2_parallelized/integer::ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #6
+                        time:   [549.61 ms 562.73 ms 588.08 ms]
+integer::ilog2_parallelized/integer::ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #7
+                        time:   [1.0399 s 1.0438 s 1.0475 s]
+integer::ilog2_parallelized/integer::ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIF... #8
+                        time:   [2.2235 s 2.2289 s 2.2346 s]
+
+integer::checked_ilog2_parallelized/integer::checked_ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_...
+                        time:   [123.27 ms 124.51 ms 126.07 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::checked_ilog2_parallelized/integer::checked_ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #2
+                        time:   [208.93 ms 211.52 ms 213.94 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::checked_ilog2_parallelized/integer::checked_ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #3
+                        time:   [329.17 ms 333.31 ms 337.99 ms]
+integer::checked_ilog2_parallelized/integer::checked_ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #4
+                        time:   [377.92 ms 381.38 ms 383.97 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::checked_ilog2_parallelized/integer::checked_ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #5
+                        time:   [496.45 ms 497.60 ms 498.93 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+Benchmarking integer::checked_ilog2_parallelized/integer::checked_ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #6: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 84.7s, enable flat sampling, or reduce sample count to 10.
+integer::checked_ilog2_parallelized/integer::checked_ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #6
+                        time:   [586.27 ms 588.85 ms 593.48 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::checked_ilog2_parallelized/integer::checked_ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #7
+                        time:   [1.1579 s 1.1620 s 1.1670 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::checked_ilog2_parallelized/integer::checked_ilog2_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #8
+                        time:   [2.4935 s 2.5003 s 2.5076 s]
+
+integer::count_zeros_parallelized/integer::count_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS...
+                        time:   [16.929 ms 17.006 ms 17.096 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) low severe
+integer::count_zeros_parallelized/integer::count_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #2
+                        time:   [112.53 ms 113.96 ms 115.49 ms]
+integer::count_zeros_parallelized/integer::count_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #3
+                        time:   [194.46 ms 199.62 ms 204.83 ms]
+integer::count_zeros_parallelized/integer::count_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #4
+                        time:   [185.97 ms 187.82 ms 189.96 ms]
+integer::count_zeros_parallelized/integer::count_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #5
+                        time:   [187.97 ms 189.66 ms 191.21 ms]
+integer::count_zeros_parallelized/integer::count_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #6
+                        time:   [219.98 ms 220.77 ms 221.84 ms]
+integer::count_zeros_parallelized/integer::count_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #7
+                        time:   [303.88 ms 305.09 ms 306.59 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::count_zeros_parallelized/integer::count_zeros_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS... #8
+                        time:   [457.26 ms 475.84 ms 492.83 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) low severe
+
+integer::count_ones_parallelized/integer::count_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32...
+                        time:   [16.958 ms 17.076 ms 17.293 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) high mild
+  2 (13.33%) high severe
+integer::count_ones_parallelized/integer::count_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #2
+                        time:   [114.67 ms 116.79 ms 118.54 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::count_ones_parallelized/integer::count_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #3
+                        time:   [187.27 ms 192.07 ms 196.27 ms]
+integer::count_ones_parallelized/integer::count_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #4
+                        time:   [189.95 ms 192.50 ms 194.65 ms]
+integer::count_ones_parallelized/integer::count_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #5
+                        time:   [185.90 ms 187.69 ms 190.21 ms]
+integer::count_ones_parallelized/integer::count_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #6
+                        time:   [219.73 ms 221.05 ms 222.60 ms]
+integer::count_ones_parallelized/integer::count_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #7
+                        time:   [302.43 ms 303.33 ms 304.41 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::count_ones_parallelized/integer::count_ones_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8
+                        time:   [491.78 ms 493.32 ms 495.05 ms]
+
+integer::max_parallelized/integer::max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_...
+                        time:   [91.703 ms 93.925 ms 96.232 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::max_parallelized/integer::max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #2
+                        time:   [151.73 ms 154.26 ms 157.02 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::max_parallelized/integer::max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #3
+                        time:   [199.76 ms 203.34 ms 205.63 ms]
+integer::max_parallelized/integer::max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #4
+                        time:   [201.09 ms 201.87 ms 202.61 ms]
+Found 4 outliers among 15 measurements (26.67%)
+  1 (6.67%) low mild
+  3 (20.00%) high severe
+integer::max_parallelized/integer::max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #5
+                        time:   [276.80 ms 279.53 ms 281.85 ms]
+integer::max_parallelized/integer::max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #6
+                        time:   [364.14 ms 365.67 ms 366.91 ms]
+Benchmarking integer::max_parallelized/integer::max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #7: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 85.2s, enable flat sampling, or reduce sample count to 10.
+integer::max_parallelized/integer::max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #7
+                        time:   [711.38 ms 713.52 ms 715.98 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::max_parallelized/integer::max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #8
+                        time:   [1.4414 s 1.4451 s 1.4489 s]
+
+integer::min_parallelized/integer::min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_...
+                        time:   [89.041 ms 91.331 ms 93.543 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  2 (13.33%) low mild
+  1 (6.67%) high mild
+integer::min_parallelized/integer::min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #2
+                        time:   [150.12 ms 154.25 ms 157.60 ms]
+integer::min_parallelized/integer::min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #3
+                        time:   [195.73 ms 198.60 ms 201.61 ms]
+integer::min_parallelized/integer::min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #4
+                        time:   [200.51 ms 201.16 ms 202.25 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+integer::min_parallelized/integer::min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #5
+                        time:   [279.27 ms 279.91 ms 280.99 ms]
+Found 5 outliers among 15 measurements (33.33%)
+  2 (13.33%) low severe
+  1 (6.67%) high mild
+  2 (13.33%) high severe
+integer::min_parallelized/integer::min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #6
+                        time:   [365.40 ms 367.37 ms 369.36 ms]
+Benchmarking integer::min_parallelized/integer::min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #7: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 85.5s, enable flat sampling, or reduce sample count to 10.
+integer::min_parallelized/integer::min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #7
+                        time:   [711.68 ms 713.89 ms 716.20 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+integer::min_parallelized/integer::min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #8
+                        time:   [1.4406 s 1.4442 s 1.4480 s]
+
+integer::eq_parallelized/integer::eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M...
+                        time:   [16.530 ms 16.589 ms 16.662 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::eq_parallelized/integer::eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #2
+                        time:   [63.949 ms 64.365 ms 64.772 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::eq_parallelized/integer::eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #3
+                        time:   [130.01 ms 133.69 ms 137.84 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::eq_parallelized/integer::eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #4
+                        time:   [104.49 ms 106.65 ms 108.40 ms]
+integer::eq_parallelized/integer::eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #5
+                        time:   [139.90 ms 141.18 ms 142.28 ms]
+integer::eq_parallelized/integer::eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #6
+                        time:   [138.34 ms 139.53 ms 141.49 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) high mild
+  2 (13.33%) high severe
+integer::eq_parallelized/integer::eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #7
+                        time:   [213.03 ms 214.32 ms 215.29 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) low mild
+integer::eq_parallelized/integer::eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #8
+                        time:   [399.77 ms 400.91 ms 401.74 ms]
+
+integer::ne_parallelized/integer::ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M...
+                        time:   [16.561 ms 16.743 ms 16.888 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::ne_parallelized/integer::ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #2
+                        time:   [63.282 ms 64.871 ms 66.640 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high mild
+integer::ne_parallelized/integer::ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #3
+                        time:   [124.98 ms 129.92 ms 134.39 ms]
+integer::ne_parallelized/integer::ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #4
+                        time:   [106.80 ms 107.87 ms 108.67 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high mild
+integer::ne_parallelized/integer::ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #5
+                        time:   [139.22 ms 140.03 ms 140.78 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::ne_parallelized/integer::ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #6
+                        time:   [138.10 ms 139.00 ms 140.61 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high severe
+integer::ne_parallelized/integer::ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #7
+                        time:   [211.75 ms 213.45 ms 214.40 ms]
+integer::ne_parallelized/integer::ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #8
+                        time:   [400.23 ms 401.61 ms 402.98 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+
+integer::lt_parallelized/integer::lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M...
+                        time:   [16.516 ms 16.641 ms 16.774 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+integer::lt_parallelized/integer::lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #2
+                        time:   [64.732 ms 66.314 ms 67.650 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::lt_parallelized/integer::lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #3
+                        time:   [132.98 ms 135.80 ms 138.71 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::lt_parallelized/integer::lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #4
+                        time:   [161.51 ms 162.77 ms 164.15 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::lt_parallelized/integer::lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #5
+                        time:   [187.32 ms 188.66 ms 190.26 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::lt_parallelized/integer::lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #6
+                        time:   [166.75 ms 168.96 ms 171.91 ms]
+integer::lt_parallelized/integer::lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #7
+                        time:   [309.43 ms 310.38 ms 311.70 ms]
+Benchmarking integer::lt_parallelized/integer::lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 75.9s, enable flat sampling, or reduce sample count to 10.
+integer::lt_parallelized/integer::lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #8
+                        time:   [630.81 ms 631.59 ms 632.30 ms]
+
+integer::le_parallelized/integer::le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M...
+                        time:   [16.516 ms 16.651 ms 16.776 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) high mild
+  2 (13.33%) high severe
+integer::le_parallelized/integer::le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #2
+                        time:   [61.768 ms 64.461 ms 67.101 ms]
+integer::le_parallelized/integer::le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #3
+                        time:   [133.05 ms 135.29 ms 137.44 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::le_parallelized/integer::le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #4
+                        time:   [161.96 ms 162.86 ms 163.74 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::le_parallelized/integer::le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #5
+                        time:   [188.54 ms 190.39 ms 192.34 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::le_parallelized/integer::le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #6
+                        time:   [173.26 ms 176.57 ms 181.08 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  2 (13.33%) high mild
+  1 (6.67%) high severe
+integer::le_parallelized/integer::le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #7
+                        time:   [309.59 ms 310.55 ms 311.40 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+Benchmarking integer::le_parallelized/integer::le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 75.9s, enable flat sampling, or reduce sample count to 10.
+integer::le_parallelized/integer::le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #8
+                        time:   [635.10 ms 636.33 ms 637.81 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+
+integer::gt_parallelized/integer::gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M...
+                        time:   [16.477 ms 16.586 ms 16.774 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::gt_parallelized/integer::gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #2
+                        time:   [66.980 ms 68.435 ms 69.504 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::gt_parallelized/integer::gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #3
+                        time:   [130.80 ms 133.68 ms 136.75 ms]
+integer::gt_parallelized/integer::gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #4
+                        time:   [160.94 ms 162.01 ms 162.92 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::gt_parallelized/integer::gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #5
+                        time:   [188.47 ms 189.94 ms 191.55 ms]
+integer::gt_parallelized/integer::gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #6
+                        time:   [172.61 ms 175.17 ms 179.74 ms]
+integer::gt_parallelized/integer::gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #7
+                        time:   [309.45 ms 310.64 ms 311.64 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+Benchmarking integer::gt_parallelized/integer::gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 76.7s, enable flat sampling, or reduce sample count to 10.
+integer::gt_parallelized/integer::gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #8
+                        time:   [633.37 ms 635.06 ms 637.09 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+
+integer::ge_parallelized/integer::ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M...
+                        time:   [16.529 ms 16.586 ms 16.729 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::ge_parallelized/integer::ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #2
+                        time:   [62.812 ms 64.517 ms 65.526 ms]
+integer::ge_parallelized/integer::ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #3
+                        time:   [132.15 ms 134.75 ms 136.95 ms]
+integer::ge_parallelized/integer::ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #4
+                        time:   [162.38 ms 163.35 ms 164.28 ms]
+integer::ge_parallelized/integer::ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #5
+                        time:   [189.77 ms 190.77 ms 191.62 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::ge_parallelized/integer::ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #6
+                        time:   [172.23 ms 174.27 ms 177.76 ms]
+integer::ge_parallelized/integer::ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #7
+                        time:   [309.88 ms 310.50 ms 311.18 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low severe
+  1 (6.67%) high severe
+Benchmarking integer::ge_parallelized/integer::ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 76.0s, enable flat sampling, or reduce sample count to 10.
+integer::ge_parallelized/integer::ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M... #8
+                        time:   [632.87 ms 633.43 ms 634.17 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+
+integer::if_then_else_parallelized/integer::if_then_else_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_...
+                        time:   [82.501 ms 83.470 ms 84.695 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::if_then_else_parallelized/integer::if_then_else_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #2
+                        time:   [80.530 ms 81.537 ms 82.728 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::if_then_else_parallelized/integer::if_then_else_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #3
+                        time:   [60.756 ms 61.079 ms 61.689 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high severe
+integer::if_then_else_parallelized/integer::if_then_else_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #4
+                        time:   [100.18 ms 100.31 ms 100.44 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::if_then_else_parallelized/integer::if_then_else_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #5
+                        time:   [146.37 ms 146.51 ms 146.64 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::if_then_else_parallelized/integer::if_then_else_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #6
+                        time:   [200.89 ms 201.27 ms 201.83 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::if_then_else_parallelized/integer::if_then_else_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #7
+                        time:   [399.83 ms 400.41 ms 401.07 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+Benchmarking integer::if_then_else_parallelized/integer::if_then_else_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 96.4s, enable flat sampling, or reduce sample count to 10.
+integer::if_then_else_parallelized/integer::if_then_else_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #8
+                        time:   [800.03 ms 801.85 ms 803.97 ms]
+
+integer::flip_parallelized/integer::flip_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR...
+                        time:   [66.238 ms 67.419 ms 68.518 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::flip_parallelized/integer::flip_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #2
+                        time:   [77.523 ms 78.845 ms 80.552 ms]
+integer::flip_parallelized/integer::flip_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #3
+                        time:   [66.955 ms 67.022 ms 67.102 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::flip_parallelized/integer::flip_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #4
+                        time:   [134.03 ms 134.27 ms 134.62 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::flip_parallelized/integer::flip_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #5
+                        time:   [186.30 ms 186.49 ms 186.71 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low severe
+  1 (6.67%) low mild
+integer::flip_parallelized/integer::flip_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #6
+                        time:   [267.85 ms 268.50 ms 269.06 ms]
+Benchmarking integer::flip_parallelized/integer::flip_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #7: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 65.1s, enable flat sampling, or reduce sample count to 10.
+integer::flip_parallelized/integer::flip_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #7
+                        time:   [535.23 ms 536.12 ms 537.18 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::flip_parallelized/integer::flip_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #8
+                        time:   [1.0741 s 1.0783 s 1.0832 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+
+integer::scalar_add_parallelized/integer::scalar_add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32...
+                        time:   [16.833 ms 16.888 ms 16.988 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high severe
+integer::scalar_add_parallelized/integer::scalar_add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #2
+                        time:   [117.05 ms 120.79 ms 124.14 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  2 (13.33%) low mild
+  1 (6.67%) high mild
+integer::scalar_add_parallelized/integer::scalar_add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #3
+                        time:   [125.18 ms 126.82 ms 128.18 ms]
+integer::scalar_add_parallelized/integer::scalar_add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #4
+                        time:   [133.71 ms 139.34 ms 144.29 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low severe
+  1 (6.67%) high severe
+integer::scalar_add_parallelized/integer::scalar_add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #5
+                        time:   [179.64 ms 180.64 ms 181.70 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::scalar_add_parallelized/integer::scalar_add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #6
+                        time:   [218.92 ms 219.28 ms 219.60 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) low severe
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::scalar_add_parallelized/integer::scalar_add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #7
+                        time:   [440.44 ms 441.09 ms 441.74 ms]
+Benchmarking integer::scalar_add_parallelized/integer::scalar_add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 110.4s, enable flat sampling, or reduce sample count to 10.
+integer::scalar_add_parallelized/integer::scalar_add_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8
+                        time:   [898.10 ms 899.27 ms 900.21 ms]
+
+integer::unsigned_overflowing_scalar_add_parallelized/integer::unsigned_overflowing_scalar_add_paral...
+                        time:   [34.088 ms 34.827 ms 35.393 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+integer::unsigned_overflowing_scalar_add_parallelized/integer::unsigned_overflowing_scalar_add_paral... #2
+                        time:   [133.52 ms 137.41 ms 140.89 ms]
+integer::unsigned_overflowing_scalar_add_parallelized/integer::unsigned_overflowing_scalar_add_paral... #3
+                        time:   [118.04 ms 119.63 ms 120.86 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high severe
+integer::unsigned_overflowing_scalar_add_parallelized/integer::unsigned_overflowing_scalar_add_paral... #4
+                        time:   [167.92 ms 168.27 ms 168.56 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::unsigned_overflowing_scalar_add_parallelized/integer::unsigned_overflowing_scalar_add_paral... #5
+                        time:   [207.32 ms 208.08 ms 208.91 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::unsigned_overflowing_scalar_add_parallelized/integer::unsigned_overflowing_scalar_add_paral... #6
+                        time:   [233.21 ms 233.35 ms 233.50 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low severe
+  1 (6.67%) high severe
+integer::unsigned_overflowing_scalar_add_parallelized/integer::unsigned_overflowing_scalar_add_paral... #7
+                        time:   [455.48 ms 455.95 ms 456.63 ms]
+Benchmarking integer::unsigned_overflowing_scalar_add_parallelized/integer::unsigned_overflowing_scalar_add_paral... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 112.2s, enable flat sampling, or reduce sample count to 10.
+integer::unsigned_overflowing_scalar_add_parallelized/integer::unsigned_overflowing_scalar_add_paral... #8
+                        time:   [913.02 ms 914.82 ms 916.33 ms]
+
+integer::scalar_sub_parallelized/integer::scalar_sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32...
+                        time:   [12.631 ms 12.846 ms 13.042 ms]
+integer::scalar_sub_parallelized/integer::scalar_sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #2
+                        time:   [122.86 ms 126.55 ms 129.48 ms]
+integer::scalar_sub_parallelized/integer::scalar_sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #3
+                        time:   [120.76 ms 122.82 ms 125.33 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::scalar_sub_parallelized/integer::scalar_sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #4
+                        time:   [121.22 ms 121.82 ms 122.57 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high severe
+integer::scalar_sub_parallelized/integer::scalar_sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #5
+                        time:   [180.62 ms 181.56 ms 182.90 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::scalar_sub_parallelized/integer::scalar_sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #6
+                        time:   [219.26 ms 219.45 ms 219.72 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  2 (13.33%) low severe
+  1 (6.67%) high mild
+integer::scalar_sub_parallelized/integer::scalar_sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #7
+                        time:   [440.98 ms 441.71 ms 442.19 ms]
+Benchmarking integer::scalar_sub_parallelized/integer::scalar_sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 110.3s, enable flat sampling, or reduce sample count to 10.
+integer::scalar_sub_parallelized/integer::scalar_sub_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8
+                        time:   [897.36 ms 898.60 ms 900.78 ms]
+
+integer::unsigned_overflowing_scalar_sub_parallelized/integer::unsigned_overflowing_scalar_sub_paral...
+                        time:   [30.905 ms 32.112 ms 32.970 ms]
+integer::unsigned_overflowing_scalar_sub_parallelized/integer::unsigned_overflowing_scalar_sub_paral... #2
+                        time:   [122.07 ms 125.46 ms 128.98 ms]
+integer::unsigned_overflowing_scalar_sub_parallelized/integer::unsigned_overflowing_scalar_sub_paral... #3
+                        time:   [118.50 ms 119.27 ms 120.22 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::unsigned_overflowing_scalar_sub_parallelized/integer::unsigned_overflowing_scalar_sub_paral... #4
+                        time:   [167.37 ms 168.04 ms 168.61 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::unsigned_overflowing_scalar_sub_parallelized/integer::unsigned_overflowing_scalar_sub_paral... #5
+                        time:   [190.44 ms 198.87 ms 208.17 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  2 (13.33%) low severe
+  1 (6.67%) high mild
+integer::unsigned_overflowing_scalar_sub_parallelized/integer::unsigned_overflowing_scalar_sub_paral... #6
+                        time:   [233.32 ms 233.51 ms 233.67 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::unsigned_overflowing_scalar_sub_parallelized/integer::unsigned_overflowing_scalar_sub_paral... #7
+                        time:   [456.26 ms 456.86 ms 457.57 ms]
+Benchmarking integer::unsigned_overflowing_scalar_sub_parallelized/integer::unsigned_overflowing_scalar_sub_paral... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 112.2s, enable flat sampling, or reduce sample count to 10.
+integer::unsigned_overflowing_scalar_sub_parallelized/integer::unsigned_overflowing_scalar_sub_paral... #8
+                        time:   [912.69 ms 914.01 ms 915.13 ms]
+
+integer::scalar_mul_parallelized/integer::scalar_mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32...
+                        time:   [30.299 ms 32.858 ms 35.123 ms]
+integer::scalar_mul_parallelized/integer::scalar_mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #2
+                        time:   [155.88 ms 159.52 ms 162.87 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low severe
+  1 (6.67%) high mild
+integer::scalar_mul_parallelized/integer::scalar_mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #3
+                        time:   [242.04 ms 248.13 ms 253.07 ms]
+integer::scalar_mul_parallelized/integer::scalar_mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #4
+                        time:   [339.96 ms 348.02 ms 355.23 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+Benchmarking integer::scalar_mul_parallelized/integer::scalar_mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #5: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 66.0s, enable flat sampling, or reduce sample count to 10.
+integer::scalar_mul_parallelized/integer::scalar_mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #5
+                        time:   [513.79 ms 525.42 ms 538.56 ms]
+integer::scalar_mul_parallelized/integer::scalar_mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #6
+                        time:   [1.0277 s 1.0456 s 1.0650 s]
+Found 4 outliers among 15 measurements (26.67%)
+  2 (13.33%) low mild
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::scalar_mul_parallelized/integer::scalar_mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #7
+                        time:   [3.5022 s 3.6011 s 3.6935 s]
+Benchmarking integer::scalar_mul_parallelized/integer::scalar_mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 211.6s, or reduce sample count to 10.
+integer::scalar_mul_parallelized/integer::scalar_mul_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8
+                        time:   [12.321 s 12.768 s 13.231 s]
+
+integer::scalar_div_parallelized/integer::scalar_div_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32...
+                        time:   [58.762 ms 64.192 ms 68.539 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::scalar_div_parallelized/integer::scalar_div_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #2
+                        time:   [261.40 ms 274.90 ms 291.45 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) low mild
+  2 (13.33%) high mild
+integer::scalar_div_parallelized/integer::scalar_div_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #3
+                        time:   [352.53 ms 365.83 ms 381.35 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::scalar_div_parallelized/integer::scalar_div_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #4
+                        time:   [757.94 ms 783.94 ms 810.13 ms]
+integer::scalar_div_parallelized/integer::scalar_div_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #5
+                        time:   [1.1244 s 1.1860 s 1.2521 s]
+integer::scalar_div_parallelized/integer::scalar_div_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #6
+                        time:   [2.2213 s 2.3475 s 2.4629 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+Benchmarking integer::scalar_div_parallelized/integer::scalar_div_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #7: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 118.4s, or reduce sample count to 10.
+integer::scalar_div_parallelized/integer::scalar_div_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #7
+                        time:   [7.9271 s 8.2730 s 8.6431 s]
+Benchmarking integer::scalar_div_parallelized/integer::scalar_div_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 457.3s, or reduce sample count to 10.
+integer::scalar_div_parallelized/integer::scalar_div_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8
+                        time:   [27.140 s 27.647 s 28.153 s]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+
+integer::scalar_rem_parallelized/integer::scalar_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32...
+                        time:   [104.87 ms 117.90 ms 137.30 ms]
+integer::scalar_rem_parallelized/integer::scalar_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #2
+                        time:   [539.74 ms 556.22 ms 573.38 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) low mild
+Benchmarking integer::scalar_rem_parallelized/integer::scalar_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #3: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 83.2s, enable flat sampling, or reduce sample count to 10.
+integer::scalar_rem_parallelized/integer::scalar_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #3
+                        time:   [680.31 ms 696.45 ms 712.11 ms]
+integer::scalar_rem_parallelized/integer::scalar_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #4
+                        time:   [1.1436 s 1.1811 s 1.2172 s]
+integer::scalar_rem_parallelized/integer::scalar_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #5
+                        time:   [1.6081 s 1.6638 s 1.7168 s]
+integer::scalar_rem_parallelized/integer::scalar_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #6
+                        time:   [3.0648 s 3.1666 s 3.2668 s]
+Benchmarking integer::scalar_rem_parallelized/integer::scalar_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #7: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 160.6s, or reduce sample count to 10.
+integer::scalar_rem_parallelized/integer::scalar_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #7
+                        time:   [9.3428 s 9.7128 s 10.127 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+Benchmarking integer::scalar_rem_parallelized/integer::scalar_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 505.0s, or reduce sample count to 10.
+integer::scalar_rem_parallelized/integer::scalar_rem_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8
+                        time:   [32.320 s 33.080 s 33.872 s]
+
+integer::scalar_left_shift_parallelized/integer::scalar_left_shift_parallelized::V1_5_PARAM_MESSAGE_...
+                        time:   [16.901 ms 17.003 ms 17.141 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high severe
+integer::scalar_left_shift_parallelized/integer::scalar_left_shift_parallelized::V1_5_PARAM_MESSAGE_... #2
+                        time:   [35.546 ms 35.989 ms 36.395 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::scalar_left_shift_parallelized/integer::scalar_left_shift_parallelized::V1_5_PARAM_MESSAGE_... #3
+                        time:   [37.843 ms 38.426 ms 39.027 ms]
+integer::scalar_left_shift_parallelized/integer::scalar_left_shift_parallelized::V1_5_PARAM_MESSAGE_... #4
+                        time:   [33.404 ms 33.459 ms 33.509 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high mild
+integer::scalar_left_shift_parallelized/integer::scalar_left_shift_parallelized::V1_5_PARAM_MESSAGE_... #5
+                        time:   [53.844 ms 54.059 ms 54.218 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::scalar_left_shift_parallelized/integer::scalar_left_shift_parallelized::V1_5_PARAM_MESSAGE_... #6
+                        time:   [66.471 ms 66.573 ms 66.697 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low severe
+  1 (6.67%) high mild
+integer::scalar_left_shift_parallelized/integer::scalar_left_shift_parallelized::V1_5_PARAM_MESSAGE_... #7
+                        time:   [133.10 ms 133.49 ms 133.89 ms]
+integer::scalar_left_shift_parallelized/integer::scalar_left_shift_parallelized::V1_5_PARAM_MESSAGE_... #8
+                        time:   [265.57 ms 266.04 ms 266.68 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+
+integer::scalar_right_shift_parallelized/integer::scalar_right_shift_parallelized::V1_5_PARAM_MESSAG...
+                        time:   [16.839 ms 17.056 ms 17.496 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high severe
+integer::scalar_right_shift_parallelized/integer::scalar_right_shift_parallelized::V1_5_PARAM_MESSAG... #2
+                        time:   [35.724 ms 36.007 ms 36.288 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::scalar_right_shift_parallelized/integer::scalar_right_shift_parallelized::V1_5_PARAM_MESSAG... #3
+                        time:   [37.471 ms 38.147 ms 39.146 ms]
+integer::scalar_right_shift_parallelized/integer::scalar_right_shift_parallelized::V1_5_PARAM_MESSAG... #4
+                        time:   [33.465 ms 33.520 ms 33.565 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::scalar_right_shift_parallelized/integer::scalar_right_shift_parallelized::V1_5_PARAM_MESSAG... #5
+                        time:   [53.870 ms 54.014 ms 54.182 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::scalar_right_shift_parallelized/integer::scalar_right_shift_parallelized::V1_5_PARAM_MESSAG... #6
+                        time:   [66.261 ms 66.373 ms 66.456 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::scalar_right_shift_parallelized/integer::scalar_right_shift_parallelized::V1_5_PARAM_MESSAG... #7
+                        time:   [133.03 ms 133.30 ms 133.50 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::scalar_right_shift_parallelized/integer::scalar_right_shift_parallelized::V1_5_PARAM_MESSAG... #8
+                        time:   [265.20 ms 265.45 ms 265.74 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+
+integer::scalar_rotate_left_parallelized/integer::scalar_rotate_left_parallelized::V1_5_PARAM_MESSAG...
+                        time:   [16.652 ms 16.746 ms 16.908 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::scalar_rotate_left_parallelized/integer::scalar_rotate_left_parallelized::V1_5_PARAM_MESSAG... #2
+                        time:   [34.696 ms 35.651 ms 36.590 ms]
+integer::scalar_rotate_left_parallelized/integer::scalar_rotate_left_parallelized::V1_5_PARAM_MESSAG... #3
+                        time:   [38.775 ms 39.411 ms 39.977 ms]
+integer::scalar_rotate_left_parallelized/integer::scalar_rotate_left_parallelized::V1_5_PARAM_MESSAG... #4
+                        time:   [33.355 ms 33.490 ms 33.593 ms]
+integer::scalar_rotate_left_parallelized/integer::scalar_rotate_left_parallelized::V1_5_PARAM_MESSAG... #5
+                        time:   [54.603 ms 54.822 ms 55.010 ms]
+integer::scalar_rotate_left_parallelized/integer::scalar_rotate_left_parallelized::V1_5_PARAM_MESSAG... #6
+                        time:   [66.293 ms 66.435 ms 66.622 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::scalar_rotate_left_parallelized/integer::scalar_rotate_left_parallelized::V1_5_PARAM_MESSAG... #7
+                        time:   [132.36 ms 132.48 ms 132.61 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::scalar_rotate_left_parallelized/integer::scalar_rotate_left_parallelized::V1_5_PARAM_MESSAG... #8
+                        time:   [265.44 ms 265.93 ms 266.42 ms]
+
+integer::scalar_rotate_right_parallelized/integer::scalar_rotate_right_parallelized::V1_5_PARAM_MESS...
+                        time:   [16.739 ms 16.843 ms 16.990 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high mild
+integer::scalar_rotate_right_parallelized/integer::scalar_rotate_right_parallelized::V1_5_PARAM_MESS... #2
+                        time:   [35.083 ms 35.374 ms 35.698 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::scalar_rotate_right_parallelized/integer::scalar_rotate_right_parallelized::V1_5_PARAM_MESS... #3
+                        time:   [39.328 ms 39.800 ms 40.287 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) low mild
+integer::scalar_rotate_right_parallelized/integer::scalar_rotate_right_parallelized::V1_5_PARAM_MESS... #4
+                        time:   [33.394 ms 33.500 ms 33.565 ms]
+integer::scalar_rotate_right_parallelized/integer::scalar_rotate_right_parallelized::V1_5_PARAM_MESS... #5
+                        time:   [54.156 ms 54.291 ms 54.433 ms]
+integer::scalar_rotate_right_parallelized/integer::scalar_rotate_right_parallelized::V1_5_PARAM_MESS... #6
+                        time:   [66.518 ms 66.603 ms 66.685 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low severe
+  1 (6.67%) high severe
+integer::scalar_rotate_right_parallelized/integer::scalar_rotate_right_parallelized::V1_5_PARAM_MESS... #7
+                        time:   [132.48 ms 132.73 ms 132.95 ms]
+integer::scalar_rotate_right_parallelized/integer::scalar_rotate_right_parallelized::V1_5_PARAM_MESS... #8
+                        time:   [265.46 ms 265.93 ms 266.43 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high mild
+
+integer::scalar_bitand_parallelized/integer::scalar_bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_...
+                        time:   [12.286 ms 12.645 ms 12.958 ms]
+integer::scalar_bitand_parallelized/integer::scalar_bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #2
+                        time:   [35.593 ms 36.430 ms 37.144 ms]
+integer::scalar_bitand_parallelized/integer::scalar_bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #3
+                        time:   [39.586 ms 40.313 ms 40.939 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::scalar_bitand_parallelized/integer::scalar_bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #4
+                        time:   [32.924 ms 33.003 ms 33.095 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  2 (13.33%) low severe
+  1 (6.67%) high mild
+integer::scalar_bitand_parallelized/integer::scalar_bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #5
+                        time:   [53.499 ms 53.848 ms 54.078 ms]
+integer::scalar_bitand_parallelized/integer::scalar_bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #6
+                        time:   [65.587 ms 65.668 ms 65.792 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::scalar_bitand_parallelized/integer::scalar_bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #7
+                        time:   [131.02 ms 131.35 ms 131.69 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::scalar_bitand_parallelized/integer::scalar_bitand_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #8
+                        time:   [262.11 ms 262.59 ms 263.11 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+
+integer::scalar_bitor_parallelized/integer::scalar_bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_...
+                        time:   [12.428 ms 12.619 ms 12.830 ms]
+integer::scalar_bitor_parallelized/integer::scalar_bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #2
+                        time:   [35.981 ms 36.867 ms 37.676 ms]
+integer::scalar_bitor_parallelized/integer::scalar_bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #3
+                        time:   [41.326 ms 42.074 ms 42.753 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::scalar_bitor_parallelized/integer::scalar_bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #4
+                        time:   [33.042 ms 33.144 ms 33.228 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::scalar_bitor_parallelized/integer::scalar_bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #5
+                        time:   [53.010 ms 53.249 ms 53.464 ms]
+integer::scalar_bitor_parallelized/integer::scalar_bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #6
+                        time:   [65.805 ms 66.015 ms 66.247 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low severe
+  1 (6.67%) high mild
+integer::scalar_bitor_parallelized/integer::scalar_bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #7
+                        time:   [132.12 ms 132.26 ms 132.39 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) low mild
+  2 (13.33%) high severe
+integer::scalar_bitor_parallelized/integer::scalar_bitor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_... #8
+                        time:   [263.73 ms 264.09 ms 264.59 ms]
+
+integer::scalar_bitxor_parallelized/integer::scalar_bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_...
+                        time:   [12.132 ms 12.388 ms 12.688 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low severe
+  1 (6.67%) high mild
+integer::scalar_bitxor_parallelized/integer::scalar_bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #2
+                        time:   [36.420 ms 36.896 ms 37.338 ms]
+integer::scalar_bitxor_parallelized/integer::scalar_bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #3
+                        time:   [39.454 ms 39.897 ms 40.448 ms]
+integer::scalar_bitxor_parallelized/integer::scalar_bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #4
+                        time:   [33.020 ms 33.104 ms 33.163 ms]
+integer::scalar_bitxor_parallelized/integer::scalar_bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #5
+                        time:   [53.715 ms 53.978 ms 54.151 ms]
+integer::scalar_bitxor_parallelized/integer::scalar_bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #6
+                        time:   [65.983 ms 66.070 ms 66.180 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::scalar_bitxor_parallelized/integer::scalar_bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #7
+                        time:   [131.99 ms 132.17 ms 132.33 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::scalar_bitxor_parallelized/integer::scalar_bitxor_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_... #8
+                        time:   [264.62 ms 264.91 ms 265.20 ms]
+Found 6 outliers among 15 measurements (40.00%)
+  1 (6.67%) low severe
+  2 (13.33%) low mild
+  2 (13.33%) high mild
+  1 (6.67%) high severe
+
+integer::scalar_eq_parallelized/integer::scalar_eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P...
+                        time:   [17.165 ms 17.491 ms 17.872 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  2 (13.33%) high mild
+  1 (6.67%) high severe
+integer::scalar_eq_parallelized/integer::scalar_eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #2
+                        time:   [78.711 ms 79.872 ms 80.848 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  2 (13.33%) low mild
+  1 (6.67%) high mild
+integer::scalar_eq_parallelized/integer::scalar_eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #3
+                        time:   [78.086 ms 79.116 ms 80.179 ms]
+integer::scalar_eq_parallelized/integer::scalar_eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #4
+                        time:   [135.13 ms 136.46 ms 137.55 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::scalar_eq_parallelized/integer::scalar_eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #5
+                        time:   [130.39 ms 132.68 ms 134.69 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::scalar_eq_parallelized/integer::scalar_eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #6
+                        time:   [101.55 ms 104.38 ms 107.43 ms]
+integer::scalar_eq_parallelized/integer::scalar_eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #7
+                        time:   [135.45 ms 136.32 ms 137.66 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+integer::scalar_eq_parallelized/integer::scalar_eq_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #8
+                        time:   [207.81 ms 209.47 ms 211.29 ms]
+
+integer::scalar_ne_parallelized/integer::scalar_ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P...
+                        time:   [17.093 ms 17.275 ms 17.626 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+integer::scalar_ne_parallelized/integer::scalar_ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #2
+                        time:   [65.577 ms 70.039 ms 73.995 ms]
+integer::scalar_ne_parallelized/integer::scalar_ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #3
+                        time:   [78.353 ms 79.117 ms 80.015 ms]
+integer::scalar_ne_parallelized/integer::scalar_ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #4
+                        time:   [133.28 ms 134.96 ms 137.33 ms]
+integer::scalar_ne_parallelized/integer::scalar_ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #5
+                        time:   [128.76 ms 130.12 ms 131.16 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) low mild
+integer::scalar_ne_parallelized/integer::scalar_ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #6
+                        time:   [104.38 ms 105.44 ms 106.63 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::scalar_ne_parallelized/integer::scalar_ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #7
+                        time:   [135.91 ms 136.75 ms 138.08 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high severe
+integer::scalar_ne_parallelized/integer::scalar_ne_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #8
+                        time:   [209.60 ms 210.77 ms 211.87 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+
+integer::scalar_lt_parallelized/integer::scalar_lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P...
+                        time:   [12.199 ms 12.341 ms 12.478 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::scalar_lt_parallelized/integer::scalar_lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #2
+                        time:   [72.431 ms 74.981 ms 76.756 ms]
+integer::scalar_lt_parallelized/integer::scalar_lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #3
+                        time:   [66.707 ms 68.793 ms 71.081 ms]
+integer::scalar_lt_parallelized/integer::scalar_lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #4
+                        time:   [126.73 ms 129.38 ms 131.62 ms]
+integer::scalar_lt_parallelized/integer::scalar_lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #5
+                        time:   [146.52 ms 148.08 ms 149.76 ms]
+integer::scalar_lt_parallelized/integer::scalar_lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #6
+                        time:   [157.17 ms 157.94 ms 158.75 ms]
+integer::scalar_lt_parallelized/integer::scalar_lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #7
+                        time:   [171.35 ms 173.62 ms 176.24 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) high mild
+  2 (13.33%) high severe
+integer::scalar_lt_parallelized/integer::scalar_lt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #8
+                        time:   [307.96 ms 309.09 ms 310.16 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) low mild
+
+integer::scalar_le_parallelized/integer::scalar_le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P...
+                        time:   [16.738 ms 16.918 ms 17.096 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::scalar_le_parallelized/integer::scalar_le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #2
+                        time:   [71.823 ms 72.911 ms 73.873 ms]
+integer::scalar_le_parallelized/integer::scalar_le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #3
+                        time:   [66.965 ms 68.638 ms 70.308 ms]
+integer::scalar_le_parallelized/integer::scalar_le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #4
+                        time:   [128.93 ms 130.13 ms 132.05 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::scalar_le_parallelized/integer::scalar_le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #5
+                        time:   [145.58 ms 147.37 ms 148.96 ms]
+integer::scalar_le_parallelized/integer::scalar_le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #6
+                        time:   [158.19 ms 159.19 ms 160.27 ms]
+integer::scalar_le_parallelized/integer::scalar_le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #7
+                        time:   [174.29 ms 178.25 ms 183.58 ms]
+integer::scalar_le_parallelized/integer::scalar_le_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #8
+                        time:   [308.44 ms 309.26 ms 310.03 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+
+integer::scalar_gt_parallelized/integer::scalar_gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P...
+                        time:   [16.621 ms 16.644 ms 16.685 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high severe
+integer::scalar_gt_parallelized/integer::scalar_gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #2
+                        time:   [68.884 ms 70.574 ms 72.712 ms]
+integer::scalar_gt_parallelized/integer::scalar_gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #3
+                        time:   [62.842 ms 64.416 ms 65.765 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) low mild
+integer::scalar_gt_parallelized/integer::scalar_gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #4
+                        time:   [129.54 ms 131.75 ms 134.39 ms]
+integer::scalar_gt_parallelized/integer::scalar_gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #5
+                        time:   [146.58 ms 148.07 ms 149.99 ms]
+integer::scalar_gt_parallelized/integer::scalar_gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #6
+                        time:   [158.77 ms 159.38 ms 160.06 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) low severe
+  1 (6.67%) low mild
+  1 (6.67%) high severe
+integer::scalar_gt_parallelized/integer::scalar_gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #7
+                        time:   [170.46 ms 174.10 ms 180.04 ms]
+integer::scalar_gt_parallelized/integer::scalar_gt_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #8
+                        time:   [307.66 ms 308.79 ms 309.76 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+
+integer::scalar_ge_parallelized/integer::scalar_ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P...
+                        time:   [12.557 ms 12.693 ms 12.852 ms]
+integer::scalar_ge_parallelized/integer::scalar_ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #2
+                        time:   [66.332 ms 69.477 ms 72.407 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::scalar_ge_parallelized/integer::scalar_ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #3
+                        time:   [68.047 ms 69.205 ms 70.451 ms]
+integer::scalar_ge_parallelized/integer::scalar_ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #4
+                        time:   [125.19 ms 128.25 ms 131.15 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::scalar_ge_parallelized/integer::scalar_ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #5
+                        time:   [147.10 ms 148.87 ms 150.47 ms]
+integer::scalar_ge_parallelized/integer::scalar_ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #6
+                        time:   [157.19 ms 158.97 ms 160.93 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::scalar_ge_parallelized/integer::scalar_ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #7
+                        time:   [170.81 ms 172.59 ms 175.85 ms]
+integer::scalar_ge_parallelized/integer::scalar_ge_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_P... #8
+                        time:   [307.91 ms 309.07 ms 310.19 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+
+integer::scalar_min_parallelized/integer::scalar_min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32...
+                        time:   [29.230 ms 29.552 ms 29.867 ms]
+integer::scalar_min_parallelized/integer::scalar_min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #2
+                        time:   [117.50 ms 118.48 ms 119.58 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) low severe
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::scalar_min_parallelized/integer::scalar_min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #3
+                        time:   [113.52 ms 115.41 ms 117.42 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::scalar_min_parallelized/integer::scalar_min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #4
+                        time:   [161.32 ms 162.82 ms 164.65 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low severe
+integer::scalar_min_parallelized/integer::scalar_min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #5
+                        time:   [206.47 ms 207.81 ms 209.51 ms]
+integer::scalar_min_parallelized/integer::scalar_min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #6
+                        time:   [164.99 ms 166.43 ms 167.72 ms]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high severe
+integer::scalar_min_parallelized/integer::scalar_min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #7
+                        time:   [295.13 ms 296.92 ms 298.49 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+Benchmarking integer::scalar_min_parallelized/integer::scalar_min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 70.9s, enable flat sampling, or reduce sample count to 10.
+integer::scalar_min_parallelized/integer::scalar_min_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8
+                        time:   [575.39 ms 577.65 ms 580.62 ms]
+
+integer::scalar_max_parallelized/integer::scalar_max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32...
+                        time:   [33.475 ms 33.850 ms 34.145 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::scalar_max_parallelized/integer::scalar_max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #2
+                        time:   [118.85 ms 121.17 ms 123.47 ms]
+integer::scalar_max_parallelized/integer::scalar_max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #3
+                        time:   [114.84 ms 116.30 ms 118.50 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::scalar_max_parallelized/integer::scalar_max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #4
+                        time:   [162.05 ms 163.37 ms 164.88 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::scalar_max_parallelized/integer::scalar_max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #5
+                        time:   [204.45 ms 205.97 ms 207.66 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::scalar_max_parallelized/integer::scalar_max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #6
+                        time:   [164.70 ms 165.70 ms 166.93 ms]
+Found 4 outliers among 15 measurements (26.67%)
+  1 (6.67%) low mild
+  3 (20.00%) high severe
+integer::scalar_max_parallelized/integer::scalar_max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #7
+                        time:   [294.60 ms 295.54 ms 296.61 ms]
+Benchmarking integer::scalar_max_parallelized/integer::scalar_max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 60.0s. You may wish to increase target time to 71.6s, enable flat sampling, or reduce sample count to 10.
+integer::scalar_max_parallelized/integer::scalar_max_parallelized::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32... #8
+                        time:   [574.08 ms 576.34 ms 578.75 ms]
+
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_...
+                        time:   [115.73 ns 130.07 ns 138.54 ns]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #2
+                        time:   [722.70 ns 737.72 ns 748.42 ns]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #3
+                        time:   [2.1602 µs 2.1782 µs 2.1898 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #4
+                        time:   [4.7131 µs 4.7564 µs 4.8070 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #5
+                        time:   [5.9625 µs 6.0101 µs 6.0704 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #6
+                        time:   [9.7771 µs 9.8285 µs 9.8998 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #7
+                        time:   [20.764 µs 20.902 µs 21.058 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high severe
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #8
+                        time:   [71.361 µs 72.376 µs 73.161 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #9
+                        time:   [318.64 ns 364.06 ns 391.39 ns]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #10
+                        time:   [304.18 ns 346.97 ns 372.16 ns]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #11
+                        time:   [1.4341 µs 1.4737 µs 1.5006 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #12
+                        time:   [4.0730 µs 4.1830 µs 4.3105 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #13
+                        time:   [5.3648 µs 5.5688 µs 5.7295 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high mild
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #14
+                        time:   [9.2388 µs 9.3375 µs 9.4649 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #15
+                        time:   [19.860 µs 20.089 µs 20.424 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #16
+                        time:   [69.572 µs 70.006 µs 70.854 µs]
+Found 4 outliers among 15 measurements (26.67%)
+  1 (6.67%) low severe
+  1 (6.67%) low mild
+  2 (13.33%) high severe
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #17
+                        time:   [540.31 ns 599.02 ns 638.66 ns]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #18
+                        time:   [548.18 ns 610.12 ns 650.69 ns]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #19
+                        time:   [495.43 ns 544.63 ns 577.42 ns]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #20
+                        time:   [3.1020 µs 3.1750 µs 3.2262 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #21
+                        time:   [4.4311 µs 4.5027 µs 4.5537 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #22
+                        time:   [8.5419 µs 8.6524 µs 8.8207 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #23
+                        time:   [19.269 µs 19.615 µs 20.121 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #24
+                        time:   [69.165 µs 69.668 µs 70.243 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #25
+                        time:   [905.83 ns 998.99 ns 1.0607 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #26
+                        time:   [954.04 ns 1.0601 µs 1.1303 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #27
+                        time:   [984.54 ns 1.1091 µs 1.1831 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #28
+                        time:   [876.84 ns 978.38 ns 1.0526 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #29
+                        time:   [2.3658 µs 2.5144 µs 2.6072 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #30
+                        time:   [7.2687 µs 7.4023 µs 7.5178 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #31
+                        time:   [18.026 µs 18.186 µs 18.386 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #32
+                        time:   [65.265 µs 65.953 µs 67.138 µs]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) low mild
+  2 (13.33%) high severe
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #33
+                        time:   [1.2337 µs 1.3779 µs 1.4659 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #34
+                        time:   [1.1702 µs 1.3099 µs 1.3990 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #35
+                        time:   [1.2644 µs 1.4356 µs 1.5539 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #36
+                        time:   [1.2346 µs 1.3582 µs 1.4328 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #37
+                        time:   [1.1860 µs 1.3140 µs 1.3910 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #38
+                        time:   [5.6165 µs 5.7303 µs 5.7940 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #39
+                        time:   [17.032 µs 17.176 µs 17.340 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #40
+                        time:   [64.006 µs 65.884 µs 68.692 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #41
+                        time:   [1.7779 µs 1.9908 µs 2.1304 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #42
+                        time:   [1.8268 µs 2.0140 µs 2.1298 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #43
+                        time:   [1.8942 µs 2.0564 µs 2.1534 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #44
+                        time:   [1.9685 µs 2.1947 µs 2.3180 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #45
+                        time:   [1.8997 µs 2.1004 µs 2.2191 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #46
+                        time:   [1.7738 µs 1.9726 µs 2.0960 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #47
+                        time:   [13.117 µs 13.255 µs 13.455 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #48
+                        time:   [55.152 µs 56.749 µs 58.717 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #49
+                        time:   [3.4006 µs 3.8233 µs 4.0835 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #50
+                        time:   [3.6674 µs 4.0105 µs 4.1991 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #51
+                        time:   [3.5724 µs 3.9958 µs 4.2457 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #52
+                        time:   [3.5123 µs 3.8149 µs 4.0041 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #53
+                        time:   [3.4994 µs 3.8460 µs 4.0724 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #54
+                        time:   [3.8181 µs 4.2850 µs 4.5789 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #55
+                        time:   [3.3108 µs 3.6546 µs 3.8623 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #56
+                        time:   [36.400 µs 37.160 µs 38.398 µs]
+Found 4 outliers among 15 measurements (26.67%)
+  1 (6.67%) low mild
+  2 (13.33%) high mild
+  1 (6.67%) high severe
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #57
+                        time:   [6.8427 µs 7.6720 µs 8.2131 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #58
+                        time:   [6.6570 µs 7.3659 µs 7.8218 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #59
+                        time:   [7.4438 µs 8.2698 µs 8.7626 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #60
+                        time:   [6.9545 µs 7.6172 µs 8.0248 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #61
+                        time:   [7.0197 µs 7.6894 µs 8.0872 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #62
+                        time:   [7.5641 µs 8.4225 µs 8.9509 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #63
+                        time:   [7.0123 µs 7.8002 µs 8.2973 µs]
+integer::cast_to_unsigned/integer::cast_to_unsigned::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_... #64
+                        time:   [7.4712 µs 8.4019 µs 8.9648 µs]
+
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12...
+                        time:   [107.32 ns 119.29 ns 127.11 ns]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #2
+                        time:   [804.78 ns 826.29 ns 843.38 ns]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #3
+                        time:   [2.2734 µs 2.3005 µs 2.3255 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high mild
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #4
+                        time:   [4.8875 µs 4.9233 µs 4.9715 µs]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) high mild
+  2 (13.33%) high severe
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #5
+                        time:   [6.1530 µs 6.2106 µs 6.2817 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #6
+                        time:   [9.9372 µs 9.9952 µs 10.068 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #7
+                        time:   [21.078 µs 21.308 µs 21.617 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #8
+                        time:   [70.799 µs 71.873 µs 72.596 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #9
+                        time:   [306.45 ns 349.01 ns 374.66 ns]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #10
+                        time:   [305.00 ns 352.15 ns 380.32 ns]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #11
+                        time:   [1.4722 µs 1.5103 µs 1.5358 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #12
+                        time:   [4.4582 µs 4.5363 µs 4.5949 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #13
+                        time:   [5.7034 µs 5.8317 µs 5.9099 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #14
+                        time:   [9.6540 µs 9.8013 µs 9.9290 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #15
+                        time:   [20.600 µs 20.891 µs 21.297 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #16
+                        time:   [70.564 µs 71.895 µs 73.580 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high severe
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #17
+                        time:   [544.49 ns 624.23 ns 673.58 ns]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #18
+                        time:   [584.73 ns 653.42 ns 692.39 ns]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #19
+                        time:   [512.39 ns 571.27 ns 608.09 ns]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #20
+                        time:   [3.4363 µs 3.5129 µs 3.5641 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #21
+                        time:   [4.9111 µs 4.9759 µs 5.0221 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #22
+                        time:   [8.9762 µs 9.0172 µs 9.0492 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #23
+                        time:   [19.729 µs 19.805 µs 19.909 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #24
+                        time:   [69.587 µs 70.348 µs 71.670 µs]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) low mild
+  2 (13.33%) high severe
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #25
+                        time:   [960.07 ns 1.0813 µs 1.1529 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #26
+                        time:   [915.91 ns 1.0197 µs 1.0905 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #27
+                        time:   [956.49 ns 1.0589 µs 1.1201 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #28
+                        time:   [974.62 ns 1.0931 µs 1.1602 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #29
+                        time:   [2.4493 µs 2.5597 µs 2.6308 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #30
+                        time:   [7.2989 µs 7.4012 µs 7.4820 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #31
+                        time:   [18.268 µs 18.327 µs 18.402 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #32
+                        time:   [66.559 µs 68.375 µs 71.684 µs]
+Found 3 outliers among 15 measurements (20.00%)
+  3 (20.00%) high severe
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #33
+                        time:   [1.1517 µs 1.2928 µs 1.3849 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #34
+                        time:   [1.2187 µs 1.3570 µs 1.4327 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #35
+                        time:   [1.2076 µs 1.3682 µs 1.4642 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #36
+                        time:   [1.3065 µs 1.4624 µs 1.5577 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #37
+                        time:   [1.2525 µs 1.3823 µs 1.4660 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #38
+                        time:   [5.9730 µs 6.0983 µs 6.1767 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #39
+                        time:   [17.616 µs 17.820 µs 18.023 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #40
+                        time:   [64.843 µs 67.584 µs 70.511 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #41
+                        time:   [1.8144 µs 2.0508 µs 2.1980 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #42
+                        time:   [1.8550 µs 2.1433 µs 2.3254 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #43
+                        time:   [1.9145 µs 2.0953 µs 2.1965 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #44
+                        time:   [1.8407 µs 2.0040 µs 2.1014 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #45
+                        time:   [1.8611 µs 2.0406 µs 2.1563 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #46
+                        time:   [1.8168 µs 2.0205 µs 2.1411 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #47
+                        time:   [13.623 µs 13.835 µs 13.974 µs]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high mild
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #48
+                        time:   [56.696 µs 57.841 µs 59.241 µs]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #49
+                        time:   [3.3802 µs 3.8229 µs 4.0930 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #50
+                        time:   [3.5675 µs 3.9058 µs 4.1085 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #51
+                        time:   [3.4759 µs 3.8081 µs 4.0340 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #52
+                        time:   [3.4147 µs 3.8329 µs 4.1287 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #53
+                        time:   [3.4033 µs 3.7476 µs 3.9511 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #54
+                        time:   [3.5984 µs 4.0484 µs 4.3264 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #55
+                        time:   [3.3579 µs 3.8174 µs 4.1218 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #56
+                        time:   [36.233 µs 36.852 µs 37.439 µs]
+Found 3 outliers among 15 measurements (20.00%)
+  1 (6.67%) low severe
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #57
+                        time:   [6.7885 µs 7.4948 µs 7.9130 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #58
+                        time:   [6.8202 µs 7.5845 µs 8.0321 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #59
+                        time:   [6.9712 µs 7.5887 µs 7.9731 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #60
+                        time:   [6.8927 µs 7.5214 µs 7.9195 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #61
+                        time:   [7.3375 µs 8.2163 µs 8.7719 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #62
+                        time:   [7.1257 µs 8.0550 µs 8.7483 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #63
+                        time:   [6.7611 µs 7.4950 µs 7.9635 µs]
+integer::cast_to_signed/integer::cast_to_signed::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M12... #64
+                        time:   [6.5509 µs 7.3085 µs 7.8017 µs]
+
+integer::unsigned_oprf/integer::unsigned_oprf::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128:...
+                        time:   [14.511 ms 14.603 ms 14.698 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) high mild
+  1 (6.67%) high severe
+integer::unsigned_oprf/integer::unsigned_oprf_bounded::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR...
+                        time:   [14.568 ms 14.582 ms 14.590 ms]
+integer::unsigned_oprf/integer::unsigned_oprf::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128:... #2
+                        time:   [32.173 ms 32.918 ms 33.416 ms]
+integer::unsigned_oprf/integer::unsigned_oprf_bounded::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #2
+                        time:   [32.043 ms 33.793 ms 35.058 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::unsigned_oprf/integer::unsigned_oprf::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128:... #3
+                        time:   [35.955 ms 36.802 ms 37.763 ms]
+integer::unsigned_oprf/integer::unsigned_oprf_bounded::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #3
+                        time:   [35.737 ms 37.198 ms 38.567 ms]
+integer::unsigned_oprf/integer::unsigned_oprf::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128:... #4
+                        time:   [29.248 ms 29.303 ms 29.379 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::unsigned_oprf/integer::unsigned_oprf_bounded::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #4
+                        time:   [29.184 ms 29.257 ms 29.338 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::unsigned_oprf/integer::unsigned_oprf::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128:... #5
+                        time:   [47.712 ms 48.011 ms 48.237 ms]
+integer::unsigned_oprf/integer::unsigned_oprf_bounded::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #5
+                        time:   [48.028 ms 48.304 ms 48.566 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) low mild
+integer::unsigned_oprf/integer::unsigned_oprf::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128:... #6
+                        time:   [58.574 ms 58.802 ms 58.976 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) low severe
+integer::unsigned_oprf/integer::unsigned_oprf_bounded::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #6
+                        time:   [58.518 ms 58.685 ms 58.861 ms]
+integer::unsigned_oprf/integer::unsigned_oprf::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128:... #7
+                        time:   [116.89 ms 117.35 ms 117.81 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  1 (6.67%) low mild
+  1 (6.67%) high mild
+integer::unsigned_oprf/integer::unsigned_oprf_bounded::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #7
+                        time:   [117.12 ms 117.79 ms 118.40 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::unsigned_oprf/integer::unsigned_oprf::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFORM_2M128:... #8
+                        time:   [232.58 ms 233.12 ms 233.67 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+integer::unsigned_oprf/integer::unsigned_oprf_bounded::V1_5_PARAM_MESSAGE_2_CARRY_2_KS32_PBS_TUNIFOR... #8
+                        time:   [233.80 ms 234.18 ms 234.62 ms]
+Found 2 outliers among 15 measurements (13.33%)
+  2 (13.33%) high severe
+
+Benchmarking integer::match_value/integer::match_value::V1_5_PARAM_MULTI_BIT_GROUP_4_MESSAGE_2_CARRY_2_KS_PBS_TUN...: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 5.0s. You may wish to increase target time to 11.2s, or reduce sample count to 10.
+integer::match_value/integer::match_value::V1_5_PARAM_MULTI_BIT_GROUP_4_MESSAGE_2_CARRY_2_KS_PBS_TUN...
+                        time:   [749.71 ms 752.04 ms 754.84 ms]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+Benchmarking integer::match_value/integer::match_value::V1_5_PARAM_MULTI_BIT_GROUP_4_MESSAGE_2_CARRY_2_KS_PBS_TUN... #2: Warming up for 3.0000 s
+Warning: Unable to complete 15 samples in 5.0s. You may wish to increase target time to 54.9s, or reduce sample count to 10.
+integer::match_value/integer::match_value::V1_5_PARAM_MULTI_BIT_GROUP_4_MESSAGE_2_CARRY_2_KS_PBS_TUN... #2
+                        time:   [3.6500 s 3.6514 s 3.6530 s]
+Found 1 outliers among 15 measurements (6.67%)
+  1 (6.67%) high mild
+
+forbin@confidential-compute:~/development/seal_zama_comparision/submodules/zama-rs$ 

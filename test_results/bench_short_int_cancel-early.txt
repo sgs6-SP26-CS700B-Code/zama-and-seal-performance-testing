@@ -1,0 +1,1250 @@
+forbin@confidential-compute:~/development/seal_zama_comparision/submodules/zama-rs$ make bench_shortint
+RUSTFLAGS="-C target-cpu=native" __TFHE_RS_BENCH_OP_FLAVOR=DEFAULT __TFHE_RS_PARAMS_SET=default __TFHE_RS_BENCH_TYPE=latency \
+cargo +nightly-2025-11-19 bench \
+--bench shortint \
+--features=shortint,internal-keycache -p tfhe-benchmark
+   Compiling tfhe v1.5.1 (/home/forbin/development/seal_zama_comparision/submodules/zama-rs/tfhe)
+   Compiling tfhe-benchmark v0.1.0 (/home/forbin/development/seal_zama_comparision/submodules/zama-rs/tfhe-benchmark)
+    Finished `bench` profile [optimized] target(s) in 1m 36s
+     Running benches/shortint/bench.rs (target/release/deps/shortint-74f42e7b31d2b83e)
+Gnuplot not found, using plotters backend
+Benchmarking shortint::pack_cast_64/shortint::pack_cast_64_V1_5_PARAM_KEYSWITCH_1_1_KS_PBS_TO_2_2_KS_PBS_GAUSSIAN...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 7.5s, or reduce sample count to 60.
+shortint::pack_cast_64/shortint::pack_cast_64_V1_5_PARAM_KEYSWITCH_1_1_KS_PBS_TO_2_2_KS_PBS_GAUSSIAN...
+                        time:   [74.982 ms 75.140 ms 75.335 ms]
+Found 3 outliers among 100 measurements (3.00%)
+  1 (1.00%) high mild
+  2 (2.00%) high severe
+
+shortint::pack_cast/shortint::pack_cast_BENCH_PARAM_KEYSWITCH_1_1_KS_PBS_TO_2_2_KS_PBS_GAUSSIAN_2M12...
+                        time:   [18.694 ms 18.729 ms 18.768 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  5 (5.00%) high mild
+  3 (3.00%) high severe
+
+shortint::cast/shortint::cast_BENCH_PARAM_KEYSWITCH_1_1_KS_PBS_TO_2_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [19.171 ms 19.579 ms 20.047 ms]
+Found 15 outliers among 100 measurements (15.00%)
+  3 (3.00%) high mild
+  12 (12.00%) high severe
+
+shortint::neg/shortint::neg::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.732 ms 15.750 ms 15.772 ms]
+Found 10 outliers among 100 measurements (10.00%)
+  7 (7.00%) high mild
+  3 (3.00%) high severe
+shortint::neg/shortint::neg::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [19.132 ms 19.169 ms 19.212 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::neg/shortint::neg::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 20.8s, or reduce sample count to 20.
+shortint::neg/shortint::neg::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [143.97 ms 147.56 ms 151.62 ms]
+Found 13 outliers among 100 measurements (13.00%)
+  13 (13.00%) high severe
+Benchmarking shortint::neg/shortint::neg::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 302.6s, or reduce sample count to 10.
+shortint::neg/shortint::neg::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.4205 s 2.4325 s 2.4459 s]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high severe
+shortint::neg/shortint::neg::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.898 ms 15.027 ms 15.175 ms]
+Found 13 outliers among 100 measurements (13.00%)
+  2 (2.00%) high mild
+  11 (11.00%) high severe
+shortint::neg/shortint::neg::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.124 ms 18.144 ms 18.167 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::neg/shortint::neg::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.2s, or reduce sample count to 30.
+shortint::neg/shortint::neg::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [139.15 ms 139.26 ms 139.39 ms]
+Found 11 outliers among 100 measurements (11.00%)
+  7 (7.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::neg/shortint::neg::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 253.5s, or reduce sample count to 10.
+shortint::neg/shortint::neg::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3465 s 2.3532 s 2.3605 s]
+Found 14 outliers among 100 measurements (14.00%)
+  14 (14.00%) high severe
+
+shortint::bitand/shortint::bitand::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.497 ms 15.512 ms 15.529 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  3 (3.00%) high mild
+  4 (4.00%) high severe
+shortint::bitand/shortint::bitand::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [19.118 ms 19.151 ms 19.187 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  5 (5.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::bitand/shortint::bitand::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.6s, or reduce sample count to 30.
+shortint::bitand/shortint::bitand::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [141.03 ms 141.60 ms 142.46 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  1 (1.00%) high mild
+  6 (6.00%) high severe
+Benchmarking shortint::bitand/shortint::bitand::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 239.0s, or reduce sample count to 10.
+shortint::bitand/shortint::bitand::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.3941 s 2.3989 s 2.4046 s]
+Found 23 outliers among 100 measurements (23.00%)
+  3 (3.00%) low severe
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+  17 (17.00%) high severe
+shortint::bitand/shortint::bitand::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.682 ms 14.688 ms 14.696 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  3 (3.00%) high mild
+  4 (4.00%) high severe
+shortint::bitand/shortint::bitand::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.261 ms 18.291 ms 18.326 ms]
+Found 11 outliers among 100 measurements (11.00%)
+  4 (4.00%) high mild
+  7 (7.00%) high severe
+Benchmarking shortint::bitand/shortint::bitand::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.5s, or reduce sample count to 30.
+shortint::bitand/shortint::bitand::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [137.85 ms 139.45 ms 141.57 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  1 (1.00%) high mild
+  7 (7.00%) high severe
+Benchmarking shortint::bitand/shortint::bitand::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 239.6s, or reduce sample count to 10.
+shortint::bitand/shortint::bitand::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3737 s 2.3822 s 2.3908 s]
+
+shortint::bitor/shortint::bitor::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.656 ms 15.671 ms 15.690 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  3 (3.00%) high mild
+  4 (4.00%) high severe
+shortint::bitor/shortint::bitor::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [19.403 ms 19.432 ms 19.463 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  4 (4.00%) high mild
+  2 (2.00%) high severe
+Benchmarking shortint::bitor/shortint::bitor::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.2s, or reduce sample count to 30.
+shortint::bitor/shortint::bitor::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [141.83 ms 141.92 ms 142.02 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+Benchmarking shortint::bitor/shortint::bitor::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 244.4s, or reduce sample count to 10.
+shortint::bitor/shortint::bitor::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.3936 s 2.3988 s 2.4052 s]
+Found 20 outliers among 100 measurements (20.00%)
+  5 (5.00%) low mild
+  2 (2.00%) high mild
+  13 (13.00%) high severe
+shortint::bitor/shortint::bitor::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.798 ms 14.892 ms 15.006 ms]
+Found 12 outliers among 100 measurements (12.00%)
+  3 (3.00%) high mild
+  9 (9.00%) high severe
+shortint::bitor/shortint::bitor::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.188 ms 18.215 ms 18.246 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  4 (4.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::bitor/shortint::bitor::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.9s, or reduce sample count to 30.
+shortint::bitor/shortint::bitor::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [138.51 ms 138.62 ms 138.75 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::bitor/shortint::bitor::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 244.6s, or reduce sample count to 10.
+shortint::bitor/shortint::bitor::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3692 s 2.3763 s 2.3835 s]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+
+shortint::bitxor/shortint::bitxor::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.570 ms 15.662 ms 15.775 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  1 (1.00%) high mild
+  6 (6.00%) high severe
+shortint::bitxor/shortint::bitxor::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [18.940 ms 18.957 ms 18.977 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::bitxor/shortint::bitxor::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 20.6s, or reduce sample count to 20.
+shortint::bitxor/shortint::bitxor::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [143.37 ms 143.47 ms 143.57 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  5 (5.00%) high mild
+  2 (2.00%) high severe
+Benchmarking shortint::bitxor/shortint::bitxor::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 241.8s, or reduce sample count to 10.
+shortint::bitxor/shortint::bitxor::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.3920 s 2.3968 s 2.4022 s]
+Found 11 outliers among 100 measurements (11.00%)
+  9 (9.00%) high mild
+  2 (2.00%) high severe
+shortint::bitxor/shortint::bitxor::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.557 ms 14.571 ms 14.586 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+shortint::bitxor/shortint::bitxor::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.168 ms 18.186 ms 18.207 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  6 (6.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::bitxor/shortint::bitxor::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.7s, or reduce sample count to 30.
+shortint::bitxor/shortint::bitxor::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [136.81 ms 136.90 ms 136.99 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::bitxor/shortint::bitxor::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 240.3s, or reduce sample count to 10.
+shortint::bitxor/shortint::bitxor::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3556 s 2.3624 s 2.3699 s]
+Found 19 outliers among 100 measurements (19.00%)
+  11 (11.00%) high mild
+  8 (8.00%) high severe
+
+shortint::add/shortint::add::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.999 ms 16.010 ms 16.022 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+shortint::add/shortint::add::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [19.093 ms 19.123 ms 19.158 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  5 (5.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::add/shortint::add::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.1s, or reduce sample count to 30.
+shortint::add/shortint::add::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [141.27 ms 141.38 ms 141.50 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::add/shortint::add::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 244.8s, or reduce sample count to 10.
+shortint::add/shortint::add::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.4070 s 2.4128 s 2.4192 s]
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+shortint::add/shortint::add::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.738 ms 14.752 ms 14.775 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  2 (2.00%) high mild
+  5 (5.00%) high severe
+shortint::add/shortint::add::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.170 ms 18.192 ms 18.217 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::add/shortint::add::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 15.5s, or reduce sample count to 30.
+shortint::add/shortint::add::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [138.60 ms 141.09 ms 144.08 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  8 (8.00%) high severe
+Benchmarking shortint::add/shortint::add::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 239.3s, or reduce sample count to 10.
+shortint::add/shortint::add::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3638 s 2.3723 s 2.3812 s]
+
+shortint::sub/shortint::sub::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [16.288 ms 16.488 ms 16.717 ms]
+Found 16 outliers among 100 measurements (16.00%)
+  4 (4.00%) low mild
+  2 (2.00%) high mild
+  10 (10.00%) high severe
+shortint::sub/shortint::sub::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [19.238 ms 19.274 ms 19.313 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::sub/shortint::sub::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 15.4s, or reduce sample count to 30.
+shortint::sub/shortint::sub::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [142.81 ms 144.66 ms 147.03 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) high severe
+Benchmarking shortint::sub/shortint::sub::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 241.3s, or reduce sample count to 10.
+shortint::sub/shortint::sub::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.3961 s 2.4011 s 2.4067 s]
+Found 31 outliers among 100 measurements (31.00%)
+  9 (9.00%) low mild
+  2 (2.00%) high mild
+  20 (20.00%) high severe
+shortint::sub/shortint::sub::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.781 ms 14.860 ms 14.958 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  9 (9.00%) high severe
+shortint::sub/shortint::sub::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.241 ms 18.272 ms 18.306 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  4 (4.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::sub/shortint::sub::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.6s, or reduce sample count to 30.
+shortint::sub/shortint::sub::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [136.72 ms 137.92 ms 139.50 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  3 (3.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::sub/shortint::sub::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 242.8s, or reduce sample count to 10.
+shortint::sub/shortint::sub::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3426 s 2.3459 s 2.3497 s]
+Found 6 outliers among 100 measurements (6.00%)
+  6 (6.00%) high severe
+
+shortint::div/shortint::div::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [16.003 ms 16.015 ms 16.030 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+shortint::div/shortint::div::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [19.049 ms 19.080 ms 19.115 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  6 (6.00%) high mild
+  2 (2.00%) high severe
+Benchmarking shortint::div/shortint::div::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.3s, or reduce sample count to 30.
+shortint::div/shortint::div::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [140.92 ms 141.02 ms 141.14 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  4 (4.00%) high mild
+  2 (2.00%) high severe
+Benchmarking shortint::div/shortint::div::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 259.5s, or reduce sample count to 10.
+shortint::div/shortint::div::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.4034 s 2.4113 s 2.4200 s]
+Found 25 outliers among 100 measurements (25.00%)
+  1 (1.00%) low mild
+  3 (3.00%) high mild
+  21 (21.00%) high severe
+shortint::div/shortint::div::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.716 ms 14.721 ms 14.727 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  3 (3.00%) high mild
+  5 (5.00%) high severe
+shortint::div/shortint::div::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.088 ms 18.107 ms 18.129 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  5 (5.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::div/shortint::div::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 15.4s, or reduce sample count to 30.
+shortint::div/shortint::div::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [137.25 ms 138.63 ms 140.53 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  3 (3.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::div/shortint::div::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 235.1s, or reduce sample count to 10.
+shortint::div/shortint::div::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3734 s 2.3834 s 2.3935 s]
+
+shortint::mul/shortint::mul::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.949 ms 15.966 ms 15.987 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  3 (3.00%) high mild
+  4 (4.00%) high severe
+shortint::mul/shortint::mul::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [19.115 ms 19.143 ms 19.174 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::mul/shortint::mul::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.2s, or reduce sample count to 30.
+shortint::mul/shortint::mul::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [141.21 ms 141.32 ms 141.43 ms]
+Found 12 outliers among 100 measurements (12.00%)
+  9 (9.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::mul/shortint::mul::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 239.3s, or reduce sample count to 10.
+shortint::mul/shortint::mul::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.3874 s 2.3922 s 2.3979 s]
+Found 6 outliers among 100 measurements (6.00%)
+  6 (6.00%) high severe
+shortint::mul/shortint::mul::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.732 ms 14.738 ms 14.746 ms]
+Found 10 outliers among 100 measurements (10.00%)
+  4 (4.00%) high mild
+  6 (6.00%) high severe
+shortint::mul/shortint::mul::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.130 ms 18.150 ms 18.173 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::mul/shortint::mul::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.7s, or reduce sample count to 30.
+shortint::mul/shortint::mul::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [136.38 ms 136.48 ms 136.59 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  3 (3.00%) high mild
+  2 (2.00%) high severe
+Benchmarking shortint::mul/shortint::mul::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 240.5s, or reduce sample count to 10.
+shortint::mul/shortint::mul::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3699 s 2.3799 s 2.3902 s]
+
+shortint::greater/shortint::greater::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.986 ms 16.000 ms 16.015 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+shortint::greater/shortint::greater::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [19.084 ms 19.123 ms 19.173 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::greater/shortint::greater::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.2s, or reduce sample count to 30.
+shortint::greater/shortint::greater::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [141.36 ms 141.46 ms 141.57 ms]
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) high mild
+Benchmarking shortint::greater/shortint::greater::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 238.6s, or reduce sample count to 10.
+shortint::greater/shortint::greater::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.3935 s 2.3994 s 2.4059 s]
+Found 33 outliers among 100 measurements (33.00%)
+  11 (11.00%) low mild
+  22 (22.00%) high severe
+shortint::greater/shortint::greater::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.747 ms 14.752 ms 14.758 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) high mild
+  4 (4.00%) high severe
+shortint::greater/shortint::greater::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.262 ms 18.285 ms 18.311 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  4 (4.00%) high mild
+  2 (2.00%) high severe
+Benchmarking shortint::greater/shortint::greater::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.7s, or reduce sample count to 30.
+shortint::greater/shortint::greater::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [136.88 ms 137.93 ms 139.46 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::greater/shortint::greater::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 234.9s, or reduce sample count to 10.
+shortint::greater/shortint::greater::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3707 s 2.3794 s 2.3886 s]
+
+shortint::greater_or_equal/shortint::greater_or_equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_...
+                        time:   [15.997 ms 16.013 ms 16.031 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  4 (4.00%) high mild
+  3 (3.00%) high severe
+shortint::greater_or_equal/shortint::greater_or_equal::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [19.653 ms 20.097 ms 20.601 ms]
+Found 17 outliers among 100 measurements (17.00%)
+  2 (2.00%) high mild
+  15 (15.00%) high severe
+Benchmarking shortint::greater_or_equal/shortint::greater_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.4s, or reduce sample count to 30.
+shortint::greater_or_equal/shortint::greater_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_...
+                        time:   [142.67 ms 142.76 ms 142.85 ms]
+Found 3 outliers among 100 measurements (3.00%)
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::greater_or_equal/shortint::greater_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 239.1s, or reduce sample count to 10.
+shortint::greater_or_equal/shortint::greater_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_...
+                        time:   [2.3947 s 2.4013 s 2.4089 s]
+Found 22 outliers among 100 measurements (22.00%)
+  6 (6.00%) low severe
+  16 (16.00%) high severe
+shortint::greater_or_equal/shortint::greater_or_equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_...
+                        time:   [14.710 ms 14.713 ms 14.717 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  4 (4.00%) high mild
+  5 (5.00%) high severe
+shortint::greater_or_equal/shortint::greater_or_equal::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_...
+                        time:   [18.166 ms 18.186 ms 18.207 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::greater_or_equal/shortint::greater_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.9s, or reduce sample count to 30.
+shortint::greater_or_equal/shortint::greater_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_...
+                        time:   [138.46 ms 138.54 ms 138.62 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::greater_or_equal/shortint::greater_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 245.9s, or reduce sample count to 10.
+shortint::greater_or_equal/shortint::greater_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_...
+                        time:   [2.3993 s 2.4083 s 2.4172 s]
+
+shortint::less/shortint::less::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.626 ms 15.640 ms 15.655 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+shortint::less/shortint::less::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [19.250 ms 19.286 ms 19.325 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  4 (4.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::less/shortint::less::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 15.7s, or reduce sample count to 30.
+shortint::less/shortint::less::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [142.87 ms 143.75 ms 145.06 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::less/shortint::less::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 239.3s, or reduce sample count to 10.
+shortint::less/shortint::less::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.4331 s 2.4404 s 2.4477 s]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+shortint::less/shortint::less::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.741 ms 14.755 ms 14.777 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  3 (3.00%) high mild
+  6 (6.00%) high severe
+shortint::less/shortint::less::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.138 ms 18.163 ms 18.192 ms]
+Found 14 outliers among 100 measurements (14.00%)
+  9 (9.00%) high mild
+  5 (5.00%) high severe
+Benchmarking shortint::less/shortint::less::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.0s, or reduce sample count to 30.
+shortint::less/shortint::less::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [138.65 ms 138.77 ms 138.90 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::less/shortint::less::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 240.5s, or reduce sample count to 10.
+shortint::less/shortint::less::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3551 s 2.3633 s 2.3721 s]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+
+shortint::less_or_equal/shortint::less_or_equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.594 ms 15.606 ms 15.619 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  6 (6.00%) high mild
+shortint::less_or_equal/shortint::less_or_equal::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [18.996 ms 19.012 ms 19.031 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  5 (5.00%) high mild
+  3 (3.00%) high severe
+Benchmarking shortint::less_or_equal/shortint::less_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.5s, or reduce sample count to 30.
+shortint::less_or_equal/shortint::less_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [142.96 ms 143.07 ms 143.20 ms]
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::less_or_equal/shortint::less_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 239.4s, or reduce sample count to 10.
+shortint::less_or_equal/shortint::less_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.3919 s 2.3969 s 2.4026 s]
+Found 20 outliers among 100 measurements (20.00%)
+  6 (6.00%) low mild
+  14 (14.00%) high severe
+shortint::less_or_equal/shortint::less_or_equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.605 ms 14.616 ms 14.629 ms]
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+shortint::less_or_equal/shortint::less_or_equal::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.160 ms 18.175 ms 18.191 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  3 (3.00%) high mild
+  6 (6.00%) high severe
+Benchmarking shortint::less_or_equal/shortint::less_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.9s, or reduce sample count to 30.
+shortint::less_or_equal/shortint::less_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [138.74 ms 138.83 ms 138.93 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::less_or_equal/shortint::less_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 234.7s, or reduce sample count to 10.
+shortint::less_or_equal/shortint::less_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3478 s 2.3481 s 2.3483 s]
+
+shortint::equal/shortint::equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.404 ms 15.418 ms 15.433 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) high mild
+  3 (3.00%) high severe
+shortint::equal/shortint::equal::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [18.974 ms 18.990 ms 19.008 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  5 (5.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::equal/shortint::equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.4s, or reduce sample count to 30.
+shortint::equal/shortint::equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [143.08 ms 144.58 ms 146.58 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  2 (2.00%) high mild
+  6 (6.00%) high severe
+Benchmarking shortint::equal/shortint::equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 238.3s, or reduce sample count to 10.
+shortint::equal/shortint::equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.4161 s 2.4245 s 2.4334 s]
+Found 20 outliers among 100 measurements (20.00%)
+  20 (20.00%) high mild
+shortint::equal/shortint::equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.555 ms 14.569 ms 14.585 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  4 (4.00%) high mild
+  3 (3.00%) high severe
+shortint::equal/shortint::equal::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.215 ms 18.482 ms 18.806 ms]
+Found 16 outliers among 100 measurements (16.00%)
+  5 (5.00%) high mild
+  11 (11.00%) high severe
+Benchmarking shortint::equal/shortint::equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 15.0s, or reduce sample count to 30.
+shortint::equal/shortint::equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [138.88 ms 138.98 ms 139.10 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  4 (4.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::equal/shortint::equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 238.6s, or reduce sample count to 10.
+shortint::equal/shortint::equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3538 s 2.3582 s 2.3627 s]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+
+shortint::not_equal/shortint::not_equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.371 ms 15.382 ms 15.394 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  5 (5.00%) high mild
+  2 (2.00%) high severe
+shortint::not_equal/shortint::not_equal::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [18.965 ms 18.982 ms 19.000 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  3 (3.00%) high mild
+  2 (2.00%) high severe
+Benchmarking shortint::not_equal/shortint::not_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.5s, or reduce sample count to 30.
+shortint::not_equal/shortint::not_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [143.01 ms 143.11 ms 143.23 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) high severe
+Benchmarking shortint::not_equal/shortint::not_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 251.7s, or reduce sample count to 10.
+shortint::not_equal/shortint::not_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.4474 s 2.4568 s 2.4660 s]
+shortint::not_equal/shortint::not_equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.803 ms 14.808 ms 14.814 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+  5 (5.00%) high severe
+shortint::not_equal/shortint::not_equal::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.053 ms 18.062 ms 18.073 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  3 (3.00%) high mild
+  6 (6.00%) high severe
+Benchmarking shortint::not_equal/shortint::not_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.9s, or reduce sample count to 30.
+shortint::not_equal/shortint::not_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [138.53 ms 138.61 ms 138.70 ms]
+Found 10 outliers among 100 measurements (10.00%)
+  8 (8.00%) high mild
+  2 (2.00%) high severe
+Benchmarking shortint::not_equal/shortint::not_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 243.4s, or reduce sample count to 10.
+shortint::not_equal/shortint::not_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3764 s 2.3832 s 2.3900 s]
+
+shortint::scalar_add/shortint::scalar_add::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.477 ms 15.502 ms 15.530 ms]
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+shortint::scalar_add/shortint::scalar_add::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [19.085 ms 19.105 ms 19.125 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  5 (5.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::scalar_add/shortint::scalar_add::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.2s, or reduce sample count to 30.
+shortint::scalar_add/shortint::scalar_add::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [140.63 ms 141.32 ms 142.38 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  5 (5.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::scalar_add/shortint::scalar_add::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 251.3s, or reduce sample count to 10.
+shortint::scalar_add/shortint::scalar_add::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.3892 s 2.3946 s 2.4011 s]
+Found 11 outliers among 100 measurements (11.00%)
+  11 (11.00%) high severe
+shortint::scalar_add/shortint::scalar_add::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.666 ms 14.682 ms 14.701 ms]
+Found 17 outliers among 100 measurements (17.00%)
+  15 (15.00%) high mild
+  2 (2.00%) high severe
+shortint::scalar_add/shortint::scalar_add::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.022 ms 18.029 ms 18.037 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  2 (2.00%) high mild
+  5 (5.00%) high severe
+Benchmarking shortint::scalar_add/shortint::scalar_add::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.0s, or reduce sample count to 30.
+shortint::scalar_add/shortint::scalar_add::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [137.32 ms 137.43 ms 137.54 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  3 (3.00%) high mild
+  2 (2.00%) high severe
+Benchmarking shortint::scalar_add/shortint::scalar_add::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 238.2s, or reduce sample count to 10.
+shortint::scalar_add/shortint::scalar_add::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3474 s 2.3513 s 2.3564 s]
+Found 16 outliers among 100 measurements (16.00%)
+  6 (6.00%) low severe
+  1 (1.00%) low mild
+  9 (9.00%) high severe
+
+shortint::scalar_sub/shortint::scalar_sub::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.604 ms 15.619 ms 15.636 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  5 (5.00%) high mild
+  2 (2.00%) high severe
+shortint::scalar_sub/shortint::scalar_sub::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [19.052 ms 19.252 ms 19.500 ms]
+Found 16 outliers among 100 measurements (16.00%)
+  6 (6.00%) high mild
+  10 (10.00%) high severe
+Benchmarking shortint::scalar_sub/shortint::scalar_sub::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.1s, or reduce sample count to 30.
+shortint::scalar_sub/shortint::scalar_sub::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [141.10 ms 142.78 ms 145.00 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  3 (3.00%) high mild
+  6 (6.00%) high severe
+Benchmarking shortint::scalar_sub/shortint::scalar_sub::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 236.7s, or reduce sample count to 10.
+shortint::scalar_sub/shortint::scalar_sub::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.4055 s 2.4134 s 2.4217 s]
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+shortint::scalar_sub/shortint::scalar_sub::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.681 ms 14.777 ms 14.893 ms]
+Found 11 outliers among 100 measurements (11.00%)
+  4 (4.00%) high mild
+  7 (7.00%) high severe
+shortint::scalar_sub/shortint::scalar_sub::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.369 ms 18.742 ms 19.184 ms]
+Found 15 outliers among 100 measurements (15.00%)
+  4 (4.00%) high mild
+  11 (11.00%) high severe
+Benchmarking shortint::scalar_sub/shortint::scalar_sub::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.7s, or reduce sample count to 30.
+shortint::scalar_sub/shortint::scalar_sub::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [136.67 ms 138.39 ms 140.58 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  2 (2.00%) high mild
+  5 (5.00%) high severe
+Benchmarking shortint::scalar_sub/shortint::scalar_sub::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 234.9s, or reduce sample count to 10.
+shortint::scalar_sub/shortint::scalar_sub::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3474 s 2.3537 s 2.3606 s]
+Found 13 outliers among 100 measurements (13.00%)
+  2 (2.00%) high mild
+  11 (11.00%) high severe
+
+shortint::scalar_div/shortint::scalar_div::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.410 ms 15.423 ms 15.438 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  6 (6.00%) high mild
+  2 (2.00%) high severe
+shortint::scalar_div/shortint::scalar_div::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [18.940 ms 18.958 ms 18.980 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::scalar_div/shortint::scalar_div::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.1s, or reduce sample count to 30.
+shortint::scalar_div/shortint::scalar_div::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [140.89 ms 141.02 ms 141.16 ms]
+Found 3 outliers among 100 measurements (3.00%)
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::scalar_div/shortint::scalar_div::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 243.8s, or reduce sample count to 10.
+shortint::scalar_div/shortint::scalar_div::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.3959 s 2.4007 s 2.4060 s]
+Found 23 outliers among 100 measurements (23.00%)
+  4 (4.00%) high mild
+  19 (19.00%) high severe
+shortint::scalar_div/shortint::scalar_div::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.623 ms 14.630 ms 14.637 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+shortint::scalar_div/shortint::scalar_div::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.029 ms 18.037 ms 18.046 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  3 (3.00%) high mild
+  5 (5.00%) high severe
+Benchmarking shortint::scalar_div/shortint::scalar_div::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.7s, or reduce sample count to 30.
+shortint::scalar_div/shortint::scalar_div::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [136.88 ms 136.97 ms 137.08 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+Benchmarking shortint::scalar_div/shortint::scalar_div::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 247.9s, or reduce sample count to 10.
+shortint::scalar_div/shortint::scalar_div::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3711 s 2.3801 s 2.3893 s]
+
+shortint::scalar_mul/shortint::scalar_mul::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.375 ms 15.387 ms 15.400 ms]
+Found 3 outliers among 100 measurements (3.00%)
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+shortint::scalar_mul/shortint::scalar_mul::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [18.950 ms 18.966 ms 18.984 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  3 (3.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::scalar_mul/shortint::scalar_mul::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.7s, or reduce sample count to 30.
+shortint::scalar_mul/shortint::scalar_mul::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [142.58 ms 144.53 ms 147.05 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) high severe
+Benchmarking shortint::scalar_mul/shortint::scalar_mul::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 239.7s, or reduce sample count to 10.
+shortint::scalar_mul/shortint::scalar_mul::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.4058 s 2.4142 s 2.4231 s]
+Found 16 outliers among 100 measurements (16.00%)
+  15 (15.00%) high mild
+  1 (1.00%) high severe
+shortint::scalar_mul/shortint::scalar_mul::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.771 ms 14.777 ms 14.783 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  6 (6.00%) high severe
+shortint::scalar_mul/shortint::scalar_mul::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.084 ms 18.201 ms 18.353 ms]
+Found 15 outliers among 100 measurements (15.00%)
+  1 (1.00%) low mild
+  4 (4.00%) high mild
+  10 (10.00%) high severe
+Benchmarking shortint::scalar_mul/shortint::scalar_mul::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.8s, or reduce sample count to 30.
+shortint::scalar_mul/shortint::scalar_mul::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [137.08 ms 138.68 ms 140.81 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  4 (4.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::scalar_mul/shortint::scalar_mul::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 239.8s, or reduce sample count to 10.
+shortint::scalar_mul/shortint::scalar_mul::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3566 s 2.3622 s 2.3680 s]
+
+shortint::scalar_mod/shortint::scalar_mod::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.371 ms 15.383 ms 15.396 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  4 (4.00%) high mild
+  1 (1.00%) high severe
+shortint::scalar_mod/shortint::scalar_mod::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [18.921 ms 18.936 ms 18.953 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  3 (3.00%) high mild
+  6 (6.00%) high severe
+Benchmarking shortint::scalar_mod/shortint::scalar_mod::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.1s, or reduce sample count to 30.
+shortint::scalar_mod/shortint::scalar_mod::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [141.11 ms 141.22 ms 141.35 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) high mild
+Benchmarking shortint::scalar_mod/shortint::scalar_mod::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 242.3s, or reduce sample count to 10.
+shortint::scalar_mod/shortint::scalar_mod::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.3935 s 2.3988 s 2.4048 s]
+Found 21 outliers among 100 measurements (21.00%)
+  21 (21.00%) high severe
+shortint::scalar_mod/shortint::scalar_mod::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.697 ms 14.703 ms 14.709 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  1 (1.00%) high mild
+  5 (5.00%) high severe
+shortint::scalar_mod/shortint::scalar_mod::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.056 ms 18.070 ms 18.087 ms]
+Found 13 outliers among 100 measurements (13.00%)
+  3 (3.00%) high mild
+  10 (10.00%) high severe
+Benchmarking shortint::scalar_mod/shortint::scalar_mod::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.7s, or reduce sample count to 30.
+shortint::scalar_mod/shortint::scalar_mod::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [136.74 ms 136.86 ms 136.98 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::scalar_mod/shortint::scalar_mod::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 240.5s, or reduce sample count to 10.
+shortint::scalar_mod/shortint::scalar_mod::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3660 s 2.3755 s 2.3855 s]
+
+shortint::scalar_left_shift/shortint::scalar_left_shift::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFOR...
+                        time:   [15.396 ms 15.408 ms 15.421 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  4 (4.00%) high mild
+  1 (1.00%) high severe
+shortint::scalar_left_shift/shortint::scalar_left_shift::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M1...
+                        time:   [18.985 ms 19.002 ms 19.022 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::scalar_left_shift/shortint::scalar_left_shift::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFOR...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 15.0s, or reduce sample count to 30.
+shortint::scalar_left_shift/shortint::scalar_left_shift::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFOR...
+                        time:   [141.24 ms 141.35 ms 141.47 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::scalar_left_shift/shortint::scalar_left_shift::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFOR...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 244.8s, or reduce sample count to 10.
+shortint::scalar_left_shift/shortint::scalar_left_shift::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFOR...
+                        time:   [2.4080 s 2.4167 s 2.4257 s]
+shortint::scalar_left_shift/shortint::scalar_left_shift::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIA...
+                        time:   [14.710 ms 14.716 ms 14.724 ms]
+Found 11 outliers among 100 measurements (11.00%)
+  1 (1.00%) low mild
+  3 (3.00%) high mild
+  7 (7.00%) high severe
+shortint::scalar_left_shift/shortint::scalar_left_shift::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIA...
+                        time:   [18.521 ms 18.969 ms 19.478 ms]
+Found 19 outliers among 100 measurements (19.00%)
+  1 (1.00%) high mild
+  18 (18.00%) high severe
+Benchmarking shortint::scalar_left_shift/shortint::scalar_left_shift::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIA...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.7s, or reduce sample count to 30.
+shortint::scalar_left_shift/shortint::scalar_left_shift::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIA...
+                        time:   [136.75 ms 136.85 ms 136.97 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  4 (4.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::scalar_left_shift/shortint::scalar_left_shift::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIA...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 242.6s, or reduce sample count to 10.
+shortint::scalar_left_shift/shortint::scalar_left_shift::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIA...
+                        time:   [2.3538 s 2.3628 s 2.3727 s]
+Found 21 outliers among 100 measurements (21.00%)
+  1 (1.00%) high mild
+  20 (20.00%) high severe
+
+shortint::scalar_right_shift/shortint::scalar_right_shift::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIF...
+                        time:   [15.373 ms 15.385 ms 15.398 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  5 (5.00%) high mild
+  2 (2.00%) high severe
+shortint::scalar_right_shift/shortint::scalar_right_shift::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2...
+                        time:   [18.973 ms 18.989 ms 19.007 ms]
+Found 11 outliers among 100 measurements (11.00%)
+  5 (5.00%) high mild
+  6 (6.00%) high severe
+Benchmarking shortint::scalar_right_shift/shortint::scalar_right_shift::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIF...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.7s, or reduce sample count to 30.
+shortint::scalar_right_shift/shortint::scalar_right_shift::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIF...
+                        time:   [141.20 ms 141.31 ms 141.43 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::scalar_right_shift/shortint::scalar_right_shift::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIF...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 242.7s, or reduce sample count to 10.
+shortint::scalar_right_shift/shortint::scalar_right_shift::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIF...
+                        time:   [2.3878 s 2.3919 s 2.3967 s]
+Found 13 outliers among 100 measurements (13.00%)
+  1 (1.00%) high mild
+  12 (12.00%) high severe
+shortint::scalar_right_shift/shortint::scalar_right_shift::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSS...
+                        time:   [14.795 ms 14.799 ms 14.803 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  1 (1.00%) high mild
+  5 (5.00%) high severe
+shortint::scalar_right_shift/shortint::scalar_right_shift::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSS...
+                        time:   [18.136 ms 18.146 ms 18.157 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high severe
+Benchmarking shortint::scalar_right_shift/shortint::scalar_right_shift::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSS...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.9s, or reduce sample count to 30.
+shortint::scalar_right_shift/shortint::scalar_right_shift::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSS...
+                        time:   [138.56 ms 138.64 ms 138.73 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::scalar_right_shift/shortint::scalar_right_shift::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSS...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 243.1s, or reduce sample count to 10.
+shortint::scalar_right_shift/shortint::scalar_right_shift::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSS...
+                        time:   [2.3766 s 2.3852 s 2.3940 s]
+
+shortint::scalar_greater/shortint::scalar_greater::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M12...
+                        time:   [15.367 ms 15.380 ms 15.395 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) high mild
+  3 (3.00%) high severe
+shortint::scalar_greater/shortint::scalar_greater::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [18.997 ms 19.014 ms 19.035 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  6 (6.00%) high mild
+  2 (2.00%) high severe
+Benchmarking shortint::scalar_greater/shortint::scalar_greater::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M12...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.2s, or reduce sample count to 30.
+shortint::scalar_greater/shortint::scalar_greater::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M12...
+                        time:   [141.82 ms 141.91 ms 142.01 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  5 (5.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::scalar_greater/shortint::scalar_greater::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M12...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 249.9s, or reduce sample count to 10.
+shortint::scalar_greater/shortint::scalar_greater::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M12...
+                        time:   [2.4051 s 2.4119 s 2.4190 s]
+shortint::scalar_greater/shortint::scalar_greater::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M12...
+                        time:   [14.783 ms 14.788 ms 14.795 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  2 (2.00%) high mild
+  5 (5.00%) high severe
+shortint::scalar_greater/shortint::scalar_greater::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M12...
+                        time:   [18.252 ms 18.571 ms 18.955 ms]
+Found 14 outliers among 100 measurements (14.00%)
+  3 (3.00%) high mild
+  11 (11.00%) high severe
+Benchmarking shortint::scalar_greater/shortint::scalar_greater::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M12...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.7s, or reduce sample count to 30.
+shortint::scalar_greater/shortint::scalar_greater::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M12...
+                        time:   [136.84 ms 136.93 ms 137.02 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  4 (4.00%) high mild
+  2 (2.00%) high severe
+Benchmarking shortint::scalar_greater/shortint::scalar_greater::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M12...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 235.2s, or reduce sample count to 10.
+shortint::scalar_greater/shortint::scalar_greater::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M12...
+                        time:   [2.3456 s 2.3506 s 2.3565 s]
+Found 13 outliers among 100 measurements (13.00%)
+  2 (2.00%) high mild
+  11 (11.00%) high severe
+
+shortint::scalar_greater_or_equal/shortint::scalar_greater_or_equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS...
+                        time:   [15.479 ms 15.493 ms 15.510 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  4 (4.00%) high mild
+  2 (2.00%) high severe
+shortint::scalar_greater_or_equal/shortint::scalar_greater_or_equal::PARAM_MESSAGE_2_CARRY_2_KS_PBS_...
+                        time:   [18.935 ms 18.951 ms 18.969 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  7 (7.00%) high mild
+  2 (2.00%) high severe
+Benchmarking shortint::scalar_greater_or_equal/shortint::scalar_greater_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.6s, or reduce sample count to 30.
+shortint::scalar_greater_or_equal/shortint::scalar_greater_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS...
+                        time:   [142.66 ms 144.30 ms 146.49 ms]
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high severe
+Benchmarking shortint::scalar_greater_or_equal/shortint::scalar_greater_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 244.6s, or reduce sample count to 10.
+shortint::scalar_greater_or_equal/shortint::scalar_greater_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS...
+                        time:   [2.3926 s 2.3976 s 2.4031 s]
+Found 9 outliers among 100 measurements (9.00%)
+  5 (5.00%) high mild
+  4 (4.00%) high severe
+shortint::scalar_greater_or_equal/shortint::scalar_greater_or_equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS... #2
+                        time:   [14.638 ms 14.645 ms 14.652 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) high mild
+  3 (3.00%) high severe
+shortint::scalar_greater_or_equal/shortint::scalar_greater_or_equal::V1_5_PARAM_MESSAGE_2_CARRY_2_KS...
+                        time:   [18.114 ms 18.126 ms 18.139 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  2 (2.00%) high mild
+  5 (5.00%) high severe
+Benchmarking shortint::scalar_greater_or_equal/shortint::scalar_greater_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS... #2: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.9s, or reduce sample count to 30.
+shortint::scalar_greater_or_equal/shortint::scalar_greater_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS... #2
+                        time:   [137.07 ms 138.69 ms 140.84 ms]
+Found 10 outliers among 100 measurements (10.00%)
+  4 (4.00%) high mild
+  6 (6.00%) high severe
+Benchmarking shortint::scalar_greater_or_equal/shortint::scalar_greater_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS... #2: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 243.1s, or reduce sample count to 10.
+shortint::scalar_greater_or_equal/shortint::scalar_greater_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS... #2
+                        time:   [2.3566 s 2.3620 s 2.3680 s]
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+
+shortint::scalar_less/shortint::scalar_less::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.393 ms 15.407 ms 15.422 ms]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+shortint::scalar_less/shortint::scalar_less::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [18.942 ms 18.965 ms 18.993 ms]
+Found 10 outliers among 100 measurements (10.00%)
+  3 (3.00%) high mild
+  7 (7.00%) high severe
+Benchmarking shortint::scalar_less/shortint::scalar_less::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 20.9s, or reduce sample count to 20.
+shortint::scalar_less/shortint::scalar_less::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [141.95 ms 144.21 ms 146.99 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  1 (1.00%) high mild
+  7 (7.00%) high severe
+Benchmarking shortint::scalar_less/shortint::scalar_less::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 239.3s, or reduce sample count to 10.
+shortint::scalar_less/shortint::scalar_less::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.3933 s 2.3979 s 2.4032 s]
+Found 16 outliers among 100 measurements (16.00%)
+  2 (2.00%) high mild
+  14 (14.00%) high severe
+shortint::scalar_less/shortint::scalar_less::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.766 ms 14.867 ms 14.986 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  8 (8.00%) high severe
+shortint::scalar_less/shortint::scalar_less::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.061 ms 18.071 ms 18.084 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  2 (2.00%) high mild
+  5 (5.00%) high severe
+Benchmarking shortint::scalar_less/shortint::scalar_less::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.7s, or reduce sample count to 30.
+shortint::scalar_less/shortint::scalar_less::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [137.17 ms 139.12 ms 141.62 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  2 (2.00%) high mild
+  7 (7.00%) high severe
+Benchmarking shortint::scalar_less/shortint::scalar_less::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 235.2s, or reduce sample count to 10.
+shortint::scalar_less/shortint::scalar_less::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3805 s 2.3893 s 2.3981 s]
+
+shortint::scalar_less_or_equal/shortint::scalar_less_or_equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_T...
+                        time:   [15.443 ms 15.456 ms 15.470 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  3 (3.00%) high mild
+  3 (3.00%) high severe
+shortint::scalar_less_or_equal/shortint::scalar_less_or_equal::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFO...
+                        time:   [18.932 ms 18.951 ms 18.971 ms]
+Found 11 outliers among 100 measurements (11.00%)
+  5 (5.00%) high mild
+  6 (6.00%) high severe
+Benchmarking shortint::scalar_less_or_equal/shortint::scalar_less_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_T...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.2s, or reduce sample count to 30.
+shortint::scalar_less_or_equal/shortint::scalar_less_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_T...
+                        time:   [141.27 ms 142.88 ms 144.97 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  2 (2.00%) high mild
+  5 (5.00%) high severe
+Benchmarking shortint::scalar_less_or_equal/shortint::scalar_less_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_T...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 239.3s, or reduce sample count to 10.
+shortint::scalar_less_or_equal/shortint::scalar_less_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_T...
+                        time:   [2.3938 s 2.3976 s 2.4021 s]
+Found 14 outliers among 100 measurements (14.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high mild
+  12 (12.00%) high severe
+shortint::scalar_less_or_equal/shortint::scalar_less_or_equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_G...
+                        time:   [14.615 ms 14.624 ms 14.635 ms]
+Found 9 outliers among 100 measurements (9.00%)
+  7 (7.00%) high mild
+  2 (2.00%) high severe
+shortint::scalar_less_or_equal/shortint::scalar_less_or_equal::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_G...
+                        time:   [18.072 ms 18.081 ms 18.094 ms]
+Found 10 outliers among 100 measurements (10.00%)
+  4 (4.00%) high mild
+  6 (6.00%) high severe
+Benchmarking shortint::scalar_less_or_equal/shortint::scalar_less_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_G...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.9s, or reduce sample count to 30.
+shortint::scalar_less_or_equal/shortint::scalar_less_or_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_G...
+                        time:   [138.63 ms 140.39 ms 142.67 ms]
+Found 23 outliers among 100 measurements (23.00%)
+  14 (14.00%) low mild
+  3 (3.00%) high mild
+  6 (6.00%) high severe
+Benchmarking shortint::scalar_less_or_equal/shortint::scalar_less_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_G...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 240.8s, or reduce sample count to 10.
+shortint::scalar_less_or_equal/shortint::scalar_less_or_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_G...
+                        time:   [2.3543 s 2.3615 s 2.3691 s]
+Found 23 outliers among 100 measurements (23.00%)
+  1 (1.00%) low mild
+  22 (22.00%) high severe
+
+shortint::scalar_equal/shortint::scalar_equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128
+                        time:   [15.480 ms 15.493 ms 15.508 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  4 (4.00%) high mild
+  3 (3.00%) high severe
+shortint::scalar_equal/shortint::scalar_equal::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [18.959 ms 18.975 ms 18.993 ms]
+Found 7 outliers among 100 measurements (7.00%)
+  3 (3.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::scalar_equal/shortint::scalar_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.1s, or reduce sample count to 30.
+shortint::scalar_equal/shortint::scalar_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_2M128
+                        time:   [140.97 ms 141.76 ms 142.91 ms]
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) high mild
+  4 (4.00%) high severe
+Benchmarking shortint::scalar_equal/shortint::scalar_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 246.7s, or reduce sample count to 10.
+shortint::scalar_equal/shortint::scalar_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_TUNIFORM_2M128
+                        time:   [2.4256 s 2.4352 s 2.4448 s]
+shortint::scalar_equal/shortint::scalar_equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128
+                        time:   [14.766 ms 14.770 ms 14.775 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) high mild
+  4 (4.00%) high severe
+shortint::scalar_equal/shortint::scalar_equal::V1_5_PARAM_MESSAGE_2_CARRY_2_KS_PBS_GAUSSIAN_2M128
+                        time:   [18.130 ms 18.147 ms 18.173 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  1 (1.00%) high mild
+  5 (5.00%) high severe
+Benchmarking shortint::scalar_equal/shortint::scalar_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 13.8s, or reduce sample count to 30.
+shortint::scalar_equal/shortint::scalar_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_GAUSSIAN_2M128
+                        time:   [137.22 ms 139.19 ms 141.71 ms]
+Found 8 outliers among 100 measurements (8.00%)
+  1 (1.00%) high mild
+  7 (7.00%) high severe
+Benchmarking shortint::scalar_equal/shortint::scalar_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 235.2s, or reduce sample count to 10.
+shortint::scalar_equal/shortint::scalar_equal::V1_5_PARAM_MESSAGE_4_CARRY_4_KS_PBS_GAUSSIAN_2M128
+                        time:   [2.3528 s 2.3602 s 2.3686 s]
+Found 15 outliers among 100 measurements (15.00%)
+  1 (1.00%) high mild
+  14 (14.00%) high severe
+
+shortint::scalar_not_equal/shortint::scalar_not_equal::V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_...
+                        time:   [15.430 ms 15.448 ms 15.469 ms]
+Found 10 outliers among 100 measurements (10.00%)
+  5 (5.00%) high mild
+  5 (5.00%) high severe
+shortint::scalar_not_equal/shortint::scalar_not_equal::PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+                        time:   [19.009 ms 19.043 ms 19.086 ms]
+Found 6 outliers among 100 measurements (6.00%)
+  5 (5.00%) high mild
+  1 (1.00%) high severe
+Benchmarking shortint::scalar_not_equal/shortint::scalar_not_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_...: Warming up for 3.0000 s
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 14.3s, or reduce sample count to 30.
+Benchmarking shortint::scalar_not_equal/shortint::scalar_not_equal::V1_5_PARAM_MESSAGE_3_CARRY_3_KS_PBS_TUNIFORM_...: Collecting 100 samples in estimated 14.255 s (100 iterations)^Cmake: *** [Makefile:1499: bench_shortint] Interrupt
+
+forbin@confidential-compute:~/development/seal_zama_comparision/submodules/zama-rs$ 

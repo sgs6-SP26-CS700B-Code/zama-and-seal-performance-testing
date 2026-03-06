@@ -1,0 +1,376 @@
+Begining to read 1m lines of signed 16 bit ints into 16 bit buffer from file: ./1m-16-bit-data.data
+Finished reading 1m lines of signed 16 bit ints into 16 bit buffer from file: ./1m-16-bit-data.data
+
+Performing seal 16384 batch size on 800 value dataset:
+
+-------------------------------------------------------------
+Performing SEAL 16384 batch Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 16384
+|   coeff_modulus size: 438 (48 + 48 + 48 + 49 + 49 + 49 + 49 + 49 + 49) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 16384
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset a
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 417us
+	| Time taken (nanoseconds)  | 417662ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset b
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 0ms
+	| Time taken (microseconds) | 320us
+	| Time taken (nanoseconds)  | 320905ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set A
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 27ms
+	| Time taken (microseconds) | 27732us
+	| Time taken (nanoseconds)  | 27732487ns
+--------------------------------------------------------------------------
+
+Size for first ciphertext in set a: 2
+
+Size Capacity for first ciphertext in set a: 2
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set B
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 25ms
+	| Time taken (microseconds) | 25024us
+	| Time taken (nanoseconds)  | 25024939ns
+--------------------------------------------------------------------------
+
+Size for first ciphertext in set b: 2
+
+Size Capacity for first ciphertext in set b: 2
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 2ms
+	| Time taken (microseconds) | 2638us
+	| Time taken (nanoseconds)  | 2638631ns
+--------------------------------------------------------------------------
+
+Size for first ciphertext in added set: 2
+
+Size Capacity for first ciphertext in added set: 2
+
+==========================================================================
+  Timing Results for: Seal bgv multiply two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 7ms
+	| Time taken (microseconds) | 7338us
+	| Time taken (nanoseconds)  | 7338073ns
+--------------------------------------------------------------------------
+
+Size for first ciphertext in multiplied set: 3
+
+Size Capacity for first ciphertext in multiplied set: 3
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit add
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 6ms
+	| Time taken (microseconds) | 6725us
+	| Time taken (nanoseconds)  | 6725869ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit mult
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 10ms
+	| Time taken (microseconds) | 10160us
+	| Time taken (nanoseconds)  | 10160091ns
+--------------------------------------------------------------------------
+SEAL Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+SEAL Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
+
+Performing zama serial compute on 800 value dataset:
+
+-------------------------------------------------------------
+Performing Zama Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+0
+Begining zama tests
+
+==========================================================================
+  Timing Results for: Zama Encrypt 32bit in 32bit space signed int
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 814ms
+	| Time taken (microseconds) | 814895us
+	| Time taken (nanoseconds)  | 814895186ns
+--------------------------------------------------------------------------
+
+Zama ciphertext first value attempt to check size?
+Serialized data size: 127141 bytes
+
+==========================================================================
+  Timing Results for: Zama add 32 bit uint (cipher+cipher)
+==========================================================================
+	| Time taken (seconds)      | 124s
+	| Time taken (milliseconds) | 124436ms
+	| Time taken (microseconds) | 124436176us
+	| Time taken (nanoseconds)  | 124436176280ns
+--------------------------------------------------------------------------
+
+Zama added ciphertext first value attempt to check size?
+Serialized data size: 127141 bytes
+
+==========================================================================
+  Timing Results for: Zama mult 32bit uint (cipher*cipher)
+==========================================================================
+	| Time taken (seconds)      | 1012s
+	| Time taken (milliseconds) | 1012359ms
+	| Time taken (microseconds) | 1012359668us
+	| Time taken (nanoseconds)  | 1012359668634ns
+--------------------------------------------------------------------------
+
+Zama multiplied ciphertext first value attempt to check size?
+Serialized data size: 127141 bytes
+
+==========================================================================
+  Timing Results for: Zama decrypt addition
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 9ms
+	| Time taken (microseconds) | 9345us
+	| Time taken (nanoseconds)  | 9345038ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt multiplication
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 10ms
+	| Time taken (microseconds) | 10082us
+	| Time taken (nanoseconds)  | 10082610ns
+--------------------------------------------------------------------------
+Zama Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+Zama Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
+Data Free
+Key Free
+
+Performing seal 16384 batch size on 1 mil value dataset:
+
+-------------------------------------------------------------
+Performing SEAL 16384 batch Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 16384
+|   coeff_modulus size: 438 (48 + 48 + 48 + 49 + 49 + 49 + 49 + 49 + 49) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 16384
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset a
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 13ms
+	| Time taken (microseconds) | 13550us
+	| Time taken (nanoseconds)  | 13550065ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset b
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15954us
+	| Time taken (nanoseconds)  | 15954073ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set A
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1144ms
+	| Time taken (microseconds) | 1144432us
+	| Time taken (nanoseconds)  | 1144432229ns
+--------------------------------------------------------------------------
+
+Size for first ciphertext in set a: 2
+
+Size Capacity for first ciphertext in set a: 2
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set B
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1174ms
+	| Time taken (microseconds) | 1174019us
+	| Time taken (nanoseconds)  | 1174019429ns
+--------------------------------------------------------------------------
+
+Size for first ciphertext in set b: 2
+
+Size Capacity for first ciphertext in set b: 2
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 84ms
+	| Time taken (microseconds) | 84321us
+	| Time taken (nanoseconds)  | 84321058ns
+--------------------------------------------------------------------------
+
+Size for first ciphertext in added set: 2
+
+Size Capacity for first ciphertext in added set: 2
+
+==========================================================================
+  Timing Results for: Seal bgv multiply two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 257ms
+	| Time taken (microseconds) | 257663us
+	| Time taken (nanoseconds)  | 257663366ns
+--------------------------------------------------------------------------
+
+Size for first ciphertext in multiplied set: 3
+
+Size Capacity for first ciphertext in multiplied set: 3
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit add
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 220ms
+	| Time taken (microseconds) | 220257us
+	| Time taken (nanoseconds)  | 220257794ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit mult
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 296ms
+	| Time taken (microseconds) | 296708us
+	| Time taken (nanoseconds)  | 296708184ns
+--------------------------------------------------------------------------
+SEAL Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+SEAL Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
+
+Performing zama serial compute on 1 mil value dataset:
+
+-------------------------------------------------------------
+Performing Zama Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+0
+Begining zama tests
+
+==========================================================================
+  Timing Results for: Zama Encrypt 32bit in 32bit space signed int
+==========================================================================
+	| Time taken (seconds)      | 1017s
+	| Time taken (milliseconds) | 1017007ms
+	| Time taken (microseconds) | 1017007700us
+	| Time taken (nanoseconds)  | 1017007700264ns
+--------------------------------------------------------------------------
+
+Zama ciphertext first value attempt to check size?
+Serialized data size: 127141 bytes
+
+==========================================================================
+  Timing Results for: Zama add 32 bit uint (cipher+cipher)
+==========================================================================
+	| Time taken (seconds)      | 151588s
+	| Time taken (milliseconds) | 151588410ms
+	| Time taken (microseconds) | 151588410355us
+	| Time taken (nanoseconds)  | 151588410355611ns
+--------------------------------------------------------------------------
+
+Zama added ciphertext first value attempt to check size?
+Serialized data size: 127141 bytes
