@@ -1750,37 +1750,20 @@ void zama_test_serial_compute(const std::vector<uint32_t>& data)
     Config*        config;
 
     // Default Parameters (I think?)
-    ShortintPBSParameters V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128 =
-        SHORTINT_V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_GAUSSIAN_2M128;
-    ShortintPBSParameters tuniform_params = SHORTINT_PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128;
-    // fields im kinda guessing to fill out.
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.lwe_noise_distribution = tuniform_params.lwe_noise_distribution;
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.glwe_noise_distribution =
-        tuniform_params.glwe_noise_distribution;
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.modulus_switch_noise_reduction_params =
-        tuniform_params.modulus_switch_noise_reduction_params;
+    ShortintPBSParameters custom_param =
+        SHORTINT_PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128;
+    custom_param.polynomial_size = 128;
+    custom_param.encryption_key_choice = ShortintEncryptionKeyChoiceSmall;
 
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.lwe_dimension  = 879; // Default moderate security level
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.glwe_dimension = 4;   // GLWE dimension
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.polynomial_size =
-        512; // Default polynomial degree is 16384, reduced this
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.pbs_base_log    = 23; // Modulus switching base log (default)
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.pbs_level       = 1;  // Modulus switching depth
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.ks_base_log     = 5;  // Key switching base log
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.ks_level        = 3;  // Key switching depth
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.message_modulus = 2;  // Modulus for the message
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.carry_modulus   = 2;  // Modulus for carry
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.max_noise_level = 2;  // Max noise tolerance
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.log2_p_fail     = tuniform_params.log2_p_fail;
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.modulus_power_of_2_exponent =
-        tuniform_params.modulus_power_of_2_exponent; // Modulus size (2^14) (default 14, reduced)
-    V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128.encryption_key_choice = tuniform_params.encryption_key_choice;
-    ; // Default key type
+    printShortintPBSParametersCSVHeader();
+    printShortintPBSParametersCSV(
+        "Custom_B_SHORTINT_PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128",
+        custom_param);
 
     config_builder_default(&builder);
 
     // Use the default parameters
-    config_builder_use_custom_parameters(&builder, V1_5_PARAM_MESSAGE_1_CARRY_1_KS_PBS_TUNIFORM_2M128);
+    config_builder_use_custom_parameters(&builder, custom_param);
 
     // Build the config object
     config_builder_build(builder, &config);

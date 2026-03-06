@@ -1,0 +1,91 @@
+Begining to read 1m lines of signed 16 bit ints into 16 bit buffer from file: ./1m-16-bit-data.data
+Finished reading 1m lines of signed 16 bit ints into 16 bit buffer from file: ./1m-16-bit-data.data
+
+Performing zama serial compute on 800 value dataset:
+
+-------------------------------------------------------------
+Performing Zama Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+0
+config_name,lwe_dimension,glwe_dimension,polynomial_size,lwe_noise_tag,lwe_gaussian_std,lwe_tuniform_bound_log2,glwe_noise_tag,glwe_gaussian_std,glwe_tuniform_bound_log2,pbs_base_log,pbs_level,ks_base_log,ks_level,message_modulus,carry_modulus,max_noise_level,log2_p_fail,modulus_power_of_2_exponent,encryption_key_choice,ms_tag,ms_modulus_switch_zeros_count,ms_bound,ms_r_sigma_factor,ms_input_variance
+Custom_A_SHORTINT_PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128,918,1,512,1,0,45,1,0,17,23,1,4,4,4,4,5,-129.581,64,Small,2,0,0,0,0
+Begining zama tests
+
+==========================================================================
+  Timing Results for: Zama Encrypt 32bit in 32bit space signed int
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 928ms
+	| Time taken (microseconds) | 928951us
+	| Time taken (nanoseconds)  | 928951334ns
+--------------------------------------------------------------------------
+
+Zama ciphertext first value attempt to check size?
+Serialized data size: 119461 bytes
+
+==========================================================================
+  Timing Results for: Zama add 32 bit uint (cipher+cipher)
+==========================================================================
+	| Time taken (seconds)      | 28s
+	| Time taken (milliseconds) | 28361ms
+	| Time taken (microseconds) | 28361253us
+	| Time taken (nanoseconds)  | 28361253766ns
+--------------------------------------------------------------------------
+
+Zama added ciphertext first value attempt to check size?
+Serialized data size: 119461 bytes
+
+==========================================================================
+  Timing Results for: Zama mult 32bit uint (cipher*cipher)
+==========================================================================
+	| Time taken (seconds)      | 197s
+	| Time taken (milliseconds) | 197447ms
+	| Time taken (microseconds) | 197447691us
+	| Time taken (nanoseconds)  | 197447691109ns
+--------------------------------------------------------------------------
+
+Zama multiplied ciphertext first value attempt to check size?
+Serialized data size: 119461 bytes
+
+==========================================================================
+  Timing Results for: Zama decrypt addition
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 9ms
+	| Time taken (microseconds) | 9621us
+	| Time taken (nanoseconds)  | 9621813ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt multiplication
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 10ms
+	| Time taken (microseconds) | 10216us
+	| Time taken (nanoseconds)  | 10216319ns
+--------------------------------------------------------------------------
+Zama Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+Zama Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
+Data Free
+Key Free
