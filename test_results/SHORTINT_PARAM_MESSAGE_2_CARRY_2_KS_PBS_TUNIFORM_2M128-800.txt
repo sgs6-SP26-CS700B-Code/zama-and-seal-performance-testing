@@ -1,0 +1,91 @@
+Begining to read 1m lines of signed 16 bit ints into 16 bit buffer from file: ./1m-16-bit-data.data
+Finished reading 1m lines of signed 16 bit ints into 16 bit buffer from file: ./1m-16-bit-data.data
+
+Using paramter SHORTINT_PARAM_MESSAGE_2_CARRY_2_KS_PBS_TUNIFORM_2M128
+
+Performing zama serial compute on 800 value dataset:
+
+-------------------------------------------------------------
+Performing Zama Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+0
+Begining zama tests
+
+==========================================================================
+  Timing Results for: Zama Encrypt 32bit in 32bit space signed int
+==========================================================================
+	| Time taken (seconds)      | 2s
+	| Time taken (milliseconds) | 2040ms
+	| Time taken (microseconds) | 2040478us
+	| Time taken (nanoseconds)  | 2040478939ns
+--------------------------------------------------------------------------
+
+Zama ciphertext first value attempt to check size?
+Serialized data size: 264101 bytes
+
+==========================================================================
+  Timing Results for: Zama add 32 bit uint (cipher+cipher)
+==========================================================================
+	| Time taken (seconds)      | 103s
+	| Time taken (milliseconds) | 103027ms
+	| Time taken (microseconds) | 103027240us
+	| Time taken (nanoseconds)  | 103027240376ns
+--------------------------------------------------------------------------
+
+Zama added ciphertext first value attempt to check size?
+Serialized data size: 264101 bytes
+
+==========================================================================
+  Timing Results for: Zama mult 32bit uint (cipher*cipher)
+==========================================================================
+	| Time taken (seconds)      | 878s
+	| Time taken (milliseconds) | 878510ms
+	| Time taken (microseconds) | 878510920us
+	| Time taken (nanoseconds)  | 878510920710ns
+--------------------------------------------------------------------------
+
+Zama multiplied ciphertext first value attempt to check size?
+Serialized data size: 264101 bytes
+
+==========================================================================
+  Timing Results for: Zama decrypt addition
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 19ms
+	| Time taken (microseconds) | 19053us
+	| Time taken (nanoseconds)  | 19053563ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Zama decrypt multiplication
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 19ms
+	| Time taken (microseconds) | 19408us
+	| Time taken (nanoseconds)  | 19408401ns
+--------------------------------------------------------------------------
+Zama Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+Zama Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
+Data Free
+Key Free
