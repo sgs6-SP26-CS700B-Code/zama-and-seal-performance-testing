@@ -1,0 +1,1229 @@
+Begining to read 1m lines of signed 16 bit ints into 16 bit buffer from file: ./1m-16-bit-data.data
+Finished reading 1m lines of signed 16 bit ints into 16 bit buffer from file: ./1m-16-bit-data.data
+
+Performing seal 16384 batch size on 1 mil value dataset:
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+SEAL TEST # 1
+-------------------------------------------------------------
+Performing SEAL 16384 batch Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+Size of vector storage (in bytes): 4000024
+Capacity in elements: 1000000
+Size of the data buffer in bytes: 4000000
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 16384
+|   coeff_modulus size: 438 (48 + 48 + 48 + 49 + 49 + 49 + 49 + 49 + 49) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 16384
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset a
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 20ms
+	| Time taken (microseconds) | 20513us
+	| Time taken (nanoseconds)  | 20513875ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector A: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset b
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 23ms
+	| Time taken (microseconds) | 23121us
+	| Time taken (nanoseconds)  | 23121843ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector B: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set A
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1390ms
+	| Time taken (microseconds) | 1390568us
+	| Time taken (nanoseconds)  | 1390568243ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector A: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set B
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1163ms
+	| Time taken (microseconds) | 1163293us
+	| Time taken (nanoseconds)  | 1163293720ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector B: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 85ms
+	| Time taken (microseconds) | 85246us
+	| Time taken (nanoseconds)  | 85246489ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of added ciphertext vector a_plus_b_batch: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv multiply two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 257ms
+	| Time taken (microseconds) | 257601us
+	| Time taken (nanoseconds)  | 257601151ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of multiplied ciphertext vector a_mul_b_batch: 195803998
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit add
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 220ms
+	| Time taken (microseconds) | 220746us
+	| Time taken (nanoseconds)  | 220746189ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit mult
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 294ms
+	| Time taken (microseconds) | 294745us
+	| Time taken (nanoseconds)  | 294745467ns
+--------------------------------------------------------------------------
+SEAL Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+SEAL Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
+SEAL TEST # 2
+-------------------------------------------------------------
+Performing SEAL 16384 batch Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+Size of vector storage (in bytes): 4000024
+Capacity in elements: 1000000
+Size of the data buffer in bytes: 4000000
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 16384
+|   coeff_modulus size: 438 (48 + 48 + 48 + 49 + 49 + 49 + 49 + 49 + 49) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 16384
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset a
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 13ms
+	| Time taken (microseconds) | 13416us
+	| Time taken (nanoseconds)  | 13416903ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector A: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset b
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15069us
+	| Time taken (nanoseconds)  | 15069614ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector B: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set A
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1138ms
+	| Time taken (microseconds) | 1138706us
+	| Time taken (nanoseconds)  | 1138706448ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector A: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set B
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1146ms
+	| Time taken (microseconds) | 1146911us
+	| Time taken (nanoseconds)  | 1146911415ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector B: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 50ms
+	| Time taken (microseconds) | 50103us
+	| Time taken (nanoseconds)  | 50103657ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of added ciphertext vector a_plus_b_batch: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv multiply two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 206ms
+	| Time taken (microseconds) | 206575us
+	| Time taken (nanoseconds)  | 206575667ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of multiplied ciphertext vector a_mul_b_batch: 195803998
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit add
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 226ms
+	| Time taken (microseconds) | 226008us
+	| Time taken (nanoseconds)  | 226008277ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit mult
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 298ms
+	| Time taken (microseconds) | 298696us
+	| Time taken (nanoseconds)  | 298696262ns
+--------------------------------------------------------------------------
+SEAL Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+SEAL Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
+SEAL TEST # 3
+-------------------------------------------------------------
+Performing SEAL 16384 batch Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+Size of vector storage (in bytes): 4000024
+Capacity in elements: 1000000
+Size of the data buffer in bytes: 4000000
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 16384
+|   coeff_modulus size: 438 (48 + 48 + 48 + 49 + 49 + 49 + 49 + 49 + 49) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 16384
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset a
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 13ms
+	| Time taken (microseconds) | 13746us
+	| Time taken (nanoseconds)  | 13746741ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector A: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset b
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15970us
+	| Time taken (nanoseconds)  | 15970089ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector B: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set A
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1155ms
+	| Time taken (microseconds) | 1155732us
+	| Time taken (nanoseconds)  | 1155732821ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector A: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set B
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1135ms
+	| Time taken (microseconds) | 1135469us
+	| Time taken (nanoseconds)  | 1135469376ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector B: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 50ms
+	| Time taken (microseconds) | 50386us
+	| Time taken (nanoseconds)  | 50386071ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of added ciphertext vector a_plus_b_batch: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv multiply two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 204ms
+	| Time taken (microseconds) | 204800us
+	| Time taken (nanoseconds)  | 204800606ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of multiplied ciphertext vector a_mul_b_batch: 195803998
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit add
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 225ms
+	| Time taken (microseconds) | 225271us
+	| Time taken (nanoseconds)  | 225271198ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit mult
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 299ms
+	| Time taken (microseconds) | 299592us
+	| Time taken (nanoseconds)  | 299592817ns
+--------------------------------------------------------------------------
+SEAL Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+SEAL Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
+SEAL TEST # 4
+-------------------------------------------------------------
+Performing SEAL 16384 batch Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+Size of vector storage (in bytes): 4000024
+Capacity in elements: 1000000
+Size of the data buffer in bytes: 4000000
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 16384
+|   coeff_modulus size: 438 (48 + 48 + 48 + 49 + 49 + 49 + 49 + 49 + 49) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 16384
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset a
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 13ms
+	| Time taken (microseconds) | 13783us
+	| Time taken (nanoseconds)  | 13783736ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector A: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset b
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 16ms
+	| Time taken (microseconds) | 16115us
+	| Time taken (nanoseconds)  | 16115027ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector B: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set A
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1137ms
+	| Time taken (microseconds) | 1137037us
+	| Time taken (nanoseconds)  | 1137037607ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector A: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set B
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1134ms
+	| Time taken (microseconds) | 1134526us
+	| Time taken (nanoseconds)  | 1134526247ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector B: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 50ms
+	| Time taken (microseconds) | 50076us
+	| Time taken (nanoseconds)  | 50076801ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of added ciphertext vector a_plus_b_batch: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv multiply two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 206ms
+	| Time taken (microseconds) | 206045us
+	| Time taken (nanoseconds)  | 206045541ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of multiplied ciphertext vector a_mul_b_batch: 195803998
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit add
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 220ms
+	| Time taken (microseconds) | 220985us
+	| Time taken (nanoseconds)  | 220985388ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit mult
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 306ms
+	| Time taken (microseconds) | 306470us
+	| Time taken (nanoseconds)  | 306470266ns
+--------------------------------------------------------------------------
+SEAL Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+SEAL Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
+SEAL TEST # 5
+-------------------------------------------------------------
+Performing SEAL 16384 batch Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+Size of vector storage (in bytes): 4000024
+Capacity in elements: 1000000
+Size of the data buffer in bytes: 4000000
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 16384
+|   coeff_modulus size: 438 (48 + 48 + 48 + 49 + 49 + 49 + 49 + 49 + 49) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 16384
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset a
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 17ms
+	| Time taken (microseconds) | 17017us
+	| Time taken (nanoseconds)  | 17017822ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector A: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset b
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 19ms
+	| Time taken (microseconds) | 19777us
+	| Time taken (nanoseconds)  | 19777783ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector B: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set A
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1495ms
+	| Time taken (microseconds) | 1495410us
+	| Time taken (nanoseconds)  | 1495410860ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector A: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set B
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1395ms
+	| Time taken (microseconds) | 1395829us
+	| Time taken (nanoseconds)  | 1395829797ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector B: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 48ms
+	| Time taken (microseconds) | 48675us
+	| Time taken (nanoseconds)  | 48675869ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of added ciphertext vector a_plus_b_batch: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv multiply two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 204ms
+	| Time taken (microseconds) | 204134us
+	| Time taken (nanoseconds)  | 204134809ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of multiplied ciphertext vector a_mul_b_batch: 195803998
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit add
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 220ms
+	| Time taken (microseconds) | 220064us
+	| Time taken (nanoseconds)  | 220064099ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit mult
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 294ms
+	| Time taken (microseconds) | 294054us
+	| Time taken (nanoseconds)  | 294054715ns
+--------------------------------------------------------------------------
+SEAL Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+SEAL Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
+SEAL TEST # 6
+-------------------------------------------------------------
+Performing SEAL 16384 batch Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+Size of vector storage (in bytes): 4000024
+Capacity in elements: 1000000
+Size of the data buffer in bytes: 4000000
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 16384
+|   coeff_modulus size: 438 (48 + 48 + 48 + 49 + 49 + 49 + 49 + 49 + 49) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 16384
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset a
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 13ms
+	| Time taken (microseconds) | 13328us
+	| Time taken (nanoseconds)  | 13328007ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector A: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset b
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15481us
+	| Time taken (nanoseconds)  | 15481339ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector B: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set A
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1133ms
+	| Time taken (microseconds) | 1133571us
+	| Time taken (nanoseconds)  | 1133571583ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector A: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set B
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1129ms
+	| Time taken (microseconds) | 1129373us
+	| Time taken (nanoseconds)  | 1129373766ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector B: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 48ms
+	| Time taken (microseconds) | 48776us
+	| Time taken (nanoseconds)  | 48776778ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of added ciphertext vector a_plus_b_batch: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv multiply two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 202ms
+	| Time taken (microseconds) | 202563us
+	| Time taken (nanoseconds)  | 202563152ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of multiplied ciphertext vector a_mul_b_batch: 195803998
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit add
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 218ms
+	| Time taken (microseconds) | 218785us
+	| Time taken (nanoseconds)  | 218785908ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit mult
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 294ms
+	| Time taken (microseconds) | 294749us
+	| Time taken (nanoseconds)  | 294749135ns
+--------------------------------------------------------------------------
+SEAL Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+SEAL Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
+SEAL TEST # 7
+-------------------------------------------------------------
+Performing SEAL 16384 batch Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+Size of vector storage (in bytes): 4000024
+Capacity in elements: 1000000
+Size of the data buffer in bytes: 4000000
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 16384
+|   coeff_modulus size: 438 (48 + 48 + 48 + 49 + 49 + 49 + 49 + 49 + 49) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 16384
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset a
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 13ms
+	| Time taken (microseconds) | 13406us
+	| Time taken (nanoseconds)  | 13406266ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector A: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset b
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15536us
+	| Time taken (nanoseconds)  | 15536347ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector B: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set A
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1132ms
+	| Time taken (microseconds) | 1132934us
+	| Time taken (nanoseconds)  | 1132934025ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector A: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set B
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1137ms
+	| Time taken (microseconds) | 1137929us
+	| Time taken (nanoseconds)  | 1137929202ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector B: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 48ms
+	| Time taken (microseconds) | 48719us
+	| Time taken (nanoseconds)  | 48719189ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of added ciphertext vector a_plus_b_batch: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv multiply two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 202ms
+	| Time taken (microseconds) | 202590us
+	| Time taken (nanoseconds)  | 202590350ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of multiplied ciphertext vector a_mul_b_batch: 195803998
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit add
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 218ms
+	| Time taken (microseconds) | 218640us
+	| Time taken (nanoseconds)  | 218640226ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit mult
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 294ms
+	| Time taken (microseconds) | 294982us
+	| Time taken (nanoseconds)  | 294982643ns
+--------------------------------------------------------------------------
+SEAL Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+SEAL Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
+SEAL TEST # 8
+-------------------------------------------------------------
+Performing SEAL 16384 batch Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+Size of vector storage (in bytes): 4000024
+Capacity in elements: 1000000
+Size of the data buffer in bytes: 4000000
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 16384
+|   coeff_modulus size: 438 (48 + 48 + 48 + 49 + 49 + 49 + 49 + 49 + 49) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 16384
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset a
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 13ms
+	| Time taken (microseconds) | 13556us
+	| Time taken (nanoseconds)  | 13556395ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector A: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset b
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15261us
+	| Time taken (nanoseconds)  | 15261257ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector B: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set A
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1255ms
+	| Time taken (microseconds) | 1255020us
+	| Time taken (nanoseconds)  | 1255020643ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector A: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set B
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1298ms
+	| Time taken (microseconds) | 1298635us
+	| Time taken (nanoseconds)  | 1298635424ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector B: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 48ms
+	| Time taken (microseconds) | 48387us
+	| Time taken (nanoseconds)  | 48387172ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of added ciphertext vector a_plus_b_batch: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv multiply two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 201ms
+	| Time taken (microseconds) | 201665us
+	| Time taken (nanoseconds)  | 201665073ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of multiplied ciphertext vector a_mul_b_batch: 195803998
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit add
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 220ms
+	| Time taken (microseconds) | 220343us
+	| Time taken (nanoseconds)  | 220343696ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit mult
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 297ms
+	| Time taken (microseconds) | 297145us
+	| Time taken (nanoseconds)  | 297145412ns
+--------------------------------------------------------------------------
+SEAL Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+SEAL Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
+SEAL TEST # 9
+-------------------------------------------------------------
+Performing SEAL 16384 batch Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+Size of vector storage (in bytes): 4000024
+Capacity in elements: 1000000
+Size of the data buffer in bytes: 4000000
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 16384
+|   coeff_modulus size: 438 (48 + 48 + 48 + 49 + 49 + 49 + 49 + 49 + 49) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 16384
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset a
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 13ms
+	| Time taken (microseconds) | 13453us
+	| Time taken (nanoseconds)  | 13453405ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector A: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset b
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15633us
+	| Time taken (nanoseconds)  | 15633048ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector B: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set A
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1134ms
+	| Time taken (microseconds) | 1134096us
+	| Time taken (nanoseconds)  | 1134096405ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector A: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set B
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1132ms
+	| Time taken (microseconds) | 1132201us
+	| Time taken (nanoseconds)  | 1132201414ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector B: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 48ms
+	| Time taken (microseconds) | 48677us
+	| Time taken (nanoseconds)  | 48677079ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of added ciphertext vector a_plus_b_batch: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv multiply two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 202ms
+	| Time taken (microseconds) | 202758us
+	| Time taken (nanoseconds)  | 202758143ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of multiplied ciphertext vector a_mul_b_batch: 195803998
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit add
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 218ms
+	| Time taken (microseconds) | 218826us
+	| Time taken (nanoseconds)  | 218826873ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit mult
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 292ms
+	| Time taken (microseconds) | 292411us
+	| Time taken (nanoseconds)  | 292411137ns
+--------------------------------------------------------------------------
+SEAL Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+SEAL Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
+SEAL TEST # 10
+-------------------------------------------------------------
+Performing SEAL 16384 batch Test: 
+Dataset A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+
+Dataset B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+
+Size of vector storage (in bytes): 4000024
+Capacity in elements: 1000000
+Size of the data buffer in bytes: 4000000
+/
+| Encryption parameters :
+|   scheme: BGV
+|   poly_modulus_degree: 16384
+|   coeff_modulus size: 438 (48 + 48 + 48 + 49 + 49 + 49 + 49 + 49 + 49) bits
+\
+Parameter validation (success): valid
+Batching Slot Count = 16384
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset a
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 13ms
+	| Time taken (microseconds) | 13770us
+	| Time taken (nanoseconds)  | 13770753ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector A: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv batch encode dataset b
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 15ms
+	| Time taken (microseconds) | 15676us
+	| Time taken (nanoseconds)  | 15676657ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of batched plaintext vector B: 8163664
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set A
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1130ms
+	| Time taken (microseconds) | 1130914us
+	| Time taken (nanoseconds)  | 1130914766ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector A: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv encrypt all batches in set B
+==========================================================================
+	| Time taken (seconds)      | 1s
+	| Time taken (milliseconds) | 1132ms
+	| Time taken (microseconds) | 1132755us
+	| Time taken (nanoseconds)  | 1132755021ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of ciphertext vector B: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv add two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 48ms
+	| Time taken (microseconds) | 48359us
+	| Time taken (nanoseconds)  | 48359729ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of added ciphertext vector a_plus_b_batch: 130538334
+
+==========================================================================
+  Timing Results for: Seal bgv multiply two batch 32bit ciphers in single slot 64bit vector
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 202ms
+	| Time taken (microseconds) | 202426us
+	| Time taken (nanoseconds)  | 202426313ns
+--------------------------------------------------------------------------
+
+ Upper Bound size in bytes of multiplied ciphertext vector a_mul_b_batch: 195803998
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit add
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 220ms
+	| Time taken (microseconds) | 220152us
+	| Time taken (nanoseconds)  | 220152819ns
+--------------------------------------------------------------------------
+
+==========================================================================
+  Timing Results for: Seal bgv decrypt and decode batched 32 bit mult
+==========================================================================
+	| Time taken (seconds)      | 0s
+	| Time taken (milliseconds) | 294ms
+	| Time taken (microseconds) | 294822us
+	| Time taken (nanoseconds)  | 294822876ns
+--------------------------------------------------------------------------
+SEAL Final Results (Addition): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
++
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 67028, 28322, 26908, 50952, 77199, 90521, 49666, 60491, 93008, 51544, ..., ]
+
+
+SEAL Final Results (multiplication): 
+A: 
+[ 43821, 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, ..., ]
+*
+B: 
+[ 23207, 5115, 21793, 29159, 48040, 42481, 7185, 53306, 39702, 11842, ..., ]
+=
+[ 1016953947, 118703805, 111471195, 635462087, 1400798360, 2040787240, 305225985, 383003610, 2116354812, 470151084, ..., ]
